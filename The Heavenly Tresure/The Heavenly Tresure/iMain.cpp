@@ -44,6 +44,7 @@ void iDraw()
 	{
 		showStory();
 	}
+	cout << "Change nigga" << endl;
 }
 
 
