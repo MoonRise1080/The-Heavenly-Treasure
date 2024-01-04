@@ -47,9 +47,6 @@
     <ClInclude Include="menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Intro_level.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="level_one.h">
       <Filter>Header Files</Filter>
     </ClInclude>

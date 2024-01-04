@@ -44,61 +44,63 @@ void loadImage()
 
 
 	/*--------------------------------- Idle Image -------------------------------------*/
-	demo_player.img_idle[0] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_0.png");
-	demo_player.img_idle[1] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_1.png");
-	demo_player.img_idle[2] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_2.png");
-	demo_player.img_idle[3] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_3.png");
-	demo_player.img_idle[4] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_4.png");
-	demo_player.img_idle[5] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_5.png");
-	demo_player.img_idle[6] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_6.png");
-	demo_player.img_idle[7] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_7.png");
+	mainChar.img_idle[0] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_0.png");
+	mainChar.img_idle[1] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_1.png");
+	mainChar.img_idle[2] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_2.png");
+	mainChar.img_idle[3] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_3.png");
+	mainChar.img_idle[4] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_4.png");
+	mainChar.img_idle[5] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_5.png");
+	mainChar.img_idle[6] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_6.png");
+	mainChar.img_idle[7] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_7.png");
 
 
 
 	/*--------------------------------- Inverted Idle Image ---------------------------------*/
-	demo_player.img_invIdle[0] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_0.png");
-	demo_player.img_invIdle[1] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_1.png");
-	demo_player.img_invIdle[2] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_2.png");
-	demo_player.img_invIdle[3] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_3.png");
-	demo_player.img_invIdle[4] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_4.png");
-	demo_player.img_invIdle[5] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_5.png");
-	demo_player.img_invIdle[6] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_6.png");
-	demo_player.img_invIdle[7] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_7.png");
+	mainChar.img_invIdle[0] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_0.png");
+	mainChar.img_invIdle[1] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_1.png");
+	mainChar.img_invIdle[2] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_2.png");
+	mainChar.img_invIdle[3] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_3.png");
+	mainChar.img_invIdle[4] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_4.png");
+	mainChar.img_invIdle[5] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_5.png");
+	mainChar.img_invIdle[6] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_6.png");
+	mainChar.img_invIdle[7] = iLoadImage("HeroKnight\\Idle\\Inv\\HeroKnight_invIdle_7.png");
 
 
 
 	/*----------------------------- Running Image -----------------------------*/
-	demo_player.img_run[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_0.png");
-	demo_player.img_run[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_1.png");
-	demo_player.img_run[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_2.png");
-	demo_player.img_run[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_3.png");
-	demo_player.img_run[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_4.png");
-	demo_player.img_run[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_5.png");
-	demo_player.img_run[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_6.png");
-	demo_player.img_run[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_7.png");
-	demo_player.img_run[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_8.png");
-	demo_player.img_run[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_9.png");
+	mainChar.img_run[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_0.png");
+	mainChar.img_run[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_1.png");
+	mainChar.img_run[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_2.png");
+	mainChar.img_run[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_3.png");
+	mainChar.img_run[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_4.png");
+	mainChar.img_run[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_5.png");
+	mainChar.img_run[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_6.png");
+	mainChar.img_run[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_7.png");
+	mainChar.img_run[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_8.png");
+	mainChar.img_run[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_Run_9.png");
 
 
 
 	/*---------------------------- Inverted Running Image ----------------------------*/
-	demo_player.img_invRun[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_9.png");
-	demo_player.img_invRun[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_8.png");
-	demo_player.img_invRun[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_7.png");
-	demo_player.img_invRun[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_6.png");
-	demo_player.img_invRun[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_5.png");
-	demo_player.img_invRun[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_4.png");
-	demo_player.img_invRun[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_3.png");
-	demo_player.img_invRun[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_2.png");
-	demo_player.img_invRun[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_1.png");
-	demo_player.img_invRun[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_0.png");
+	mainChar.img_invRun[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_9.png");
+	mainChar.img_invRun[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_8.png");
+	mainChar.img_invRun[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_7.png");
+	mainChar.img_invRun[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_6.png");
+	mainChar.img_invRun[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_5.png");
+	mainChar.img_invRun[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_4.png");
+	mainChar.img_invRun[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_3.png");
+	mainChar.img_invRun[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_2.png");
+	mainChar.img_invRun[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_1.png");
+	mainChar.img_invRun[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_0.png");
 
 	
 
 
 
 	/*--------------------------- Background --------------------------*/
-	demo_bg.backgrounds = iLoadImage("DemoBackground\\demo_level.png");
+	lvlOnePhaseOne.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_1.png");
+	lvlOnePhaseTwo.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_2.png");
+	lvlOnePhaseThree.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_3.png");
 
 }
 

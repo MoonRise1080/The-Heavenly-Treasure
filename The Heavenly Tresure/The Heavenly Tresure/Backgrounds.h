@@ -1,18 +1,22 @@
 #ifndef BACKGROUND_H_INCLUDED
 #define BACKGROUND_H_INCLUDED
+#define screenWidth 1280
+#define screenHight 720
+#define oriX 0
+#define oriY 0
 
 int recX[8];
 int recY[8];
 int dx[8];
 int dy[8];
 
-struct DemoBackground
+struct Background
 {
 	int pos_x, pos_y;
 	int dim_x, dim_y;
-	int backgrounds;
+	int bgImage;
 
-	DemoBackground(int pos_x, int pos_y, int dim_x, int dim_y)
+	Background(int pos_x, int pos_y, int dim_x, int dim_y)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
@@ -21,9 +25,13 @@ struct DemoBackground
 	}
 
 	
-}demo_bg(0, 0, 1280, 720);
+};
 
-void collisionLvlOne()
+Background lvlOnePhaseOne(oriX, oriY, screenWidth, screenHight);
+Background lvlOnePhaseTwo(oriX, oriY, screenWidth, screenHight);
+Background lvlOnePhaseThree(oriX, oriY, screenWidth, screenHight);
+
+void collisionLvlOnePhaseOne()
 {	
 	
 	recX[0] = 0;

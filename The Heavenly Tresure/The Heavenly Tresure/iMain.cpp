@@ -1,11 +1,11 @@
 #include <iostream>
 #include "iGraphics.h"
-#include "Background.h"
+#include "Backgrounds.h"
 #include "Loadimg.h"
 #include "Player.h"
 #include "Collision.h"
 #include "menu.h"
-#include "Intro_level.h"
+#include "level_one.h"
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -27,7 +27,7 @@ void iDraw()
 	if (menu_option == 1)
 	{
 		isStart = true;
-		showIntroLevel();
+		showLevelOne();
 	}
 
 	if (menu_option == 3)
@@ -52,43 +52,22 @@ void oneFiftyMilli()
 {
 	if (isStart)
 	{
-		if (demo_player.idle)
+		if (mainChar.idle)
 		{
-			demo_player.idleIndex++;
-			if (demo_player.idleIndex > 7)
+			mainChar.idleIndex++;
+			if (mainChar.idleIndex > 7)
 			{
-				demo_player.idleIndex = 0;
+				mainChar.idleIndex = 0;
 			}
 		}
 
-		if (!demo_player.idle)
+		if (!mainChar.idle)
 		{
-			demo_player.runIndex++;
-			if (demo_player.runIndex >= 9)
+			mainChar.runIndex++;
+			if (mainChar.runIndex >= 9)
 			{
-				demo_player.runIndex = 0;
+				mainChar.runIndex = 0;
 			}
-		}
-
-		collImpl = (collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[0], recY[0], dx[0], dy[0]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[1], recY[1], dx[1], dy[1]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[2], recY[2], dx[2], dy[2]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[3], recY[3], dx[3], dy[3]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[5], recY[5], dx[5], dy[5]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[6], recY[6], dx[6], dy[6]) ||
-			collisionDetection(demo_player.pos_x, demo_player.pos_y, demo_player.dim_x, demo_player.dim_y, recX[7], recY[7], dx[7], dy[7]));
-
-		if (collImpl)
-		{
-			cout << colX << endl;
-			cout << colY << endl;
-			cout << "Collision detected" << endl;
-		}
-
-		else
-		{
-			demo_player.pos_y -= 15;
 		}
 	}
 	
@@ -236,9 +215,9 @@ void iSpecialKeyboard(unsigned char key)
 	{	
 		if (1)
 		{
-			demo_player.pos_x += 5;
-			demo_player.idle = false;
-			demo_player.rdirection = true;
+			mainChar.pos_x += 5;
+			mainChar.idle = false;
+			mainChar.rdirection = true;
 		}
 	}
 
@@ -246,16 +225,16 @@ void iSpecialKeyboard(unsigned char key)
 	{
 		if (1)
 		{
-			demo_player.pos_x -= 5;
-			demo_player.idle = false;
-			demo_player.rdirection = false;
+			mainChar.pos_x -= 5;
+			mainChar.idle = false;
+			mainChar.rdirection = false;
 		}	
 	}
 
 	if (key == GLUT_KEY_UP)
 	{
-		demo_player.pos_y += 300;
-		demo_player.idle = false;
+		mainChar.pos_y += 300;
+		mainChar.idle = false;
 
 	}
 	
