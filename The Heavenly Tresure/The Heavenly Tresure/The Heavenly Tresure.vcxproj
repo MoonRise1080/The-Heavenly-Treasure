@@ -69,11 +69,12 @@
   <ItemGroup>
     <ClInclude Include="bitmap_loader.h" />
     <ClInclude Include="Collision.h" />
-    <ClInclude Include="DemoBackground.h" />
+    <ClInclude Include="Backgrounds.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />
     <ClInclude Include="iGraphics.h" />
     <ClInclude Include="Intro_level.h" />
+    <ClInclude Include="level_one.h" />
     <ClInclude Include="Loadimg.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Player.h" />

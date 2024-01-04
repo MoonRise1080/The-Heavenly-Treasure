@@ -1,5 +1,5 @@
-#ifndef DEMOBACKGROUND_H_INCLUDED
-#define DEMOBACKGROUND_H_INCLUDED
+#ifndef BACKGROUND_H_INCLUDED
+#define BACKGROUND_H_INCLUDED
 
 int recX[8];
 int recY[8];
@@ -23,7 +23,7 @@ struct DemoBackground
 	
 }demo_bg(0, 0, 1280, 720);
 
-void collisionBox()
+void collisionLvlOne()
 {	
 	
 	recX[0] = 0;

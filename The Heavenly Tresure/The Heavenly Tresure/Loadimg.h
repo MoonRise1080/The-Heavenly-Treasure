@@ -2,7 +2,7 @@
 #define LOADIMAGE_H_INCLUDED
 
 #include "Player.h"
-#include "DemoBackground.h"
+#include "Backgrounds.h"
 #include "menu.h"
 
 

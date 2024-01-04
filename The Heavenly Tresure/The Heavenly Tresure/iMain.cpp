@@ -1,6 +1,6 @@
 #include <iostream>
 #include "iGraphics.h"
-#include "DemoBackground.h"
+#include "Background.h"
 #include "Loadimg.h"
 #include "Player.h"
 #include "Collision.h"

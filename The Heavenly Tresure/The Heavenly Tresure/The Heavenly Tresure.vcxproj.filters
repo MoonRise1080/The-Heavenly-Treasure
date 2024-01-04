@@ -41,9 +41,6 @@
     <ClInclude Include="Loadimg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DemoBackground.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -51,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Intro_level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="level_one.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Backgrounds.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
