@@ -17,6 +17,7 @@ void iDraw()
 {
 	iClear();
 
+
 	if (menu_option == 0)
 	{
 		isStart = false;
@@ -69,7 +70,13 @@ void oneFiftyMilli()
 				mainChar.runIndex = 0;
 			}
 		}
+
+		if (collision == false)
+		{
+			mainChar.pos_y -= 15;
+		}
 	}
+	
 	
 	
 }
@@ -233,14 +240,15 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_UP)
 	{
-		mainChar.pos_y += 300;
+		mainChar.pos_y += 200;
 		mainChar.idle = false;
 
 	}
 	
-	if (key == GLUT_KEY_HOME)
+	if (key == GLUT_KEY_DOWN)
 	{
-		
+		mainChar.pos_y -= 200;
+		mainChar.idle = false;
 	}
 
 	if (key == GLUT_KEY_END)

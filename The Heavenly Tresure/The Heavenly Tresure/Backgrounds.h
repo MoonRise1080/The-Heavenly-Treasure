@@ -5,10 +5,10 @@
 #define oriX 0
 #define oriY 0
 
-int recX[8];
-int recY[8];
-int dx[8];
-int dy[8];
+int *recX;
+int *recY;
+int *dx;
+int *dy;
 
 struct Background
 {
@@ -31,59 +31,33 @@ Background lvlOnePhaseOne(oriX, oriY, screenWidth, screenHight);
 Background lvlOnePhaseTwo(oriX, oriY, screenWidth, screenHight);
 Background lvlOnePhaseThree(oriX, oriY, screenWidth, screenHight);
 
+
+
 void collisionLvlOnePhaseOne()
-{	
-	
-	recX[0] = 0;
-	recY[0] = 0;
-	dx[0] = 230;
-	dy[0] = 105;
+{
 
-	recX[1] = 230;
+	recX = (int*)malloc(5 * sizeof(int));
+	recY = (int*)malloc(5 * sizeof(int));
+	dx = (int*)malloc(5 * sizeof(int));
+	dy = (int*)malloc(5 * sizeof(int));
+
+	recX[0] = 91;
+	recY[0] = 291;
+	dx[0] = 119;
+	dy[0] = 33;
+
+	recX[1] = 0;
 	recY[1] = 0;
-	dx[1] = 55;
-	dy[1] = 160;
+	dx[1] = 511;
+	dy[1] = 148;
 
-	recX[2] = 285;
-	recY[2] = 0;
-	dx[2] = 57;
-	dy[2] = 220;
-
-	recX[3] = 345;
-	recY[3] = 336;
-	dx[3] = 212;
-	dy[3] = 51;
-
-	recX[4] = 631;
-	recY[4] = 508;
-	dx[4] = 212;
-	dy[4] = 51;
-
-	recX[5] = 574;
-	recY[5] = 0;
-	dx[5] = 448;
-	dy[5] = 220;
-
-	recX[6] = 1022;
-	recY[6] = 0;
-	dx[6] = 68;
-	dy[6] = 280;
-
-	recX[7] = 1090;
-	recY[7] = 0;
-	dx[7] = 190;
-	dy[7] = 335;
 
 	iSetColor(255, 255, 255);
 	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
 	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
-	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
-	iFilledRectangle(recX[3], recY[3], dx[3], dy[3]);
-	iFilledRectangle(recX[4], recY[4], dx[4], dy[4]);
-	iFilledRectangle(recX[5], recY[5], dx[5], dy[5]);
-	iFilledRectangle(recX[6], recY[6], dx[6], dy[6]);
-	iFilledRectangle(recX[7], recY[7], dx[7], dy[7]);
 
+
+	
 }
 
 

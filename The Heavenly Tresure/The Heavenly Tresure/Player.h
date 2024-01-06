@@ -8,6 +8,8 @@ struct Player
 	int dim_x, dim_y;
 	int idleIndex = 0, runIndex = 0;
 	int moveCheck = 0;
+	int padN = 50;
+	int padInv = 0;
 	bool idle = true;
 	bool rdirection = true;
 	
@@ -25,6 +27,6 @@ struct Player
 		this->rdirection = rdirection;
 	}
 
-}mainChar(0, 0, 300, 165, true, true);
+}mainChar(100, 324, 138, 120, true, true);
 
 #endif

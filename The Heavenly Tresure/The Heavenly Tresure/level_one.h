@@ -11,18 +11,22 @@
 
 bool isStart = false;
 int phase = 0;
+bool collsion = false;
 
 void showLevelOne()
 {
-	
+
 	if (phase == 0)
 	{
-		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+		collisionLvlOnePhaseOne();
+		//iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
 		if (mainChar.pos_x == 1280)
 		{
 			phase++;
 			mainChar.pos_x = 0;
 		}
+		collision = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]) || 
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]));
 	}
 
 	else if (phase == 1)
@@ -55,7 +59,7 @@ void showLevelOne()
 		}
 	}
 
-	
+	/*___________________________________________________Animations_____________________________________________________________*/
 
 	if (mainChar.idle)
 	{
@@ -92,6 +96,8 @@ void showLevelOne()
 		}
 
 	}
+
+	/*____________________________________________________Animations End________________________________________________________*/
 
 	
 }
