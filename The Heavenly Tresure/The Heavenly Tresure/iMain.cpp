@@ -6,6 +6,7 @@
 #include "Collision.h"
 #include "menu.h"
 #include "level_one.h"
+#include"sound.h"
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -188,6 +189,7 @@ void iMouse(int button, int state, int mx, int my)
 	
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
 	{
+		controlSound(false);
 		selectMenuOption(mx, my);
 	}
 	
@@ -211,6 +213,11 @@ void iKeyboard(unsigned char key)
 		
 	}
 	
+	if (key == 'm')
+	{
+		music = false; //to stop all sound
+		controlSound(false);
+	}
 	
 }
 
@@ -254,6 +261,9 @@ void iSpecialKeyboard(unsigned char key)
 	if (key == GLUT_KEY_END)
 	{
 		menu_option = 0;
+		musicOption = 1;
+		controlSound(false);
+		controlSound(true);
 	}
 	
 }
@@ -266,7 +276,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
-	
+	controlSound(true);
 	iStart();
 	return 0;
 }

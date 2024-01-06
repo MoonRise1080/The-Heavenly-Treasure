@@ -2,6 +2,7 @@
 #define MENU_H_INCLUDED
 #define screenWidth 1280
 #define screenHight 720
+#include"sound.h"
 
 int menu_option = 0;
 int menu_image[8];
@@ -19,7 +20,9 @@ void selectMenuOption(int menu_x, int menu_y)
 	{
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 475 && menu_y <= 525)
 		{
+			musicOption = 4;
 			menu_option = 1; //For new game.
+			controlSound(true);
 		}
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 399 && menu_y <= 450)
 		{
@@ -28,7 +31,9 @@ void selectMenuOption(int menu_x, int menu_y)
 
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 325 && menu_y <= 375)
 		{
+			musicOption = 2;
 			menu_option = 3; //For score.
+			controlSound(true);
 		}
 
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 250 && menu_y <= 305)
@@ -43,7 +48,9 @@ void selectMenuOption(int menu_x, int menu_y)
 
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 100 && menu_y <= 150)
 		{
+			musicOption = 3;
 			menu_option = 6; //For story.
+			controlSound(true);
 		}
 
 		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 25 && menu_y <= 75)
@@ -55,7 +62,9 @@ void selectMenuOption(int menu_x, int menu_y)
 
 	if (menu_option == 3 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 130 && menu_y <= 180))
 	{
+		musicOption = 1;
 		menu_option = 0; //Score back
+		controlSound(true);
 	}
 
 	if (menu_option == 4 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 60 && menu_y <= 110))
@@ -65,7 +74,9 @@ void selectMenuOption(int menu_x, int menu_y)
 
 	if (menu_option == 6 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 67 && menu_y <= 118))
 	{
+		musicOption = 1;
 		menu_option = 0; //Story back
+		controlSound(true);
 	}
 
 	
