@@ -2,7 +2,7 @@
 #define MENU_H_INCLUDED
 #define screenWidth 1280
 #define screenHight 720
-#include"sound.h"
+#include "sound.h"
 
 int menu_option = 0;
 int menu_image[8];
@@ -72,6 +72,18 @@ void selectMenuOption(int menu_x, int menu_y)
 		menu_option = 0; //Settings back
 	}
 
+	if (menu_option == 4 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 438 && menu_y <= 488))
+	{
+		music = false; //Music off
+		controlSound(false);
+	}
+
+	if (menu_option == 4 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 515 && menu_y <= 565))
+	{
+		music = true; //Music on
+		controlSound(true);
+	}
+	
 	if (menu_option == 6 && (menu_x >= 536 && menu_x <= 758 && menu_y >= 67 && menu_y <= 118))
 	{
 		musicOption = 1;

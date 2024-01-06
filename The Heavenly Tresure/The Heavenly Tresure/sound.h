@@ -17,23 +17,18 @@ void controlSound(bool playSound)
 	{
 		if (musicOption == 1)//menu
 		{
-
 			PlaySound("music\\Take On Me.wav", NULL, SND_LOOP | SND_ASYNC);
-
 		}
 		else if (musicOption == 2)//score
-		{
-			
+		{	
 			PlaySound("music\\score.wav", NULL, SND_LOOP | SND_ASYNC);
 		}
 		else if (musicOption == 3)//story
 		{
 			PlaySound("music\\Fireflies .wav", NULL, SND_LOOP | SND_ASYNC);
-
 		}
 		else if (musicOption == 4)//level 1
 		{
-
 			PlaySound("music\\level_one.wav", NULL, SND_LOOP | SND_ASYNC);
 		}
 
@@ -41,7 +36,6 @@ void controlSound(bool playSound)
 	else
 	{
 		PlaySound(0, 0, 0);
-
 	}
 }
 

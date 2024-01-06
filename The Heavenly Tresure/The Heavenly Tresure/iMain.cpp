@@ -95,6 +95,7 @@ void iMouseMove(int mx, int my)
 //*******************************************************************ipassiveMouse***********************************************************************//
 void iPassiveMouseMove(int mx, int my)
 {
+	/*-------------------------- Highlight menu -------------------------*/
 	if (menu_option >= 0 && menu_option <= 6)
 	{
 		if (mx >= 520 && mx <= 750 && my >= 475 && my <= 525)
@@ -129,6 +130,8 @@ void iPassiveMouseMove(int mx, int my)
 		{
 			highlightIndex = 0;
 		}
+
+		/*--------------------------------- Selected ----------------------------------------*/
 
 		if (menu_option == 4 && (mx >= 536 && mx <= 758 && my >= 286 && my <= 336))
 		{
@@ -189,7 +192,7 @@ void iMouse(int button, int state, int mx, int my)
 	
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
 	{
-		controlSound(false);
+		//controlSound(false);
 		selectMenuOption(mx, my);
 	}
 	
@@ -215,7 +218,7 @@ void iKeyboard(unsigned char key)
 	
 	if (key == 'm')
 	{
-		music = false; //to stop all sound
+		music = false; 
 		controlSound(false);
 	}
 	

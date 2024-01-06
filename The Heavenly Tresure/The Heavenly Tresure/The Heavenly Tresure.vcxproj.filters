@@ -53,5 +53,8 @@
     <ClInclude Include="Backgrounds.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
