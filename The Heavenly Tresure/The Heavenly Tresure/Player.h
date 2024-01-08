@@ -4,6 +4,7 @@
 
 struct Player
 {
+	int hp = 4;
 	int pos_x, pos_y;
 	int dim_x, dim_y;
 	int idleIndex = 0, runIndex = 0;

@@ -5,10 +5,12 @@
 #define oriX 0
 #define oriY 0
 
-int *recX;
-int *recY;
-int *dx;
-int *dy;
+int boxNumber = 1;
+
+int *recX = (int*)malloc(boxNumber * sizeof(int));
+int *recY = (int*)malloc(boxNumber * sizeof(int));
+int *dx = (int*)malloc(boxNumber * sizeof(int));
+int *dy = (int*)malloc(boxNumber * sizeof(int));
 
 struct Background
 {
@@ -35,11 +37,12 @@ Background lvlOnePhaseThree(oriX, oriY, screenWidth, screenHight);
 
 void collisionLvlOnePhaseOne()
 {
+	boxNumber = 2;
 
-	recX = (int*)malloc(5 * sizeof(int));
-	recY = (int*)malloc(5 * sizeof(int));
-	dx = (int*)malloc(5 * sizeof(int));
-	dy = (int*)malloc(5 * sizeof(int));
+	recX = (int*)realloc(recX, boxNumber * sizeof(int));
+	recY = (int*)realloc(recY, boxNumber * sizeof(int));
+	dx = (int*)realloc(dx, boxNumber * sizeof(int));
+	dy = (int*)realloc(dy, boxNumber * sizeof(int));
 
 	recX[0] = 91;
 	recY[0] = 291;
