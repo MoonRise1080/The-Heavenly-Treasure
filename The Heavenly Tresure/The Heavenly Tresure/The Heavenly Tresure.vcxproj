@@ -72,6 +72,7 @@
     <ClInclude Include="Backgrounds.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />
+    <ClInclude Include="HUD.h" />
     <ClInclude Include="iGraphics.h" />
     <ClInclude Include="level_one.h" />
     <ClInclude Include="Loadimg.h" />

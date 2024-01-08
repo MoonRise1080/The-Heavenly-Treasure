@@ -102,6 +102,9 @@ void loadImage()
 	lvlOnePhaseTwo.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_2.png");
 	lvlOnePhaseThree.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_3.png");
 
+	/*--------------------------- Hp_Image_demo --------------------------*/
+
+
 }
 
 #endif
