@@ -2,30 +2,14 @@
 #define HUD_H_INCLUDED
 
 #include "Player.h"
-#include "iGraphics.h"
+#define hpLength 300
+#define hpWidth 300
 
-void showHp(){
+int hpImgArr[5];
 
-	if (mainChar.hp == 4)
-	{
-		iShowImage(0, 0, 0, 0, menu_image[menu_option]);
-	}
-	if (mainChar.hp == 3)
-	{
-		iShowImage(0, 0, 0, 0, menu_image[menu_option]);
-	}
-	if (mainChar.hp == 2)
-	{
-		iShowImage(0, 0, 0, 0, menu_image[menu_option]);
-	}
-	if (mainChar.hp == 1)
-	{
-		iShowImage(0, 0, 0, 0, menu_image[menu_option]);
-	}
-	if (mainChar.hp == 0)
-	{
-		iShowImage(0, 0, 0, 0, menu_image[menu_option]);
-	}
+void showHp()
+{
+	iShowImage(0, 0, hpLength, hpWidth, hpImgArr[mainChar.hp]);
 }
 
 

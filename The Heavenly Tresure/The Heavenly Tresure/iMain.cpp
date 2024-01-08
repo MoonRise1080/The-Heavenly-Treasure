@@ -18,7 +18,7 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-
+	
 
 	if (menu_option == 0)
 	{

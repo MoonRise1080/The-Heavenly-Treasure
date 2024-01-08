@@ -11,7 +11,7 @@ struct Player
 	int moveCheck = 0;
 	int padN = 51;
 	int padInv = 51;
-	int hp = 4;
+	int hp = 0;
 	bool idle = true;
 	bool rdirection = true;
 	
@@ -25,10 +25,11 @@ struct Player
 		this->pos_y = pos_y;
 		this->dim_x = dim_x;
 		this->dim_y = dim_y;
+		this->hp = hp;
 		this->idle = idle;
 		this->rdirection = rdirection;
 	}
 
-}mainChar(100, 324, 138, 120, 4, true, true);
+}mainChar(100, 324, 138, 120, 0, true, true);
 
 #endif

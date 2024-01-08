@@ -8,6 +8,7 @@
 #include "Player.h"
 #include "Collision.h"
 #include "menu.h"
+#include "HUD.h"
 
 bool isStart = false;
 int phase = 0;
@@ -15,11 +16,12 @@ bool collsion = false;
 
 void showLevelOne()
 {
-
+	
 	if (phase == 0)
 	{
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+		showHp();
 		if (mainChar.pos_x == 1280)
 		{
 			phase++;

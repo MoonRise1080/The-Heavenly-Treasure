@@ -4,7 +4,7 @@
 #include "Player.h"
 #include "Backgrounds.h"
 #include "menu.h"
-
+#include "HUD.h"
 
 void loadImage()
 {
@@ -102,8 +102,12 @@ void loadImage()
 	lvlOnePhaseTwo.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_2.png");
 	lvlOnePhaseThree.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_3.png");
 
-	/*--------------------------- Hp_Image_demo --------------------------*/
-
+	/*--------------------------- Hp Image --------------------------*/
+	hpImgArr[0] = iLoadImage("Backgrounds\\HUD\\Health\\health_0.png");
+	hpImgArr[1] = iLoadImage("Backgrounds\\HUD\\Health\\health_1.png");
+	hpImgArr[2] = iLoadImage("Backgrounds\\HUD\\Health\\health_2.png");
+	hpImgArr[3] = iLoadImage("Backgrounds\\HUD\\Health\\health_3.png");
+	hpImgArr[4] = iLoadImage("Backgrounds\\HUD\\Health\\health_4.png");
 
 }
 
