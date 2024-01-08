@@ -4,13 +4,14 @@
 
 struct Player
 {
-	int hp = 4;
 	int pos_x, pos_y;
 	int dim_x, dim_y;
-	int idleIndex = 0, runIndex = 0;
+	int idleIndex = 0;
+	int runIndex = 0;
 	int moveCheck = 0;
-	int padN = 50;
-	int padInv = 0;
+	int padN = 51;
+	int padInv = 51;
+	int hp = 4;
 	bool idle = true;
 	bool rdirection = true;
 	
@@ -18,7 +19,7 @@ struct Player
 
 	
 
-	Player(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection)
+	Player(int pos_x, int pos_y, int dim_x, int dim_y, int hp, bool idle, bool rdirection)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
@@ -28,6 +29,6 @@ struct Player
 		this->rdirection = rdirection;
 	}
 
-}mainChar(100, 324, 138, 120, true, true);
+}mainChar(100, 324, 138, 120, 4, true, true);
 
 #endif

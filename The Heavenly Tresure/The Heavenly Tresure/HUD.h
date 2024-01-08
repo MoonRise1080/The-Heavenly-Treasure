@@ -1,7 +1,9 @@
 #ifndef HUD_H_INCLUDED
 #define HUD_H_INCLUDED
+
 #include "Player.h"
 #include "iGraphics.h"
+
 void showHp(){
 
 	if (mainChar.hp == 4)
