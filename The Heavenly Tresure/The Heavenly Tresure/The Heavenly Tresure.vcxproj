@@ -70,6 +70,7 @@
     <ClInclude Include="bitmap_loader.h" />
     <ClInclude Include="Collision.h" />
     <ClInclude Include="Backgrounds.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />
     <ClInclude Include="iGraphics.h" />
