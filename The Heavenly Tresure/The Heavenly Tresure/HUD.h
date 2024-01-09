@@ -9,7 +9,7 @@ int hpImgArr[5];
 
 void showHp()
 {
-	iShowImage(0, 0, hpLength, hpWidth, hpImgArr[mainChar.hp]);
+	iShowImage(0, -100, hpLength, hpWidth, hpImgArr[mainChar.hp]);
 }
 
 

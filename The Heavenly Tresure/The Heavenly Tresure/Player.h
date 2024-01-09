@@ -32,4 +32,50 @@ struct Player
 
 }mainChar(100, 324, 138, 120, 0, true, true);
 
+
+void applyGravity()
+{
+	mainChar.pos_y -= 15;
+}
+
+
+void showPlayerAnimations()
+{
+	if (mainChar.idle)
+	{
+		if (mainChar.rdirection)
+		{
+			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_idle[mainChar.idleIndex]);
+		}
+
+		else
+		{
+			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_invIdle[mainChar.idleIndex]);
+		}
+
+	}
+
+	else
+	{
+		if (mainChar.rdirection)
+		{
+			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_run[mainChar.runIndex]);
+		}
+
+		else
+		{
+			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_invRun[mainChar.runIndex]);
+		}
+
+		mainChar.moveCheck++;
+
+		if (mainChar.moveCheck > 200)
+		{
+			mainChar.moveCheck = 0;
+			mainChar.idle = true;
+		}
+
+	}
+}
+
 #endif

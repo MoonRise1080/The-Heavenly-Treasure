@@ -29,7 +29,8 @@ void showLevelOne()
 		}
 
 		collision = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]) || 
-					collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]));
+					collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]) ||
+					collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[2], recY[2], dx[2], dy[2]));
 	}
 
 	else if (phase == 1)
@@ -64,41 +65,7 @@ void showLevelOne()
 
 	/*___________________________________________________Animations_____________________________________________________________*/
 
-	if (mainChar.idle)
-	{
-		if (mainChar.rdirection)
-		{
-			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_idle[mainChar.idleIndex]);
-		}
-
-		else
-		{
-			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_invIdle[mainChar.idleIndex]);
-		}
-
-	}
-
-	else
-	{
-		if (mainChar.rdirection)
-		{
-			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_run[mainChar.runIndex]);
-		}
-
-		else
-		{
-			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_invRun[mainChar.runIndex]);
-		}
-
-		mainChar.moveCheck++;
-
-		if (mainChar.moveCheck > 200)
-		{
-			mainChar.moveCheck = 0;
-			mainChar.idle = true;
-		}
-
-	}
+	showPlayerAnimations();
 
 	/*____________________________________________________Animations End________________________________________________________*/
 

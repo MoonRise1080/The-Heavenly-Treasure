@@ -7,7 +7,7 @@
 #include "menu.h"
 #include "level_one.h"
 #include "sound.h"
-//#include "HUD.h"
+#include "HUD.h"
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -75,7 +75,7 @@ void oneFiftyMilli()
 
 		if (collision == false)
 		{
-			mainChar.pos_y -= 15;
+			applyGravity();
 		}
 	}
 	
@@ -93,7 +93,9 @@ void iMouseMove(int mx, int my)
 {
 	
 }
+
 //*******************************************************************ipassiveMouse***********************************************************************//
+
 void iPassiveMouseMove(int mx, int my)
 {
 	/*-------------------------- Highlight menu -------------------------*/

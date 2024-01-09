@@ -37,7 +37,7 @@ Background lvlOnePhaseThree(oriX, oriY, screenWidth, screenHight);
 
 void collisionLvlOnePhaseOne()
 {
-	boxNumber = 2;
+	boxNumber = 3;
 
 	recX = (int*)realloc(recX, boxNumber * sizeof(int));
 	recY = (int*)realloc(recY, boxNumber * sizeof(int));
@@ -54,11 +54,16 @@ void collisionLvlOnePhaseOne()
 	dx[1] = 511;
 	dy[1] = 148;
 
+	recX[2] = 512;
+	recY[2] = 0;
+	dx[2] = 768;
+	dy[2] = 182;
+
 
 	iSetColor(255, 255, 255);
 	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
 	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
-
+	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
 
 	
 }
