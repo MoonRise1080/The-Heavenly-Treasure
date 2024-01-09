@@ -1,13 +1,84 @@
-﻿Build started 1/9/2024 11:05:01 AM.
+﻿Build started 1/9/2024 12:01:21 PM.
      1>Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          E:\VS 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp
          iMain.cpp
-       Link:
-         E:\VS 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.lib" /MACHINE:X86 Debug\iMain.obj
-         The Heavenly Tresure.vcxproj -> E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe
-     1>Done Building Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)).
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(38): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(38): error C2228: left of '.idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(40): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(40): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(42): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(47): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(56): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(61): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(64): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(64): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(66): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(66): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(68): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(68): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(69): error C2065: 'huntress' : undeclared identifier
+     1>e:\premiere pro projects\cse 1200 game development project\the heavenly treasure\the heavenly tresure\the heavenly tresure\enemy.h(69): error C2228: left of '.idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>Done Building Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.01
+Time Elapsed 00:00:00.84
