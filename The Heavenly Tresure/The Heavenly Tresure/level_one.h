@@ -4,15 +4,16 @@
 #define screenHight 720
 
 #include "Backgrounds.h"
-#include "Loadimg.h"
 #include "Player.h"
 #include "Collision.h"
 #include "menu.h"
 #include "HUD.h"
+#include "Enemy.h"
 
 bool isStart = false;
 int phase = 0;
 bool collsion = false;
+Enemy huntress(890, 180, 200, 200, true, false);
 
 void showLevelOne()
 {
@@ -21,6 +22,8 @@ void showLevelOne()
 	{
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+		huntressAni();
+
 		showHp();
 		if (mainChar.pos_x == 1280)
 		{
