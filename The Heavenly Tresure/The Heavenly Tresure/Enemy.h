@@ -33,7 +33,7 @@ struct Enemy
 
 };
 
-void huntressAni()
+/*void huntressAni()
 {
 	if (huntress.idle)
 	{
@@ -73,6 +73,6 @@ void huntressAni()
 
 }
 
-
+*/
 
 #endif

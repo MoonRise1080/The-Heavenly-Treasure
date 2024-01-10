@@ -68,6 +68,38 @@ void collisionLvlOnePhaseOne()
 	
 }
 
+void collisionLvlOnePhaseTwo()
+{
+	boxNumber = 3;
+
+	recX = (int*)realloc(recX, boxNumber * sizeof(int));
+	recY = (int*)realloc(recY, boxNumber * sizeof(int));
+	dx = (int*)realloc(dx, boxNumber * sizeof(int));
+	dy = (int*)realloc(dy, boxNumber * sizeof(int));
+
+	recX[0] = 91;
+	recY[0] = 291;
+	dx[0] = 119;
+	dy[0] = 33;
+
+	recX[1] = 0;
+	recY[1] = 0;
+	dx[1] = 511;
+	dy[1] = 148;
+
+	recX[2] = 512;
+	recY[2] = 0;
+	dx[2] = 768;
+	dy[2] = 182;
+
+
+	iSetColor(255, 255, 255);
+	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
+	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
+	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
+
+
+}
 
 
 #endif

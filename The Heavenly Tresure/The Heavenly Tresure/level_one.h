@@ -22,7 +22,7 @@ void showLevelOne()
 	{
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
-		huntressAni();
+		//huntressAni();
 
 		showHp();
 		if (mainChar.pos_x == 1280)
@@ -38,6 +38,7 @@ void showLevelOne()
 
 	else if (phase == 1)
 	{
+		collisionLvlOnePhaseTwo();
 		iShowImage(lvlOnePhaseTwo.pos_x, lvlOnePhaseTwo.pos_y, lvlOnePhaseTwo.dim_x, lvlOnePhaseTwo.dim_y, lvlOnePhaseTwo.bgImage);
 		if (mainChar.pos_x > 1280)
 		{
