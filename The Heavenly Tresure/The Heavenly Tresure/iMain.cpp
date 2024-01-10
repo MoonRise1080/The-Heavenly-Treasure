@@ -303,7 +303,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
-	controlSound(false);
+	controlSound(true);
 	iStart();
 	return 0;
 }
