@@ -20,7 +20,6 @@ struct Enemy
 		;
 	}
 
-
 	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection)
 	{
 		this->pos_x = pos_x;
@@ -71,7 +70,8 @@ struct Enemy
 
 	}
 
-}
+	}
+
 
 */
 

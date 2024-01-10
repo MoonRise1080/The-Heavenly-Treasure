@@ -22,7 +22,11 @@ void showLevelOne()
 	{
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+<<<<<<< Updated upstream
 		//huntressAni();
+=======
+//		huntressAni();
+>>>>>>> Stashed changes
 
 		showHp();
 		if (mainChar.pos_x == 1280)

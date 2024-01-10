@@ -1,13 +1,100 @@
+<<<<<<< Updated upstream
 ﻿Build started 1/9/2024 10:28:18 PM.
      1>Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
+=======
+﻿Build started 10/01/2024 20:14:32.
+     1>Project "E:\joy bangla\The-Heavenly-Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
+>>>>>>> Stashed changes
      1>ClCompile:
-         E:\VS 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp
          iMain.cpp
+<<<<<<< Updated upstream
        Link:
          E:\VS 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.lib" /MACHINE:X86 Debug\iMain.obj
          The Heavenly Tresure.vcxproj -> E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe
      1>Done Building Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)).
+=======
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(37): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(37): error C2228: left of '.idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(39): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(39): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(41): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(46): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(55): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.img_idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2228: left of '.idleIndex' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(60): error C2660: 'iShowImage' : function does not take 1 arguments
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(63): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(63): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(65): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(65): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(67): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(67): error C2228: left of '.moveCheck' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(68): error C2065: 'huntress' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\enemy.h(68): error C2228: left of '.idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>Done Building Project "E:\joy bangla\The-Heavenly-Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)) -- FAILED.
+>>>>>>> Stashed changes
 
 Build succeeded.
 
+<<<<<<< Updated upstream
 Time Elapsed 00:00:00.99
+=======
+Time Elapsed 00:00:00.83
+>>>>>>> Stashed changes
