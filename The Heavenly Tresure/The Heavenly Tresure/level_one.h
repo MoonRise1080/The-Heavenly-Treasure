@@ -2,6 +2,8 @@
 #define LEVELONE_H_INCLUDED
 #define screenWidth 1280
 #define screenHight 720
+#define huntressHeight 200
+#define huntressWidth 200
 
 #include "Backgrounds.h"
 #include "Player.h"
@@ -13,20 +15,17 @@
 bool isStart = false;
 int phase = 0;
 bool collsion = false;
-Enemy huntress(890, 180, 200, 200, true, false);
+
 
 void showLevelOne()
 {
 	
 	if (phase == 0)
 	{
+		Enemy HuntressOne(1020, 580, huntressHeight, huntressWidth,true,false);
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
-<<<<<<< Updated upstream
-		//huntressAni();
-=======
-//		huntressAni();
->>>>>>> Stashed changes
+		iShowImage(HuntressOne.pos_x,HuntressOne.pos_y,HuntressOne.dim_x,HuntressOne.dim_y,)
 
 		showHp();
 		if (mainChar.pos_x == 1280)
