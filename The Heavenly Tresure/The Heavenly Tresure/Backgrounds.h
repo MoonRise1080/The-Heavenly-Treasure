@@ -144,7 +144,7 @@ void collisionLvlOnePhaseTwo()
 
 }
 
-void collisionLvlOnePhaseTwo()
+void collisionLvlOnePhaseThree()
 {
 	boxNumber = 3;
 

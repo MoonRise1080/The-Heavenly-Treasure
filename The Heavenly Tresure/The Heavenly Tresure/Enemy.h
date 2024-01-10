@@ -33,46 +33,6 @@ struct Enemy
 
 };
 
-/*void huntressAni()
-{
-	if (huntress.idle)
-	{
-		if (huntress.rdirection)
-		{
-			iShowImage(huntress.pos_x, huntress.pos_y, huntress.dim_x, huntress.dim_y, huntress.img_idle[huntress.idleIndex]);
-		}
 
-		else
-		{
-			iShowImage(huntress.pos_x, huntress.pos_y, huntress.dim_x, huntress.dim_y, huntress.img_idle[huntress.idleIndex]);
-		}
-
-	}
-
-	else
-	{
-		if (mainChar.rdirection)
-		{
-			iShowImage(huntress.pos_x, huntress.pos_y, huntress.dim_x, huntress.dim_y, huntress.img_idle[huntress.idleIndex]);
-		}
-
-		else
-		{
-			iShowImage(huntress.pos_x, huntress.pos_y, huntress.dim_x, huntress.dim_y, huntress.img_idle[huntress.idleIndex]);
-		}
-
-		huntress.moveCheck++;
-
-		if (huntress.moveCheck > 200)
-		{
-			huntress.moveCheck = 0;
-			huntress.idle = true;
-		}
-
-	}
-
-}
-
-*/
 
 #endif
