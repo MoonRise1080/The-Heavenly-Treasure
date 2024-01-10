@@ -73,9 +73,30 @@ void oneFiftyMilli()
 			}
 		}
 
-		if (collision == false)
+		if (collisionPlayer == false)
 		{
 			applyGravity();
+		}
+	}
+
+	if (lvlOneStart = true)
+	{
+		if (huntressMother.idle)
+		{
+			huntressMother.idleIndex++;
+			if (huntressMother.idleIndex > 7)
+			{
+				huntressMother.idleIndex = 0;
+			}
+		}
+
+		if (!huntressMother.idle)
+		{
+			huntressMother.runIndex++;
+			if (huntressMother.runIndex >= 9)
+			{
+				huntressMother.runIndex = 0;
+			}
 		}
 	}
 	
@@ -282,7 +303,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
-	controlSound(true);
+	controlSound(false);
 	iStart();
 	return 0;
 }

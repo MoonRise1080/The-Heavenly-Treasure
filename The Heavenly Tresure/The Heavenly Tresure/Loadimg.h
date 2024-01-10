@@ -117,23 +117,23 @@ void loadImage()
 
 	/*------------------------------------------------- Enemy -----------------------------------------*/
 
-	huntress.img_idle[0] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_0.png");
-	huntress.img_idle[1] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_1.png");
-	huntress.img_idle[2] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_2.png");
-	huntress.img_idle[3] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_3.png");
-	huntress.img_idle[4] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_4.png");
-	huntress.img_idle[5] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_5.png");
-	huntress.img_idle[6] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_6.png");
-	huntress.img_idle[7] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_7.png");
+	huntressMother.img_idle[0] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_0.png");
+	huntressMother.img_idle[1] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_1.png");
+	huntressMother.img_idle[2] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_2.png");
+	huntressMother.img_idle[3] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_3.png");
+	huntressMother.img_idle[4] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_4.png");
+	huntressMother.img_idle[5] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_5.png");
+	huntressMother.img_idle[6] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_6.png");
+	huntressMother.img_idle[7] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_7.png");
 	
-	huntress.img_invIdle[0] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_0.png");
-	huntress.img_invIdle[1] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_1.png");
-	huntress.img_invIdle[2] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_2.png");
-	huntress.img_invIdle[3] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_3.png");
-	huntress.img_invIdle[4] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_4.png");
-	huntress.img_invIdle[5] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_5.png");
-	huntress.img_invIdle[6] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_6.png");
-	huntress.img_invIdle[7] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_7.png");
+	huntressMother.img_invIdle[0] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_0.png");
+	huntressMother.img_invIdle[1] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_1.png");
+	huntressMother.img_invIdle[2] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_2.png");
+	huntressMother.img_invIdle[3] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_3.png");
+	huntressMother.img_invIdle[4] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_4.png");
+	huntressMother.img_invIdle[5] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_5.png");
+	huntressMother.img_invIdle[6] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_6.png");
+	huntressMother.img_invIdle[7] = iLoadImage("Enemy\\Huntress\\Idle Inv\\huntress_invIdle_7.png");
 
 }
 
