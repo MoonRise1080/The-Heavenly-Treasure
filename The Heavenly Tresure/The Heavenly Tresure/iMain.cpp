@@ -254,7 +254,8 @@ void iSpecialKeyboard(unsigned char key)
 	
 	if (key == GLUT_KEY_RIGHT)
 	{	
-		if (1)
+		cout << colL << endl;
+		if (colL == false)
 		{
 			mainChar.pos_x += 5;
 			mainChar.idle = false;
@@ -264,7 +265,8 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_LEFT)
 	{
-		if (1)
+		cout << colR << endl;
+		if (colR == false)
 		{
 			mainChar.pos_x -= 5;
 			mainChar.idle = false;

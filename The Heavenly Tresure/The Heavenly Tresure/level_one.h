@@ -72,7 +72,7 @@ void showLevelOne()
 			mainChar.pos_x = 1280;
 		}
 
-		collision = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[6], recY[6], dx[6], dy[6]) ||
+		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[6], recY[6], dx[6], dy[6]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[7], recY[7], dx[7], dy[7]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[8], recY[8], dx[8], dy[8]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[9], recY[9], dx[9], dy[9]) ||
