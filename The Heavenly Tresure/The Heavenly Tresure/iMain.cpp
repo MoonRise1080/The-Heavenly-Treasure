@@ -19,6 +19,7 @@ void iDraw()
 {
 	iClear();
 	
+	cout << collisionMob << endl;
 
 	if (menu_option == 0)
 	{
@@ -98,6 +99,12 @@ void oneFiftyMilli()
 				huntressMother.runIndex = 0;
 			}
 		}
+	
+		if (collisionMob == false)
+		{
+			huntressOne.applyGravityEnemy();
+		}
+
 	}
 	
 	
@@ -254,7 +261,6 @@ void iSpecialKeyboard(unsigned char key)
 	
 	if (key == GLUT_KEY_RIGHT)
 	{	
-		cout << colL << endl;
 		if (colL == false)
 		{
 			mainChar.pos_x += 5;
@@ -265,7 +271,6 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_LEFT)
 	{
-		cout << colR << endl;
 		if (colR == false)
 		{
 			mainChar.pos_x -= 5;

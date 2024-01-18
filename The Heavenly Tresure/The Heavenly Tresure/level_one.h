@@ -18,14 +18,14 @@ bool collisionPlayer = false;
 bool collisionMob = false;
 bool lvlOneStart = true;
 Enemy huntressMother;
-
+Enemy huntressOne(990, 300, huntressHeight, huntressWidth, true, false, false);
 
 void showLevelOne()
 {
 	
 	if (phase == 0)
 	{
-		Enemy huntressOne(1078, 380, huntressHeight, huntressWidth, true, false, true);
+		
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
 		iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
@@ -45,14 +45,13 @@ void showLevelOne()
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[5], recY[5], dx[5], dy[5]));
 
-		if (!collisionEnemy(huntressOne, recX[0], recY[0], dx[0], dy[0]) || 
-			!collisionEnemy(huntressOne, recX[1], recY[1], dx[1], dy[1]) ||
-			!collisionEnemy(huntressOne, recX[3], recY[3], dx[3], dy[3]) ||
-			!collisionEnemy(huntressOne, recX[4], recY[4], dx[4], dy[4]) ||
-			!collisionEnemy(huntressOne, recX[5], recY[5], dx[5], dy[5]))
-		{
-			huntressOne.applyGravityEnemy();
-		}
+		collisionMob = (collisionEnemy(huntressOne, recX[0], recY[0], dx[0], dy[0]) ||
+						collisionEnemy(huntressOne, recX[1], recY[1], dx[1], dy[1]) ||
+						collisionEnemy(huntressOne, recX[2], recY[2], dx[2], dy[2]) ||
+						collisionEnemy(huntressOne, recX[3], recY[3], dx[3], dy[3]) ||
+						collisionEnemy(huntressOne, recX[4], recY[4], dx[4], dy[4]) ||
+						collisionEnemy(huntressOne, recX[5], recY[5], dx[5], dy[5]));
+
 		
 	}
 
@@ -96,11 +95,11 @@ void showLevelOne()
 		}
 	}
 
-	/*___________________________________________________Animations_____________________________________________________________*/
+	/*___________________________________________________ Animations _____________________________________________________________*/
 
 	showPlayerAnimations();
 
-	/*____________________________________________________Animations End________________________________________________________*/
+	/*___________________________________________________ Animations End ________________________________________________________*/
 
 	
 }

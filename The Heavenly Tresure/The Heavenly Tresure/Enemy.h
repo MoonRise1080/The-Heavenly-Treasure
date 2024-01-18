@@ -37,6 +37,7 @@ struct Enemy
 		pos_y -= 15;
 	}
 
+
 };
 
 
