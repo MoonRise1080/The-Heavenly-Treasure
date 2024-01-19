@@ -86,16 +86,16 @@ void loadImage()
 
 	/*---------------------------- Inverted Running Image ----------------------------*/
 
-	mainChar.img_invRun[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_9.png");
-	mainChar.img_invRun[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_8.png");
-	mainChar.img_invRun[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_7.png");
-	mainChar.img_invRun[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_6.png");
-	mainChar.img_invRun[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_5.png");
-	mainChar.img_invRun[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_4.png");
-	mainChar.img_invRun[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_3.png");
-	mainChar.img_invRun[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_2.png");
-	mainChar.img_invRun[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_1.png");
-	mainChar.img_invRun[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_0.png");
+	mainChar.img_invRun[0] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_0.png");
+	mainChar.img_invRun[1] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_1.png");
+	mainChar.img_invRun[2] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_2.png");
+	mainChar.img_invRun[3] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_3.png");
+	mainChar.img_invRun[4] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_4.png");
+	mainChar.img_invRun[5] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_5.png");
+	mainChar.img_invRun[6] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_6.png");
+	mainChar.img_invRun[7] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_7.png");
+	mainChar.img_invRun[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_8.png");
+	mainChar.img_invRun[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_9.png");
 
 	
 

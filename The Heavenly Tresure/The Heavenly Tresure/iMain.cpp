@@ -99,16 +99,14 @@ void oneFiftyMilli()
 				huntressMother.runIndex = 0;
 			}
 		}
-	
-		if (collisionMob == false)
+
+		if (huntressOne.collision == false)
 		{
 			huntressOne.applyGravityEnemy();
 		}
-
+			
 	}
-	
-	
-	
+		
 }
 
 

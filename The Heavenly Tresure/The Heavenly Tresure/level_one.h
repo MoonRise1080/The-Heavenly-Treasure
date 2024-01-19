@@ -45,13 +45,21 @@ void showLevelOne()
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[5], recY[5], dx[5], dy[5]));
 
-		collisionMob = (collisionEnemy(huntressOne, recX[0], recY[0], dx[0], dy[0]) ||
-						collisionEnemy(huntressOne, recX[1], recY[1], dx[1], dy[1]) ||
-						collisionEnemy(huntressOne, recX[2], recY[2], dx[2], dy[2]) ||
-						collisionEnemy(huntressOne, recX[3], recY[3], dx[3], dy[3]) ||
-						collisionEnemy(huntressOne, recX[4], recY[4], dx[4], dy[4]) ||
-						collisionEnemy(huntressOne, recX[5], recY[5], dx[5], dy[5]));
-
+		if (collisionEnemy(huntressOne, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressOne, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressOne, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressOne, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressOne, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressOne, recX[5], recY[5], dx[5], dy[5]))
+		{
+			huntressOne.collision = true;
+		}
+		else
+		{
+			huntressOne.collision = false;
+		}
+		
+		
 		
 	}
 
