@@ -18,8 +18,8 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-	
-	cout << collisionMob << endl;
+
+	cout << huntressOne.pos_x - mainChar.pos_x << endl;
 
 	if (menu_option == 0)
 	{
@@ -31,6 +31,7 @@ void iDraw()
 	if (menu_option == 1)
 	{
 		isStart = true;
+		lvlOneStart = true;
 		showLevelOne();
 	}
 
@@ -68,7 +69,7 @@ void oneFiftyMilli()
 		if (!mainChar.idle)
 		{
 			mainChar.runIndex++;
-			if (mainChar.runIndex >= 9)
+			if (mainChar.runIndex > 9)
 			{
 				mainChar.runIndex = 0;
 			}
@@ -80,7 +81,7 @@ void oneFiftyMilli()
 		}
 	}
 
-	if (lvlOneStart = true)
+	if (lvlOneStart == true)
 	{
 		if (huntressMother.idle)
 		{
@@ -94,7 +95,7 @@ void oneFiftyMilli()
 		if (!huntressMother.idle)
 		{
 			huntressMother.runIndex++;
-			if (huntressMother.runIndex >= 9)
+			if (huntressMother.runIndex > 7)
 			{
 				huntressMother.runIndex = 0;
 			}
@@ -104,10 +105,20 @@ void oneFiftyMilli()
 		{
 			huntressOne.applyGravityEnemy();
 		}
+
+		if (huntressTwo.collision == false)
+		{
+			huntressTwo.applyGravityEnemy();
+		}
 		
-		if (huntressOne.chase)
+		if (huntressOne.chase == true)
 		{
 			huntressOne.Chase();
+		}
+
+		if (huntressTwo.chase == true)
+		{
+			huntressTwo.Chase();
 		}
 	}
 		
@@ -263,7 +274,7 @@ void iSpecialKeyboard(unsigned char key)
 	
 	if (key == GLUT_KEY_RIGHT)
 	{	
-		if (colL == false)
+		if (1)
 		{
 			mainChar.pos_x += 5;
 			mainChar.idle = false;
@@ -273,7 +284,7 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_LEFT)
 	{
-		if (colR == false)
+		if (1)
 		{
 			mainChar.pos_x -= 5;
 			mainChar.idle = false;

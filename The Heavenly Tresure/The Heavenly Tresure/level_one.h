@@ -11,14 +11,18 @@
 #include "menu.h"
 #include "HUD.h"
 #include "Enemy.h"
+#include <iostream>
+#include <cstdlib>
 
 bool isStart = false;
 int phase = 0;
 bool collisionPlayer = false;
 bool collisionMob = false;
-bool lvlOneStart = true;
-Enemy huntressMother;
-Enemy huntressOne(990, 500, huntressHeight, huntressWidth, true, false, false,false);
+bool lvlOneStart = false;
+bool lvlOnePhaseOneRepo = false;
+
+Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false);
+Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false);
 
 void showLevelOne()
 {
@@ -28,8 +32,29 @@ void showLevelOne()
 		
 		collisionLvlOnePhaseOne();
 		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
-		iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
+		
+		showHuntressAnimations(huntressOne);
+		showHuntressAnimations(huntressTwo);
 
+		/*if (huntressOne.rdirection == true)
+		{
+			iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
+		}
+		else
+		{
+			iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
+		}
+
+		if (huntressTwo.rdirection == true)
+		{
+			iShowImage(huntressTwo.pos_x, huntressTwo.pos_y, huntressTwo.dim_x, huntressTwo.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
+		}
+		else
+		{
+			iShowImage(huntressTwo.pos_x, huntressTwo.pos_y, huntressTwo.dim_x, huntressTwo.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
+		}*/
+		
+		
 		showHp();
 		if (mainChar.pos_x == 1280)
 		{
@@ -45,12 +70,12 @@ void showLevelOne()
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[5], recY[5], dx[5], dy[5]));
 
-		if (collisionEnemy(huntressOne, recX[0], recY[0], dx[0], dy[0]) ||
-			collisionEnemy(huntressOne, recX[1], recY[1], dx[1], dy[1]) ||
-			collisionEnemy(huntressOne, recX[2], recY[2], dx[2], dy[2]) ||
-			collisionEnemy(huntressOne, recX[3], recY[3], dx[3], dy[3]) ||
-			collisionEnemy(huntressOne, recX[4], recY[4], dx[4], dy[4]) ||
-			collisionEnemy(huntressOne, recX[5], recY[5], dx[5], dy[5]))
+		if (collisionEnemy(huntressOne, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressOne, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressOne, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressOne, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressOne, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressOne, huntressMother, recX[5], recY[5], dx[5], dy[5]))
 		{
 			huntressOne.collision = true;
 		}
@@ -58,24 +83,71 @@ void showLevelOne()
 		{
 			huntressOne.collision = false;
 		}
+
+		if (collisionEnemy(huntressTwo, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressTwo, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressTwo, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressTwo, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressTwo, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressTwo, huntressMother, recX[5], recY[5], dx[5], dy[5]))
+		{
+			huntressTwo.collision = true;
+		}
+		else
+		{
+			huntressTwo.collision = false;
+		}
 		
-		if (mainChar.pos_x - huntressOne.pos_x <= 50)
+		if (abs(mainChar.pos_x - huntressOne.pos_x) <= 150 && abs(mainChar.pos_x - huntressOne.pos_x) >= 15)
 		{
 			huntressOne.idle = false;
 			huntressOne.chase = true;
-			huntressOne.rdirection = false;
+			if (mainChar.pos_x - huntressOne.pos_x <= 0)
+			{
+				huntressOne.rdirection = false;
+			}
+			else
+			{
+				huntressOne.rdirection = true; 
+			}
 		}
-		else if (huntressOne.pos_x - mainChar.pos_x <= 50)
+		else 
 		{
-			huntressOne.idle = false;
-			huntressOne.chase = true;
-			huntressOne.rdirection = true;
+			huntressOne.idle = true;
+			huntressOne.chase = false;
 		}
+
+		if (abs(mainChar.pos_x - huntressTwo.pos_x) <= 150 && abs(mainChar.pos_x - huntressTwo.pos_x) >= 15)
+		{
+			huntressTwo.idle = false;
+			huntressTwo.chase = true;
+			if (mainChar.pos_x - huntressTwo.pos_x <= 0)
+			{
+				huntressTwo.rdirection = false;
+			}
+			else
+			{
+				huntressTwo.rdirection = true;
+			}
+		}
+		else
+		{
+			huntressTwo.idle = true;
+			huntressTwo.chase = false;
+		}
+
 		
 	}
 
 	else if (phase == 1)
 	{
+		if (lvlOnePhaseOneRepo == false)
+		{
+			mainChar.pos_x = 40;
+			mainChar.pos_y = 300;
+			lvlOnePhaseOneRepo = true;
+		}
+		
 		collisionLvlOnePhaseTwo();
 		iShowImage(lvlOnePhaseTwo.pos_x, lvlOnePhaseTwo.pos_y, lvlOnePhaseTwo.dim_x, lvlOnePhaseTwo.dim_y, lvlOnePhaseTwo.bgImage);
 		showHp();

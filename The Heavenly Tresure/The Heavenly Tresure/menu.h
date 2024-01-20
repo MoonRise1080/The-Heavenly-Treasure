@@ -99,7 +99,6 @@ void selectMenuOption(int menu_x, int menu_y)
 //This function runs all the codes for menu.
 void showMenu()
 {
-	//cout << "Menu codes running!" << endl;
 
 	if (menu_option == 0 && highlightIndex == 0)
 	{
