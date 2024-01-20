@@ -18,7 +18,7 @@ bool collisionPlayer = false;
 bool collisionMob = false;
 bool lvlOneStart = true;
 Enemy huntressMother;
-Enemy huntressOne(990, 300, huntressHeight, huntressWidth, true, false, false);
+Enemy huntressOne(990, 500, huntressHeight, huntressWidth, true, false, false,false);
 
 void showLevelOne()
 {
@@ -59,7 +59,18 @@ void showLevelOne()
 			huntressOne.collision = false;
 		}
 		
-		
+		if (mainChar.pos_x - huntressOne.pos_x <= 50)
+		{
+			huntressOne.idle = false;
+			huntressOne.chase = true;
+			huntressOne.rdirection = false;
+		}
+		else if (huntressOne.pos_x - mainChar.pos_x <= 50)
+		{
+			huntressOne.idle = false;
+			huntressOne.chase = true;
+			huntressOne.rdirection = true;
+		}
 		
 	}
 

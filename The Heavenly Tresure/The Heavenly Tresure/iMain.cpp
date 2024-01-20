@@ -104,7 +104,11 @@ void oneFiftyMilli()
 		{
 			huntressOne.applyGravityEnemy();
 		}
-			
+		
+		if (huntressOne.chase)
+		{
+			huntressOne.Chase();
+		}
 	}
 		
 }

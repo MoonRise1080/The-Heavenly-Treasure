@@ -13,6 +13,7 @@ struct Enemy
 	bool idle = true;
 	bool rdirection = true;
 	bool collision = false;
+	bool chase = true;
 	int img_idle[8], img_invIdle[8];
 
 	Enemy()
@@ -20,7 +21,7 @@ struct Enemy
 		;
 	}
 
-	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision)
+	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision,bool chase)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
@@ -29,13 +30,24 @@ struct Enemy
 		this->idle = idle;
 		this->rdirection = rdirection;
 		this->collision = collision;
+		this->chase = chase;
 	}
 
 	void applyGravityEnemy()
 	{
 		pos_y -= 15;
 	}
-
+	void Chase()
+	{
+		if (rdirection)
+		{
+			pos_x += 5;
+		}
+		else
+		{
+			pos_x -= 5;
+		}
+	}
 
 };
 
