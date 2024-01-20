@@ -105,11 +105,18 @@ void oneFiftyMilli()
 			huntressOne.applyGravityEnemy();
 		}
 
+
+		if (huntressOne.chase==true)
+		{
+			huntressOne.Chase();
+		}
+		
 	}
-	
-	
-	
+
 }
+	
+	
+	
 
 
 /*function iMouseMove() is called when the user presses and drags the mouse.
