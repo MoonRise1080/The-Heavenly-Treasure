@@ -99,24 +99,15 @@ void oneFiftyMilli()
 				huntressMother.runIndex = 0;
 			}
 		}
-	
-		if (collisionMob == false)
+
+		if (huntressOne.collision == false)
 		{
 			huntressOne.applyGravityEnemy();
 		}
-
-
-		if (huntressOne.chase==true)
-		{
-			huntressOne.Chase();
-		}
-		
+			
 	}
-
+		
 }
-	
-	
-	
 
 
 /*function iMouseMove() is called when the user presses and drags the mouse.
