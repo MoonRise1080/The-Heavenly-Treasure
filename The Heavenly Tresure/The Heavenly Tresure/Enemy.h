@@ -12,7 +12,6 @@ struct Enemy
 	int padInv = 0;
 	bool idle = true;
 	bool rdirection = true;
-	bool gravity = true;
 	bool collision = false;
 	int img_idle[8], img_invIdle[8];
 
