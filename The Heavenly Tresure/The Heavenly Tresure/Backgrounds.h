@@ -89,7 +89,7 @@ void collisionLvlOnePhaseOne()
 
 void collisionLvlOnePhaseTwo()
 {
-	boxNumber = 13;
+	boxNumber = 17;
 
 	recX = (int*)realloc(recX, boxNumber * sizeof(int));
 	recY = (int*)realloc(recY, boxNumber * sizeof(int));
@@ -130,6 +130,26 @@ void collisionLvlOnePhaseTwo()
 	recY[12] = 0;
 	dx[12] = 238;
 	dy[12] = 157;
+	/**************************************************************************************************************/
+	recX[13] = 89;
+	recY[13] = 524;
+	dx[13] = 144;
+	dy[13] = 37;
+
+	recX[14] = 1047;
+	recY[14] = 534;
+	dx[14] = 146;
+	dy[14] = 24;
+
+	recX[15] = 457;
+	recY[15] = 585;
+	dx[15] = 183;
+	dy[15] = 18;
+
+	recX[16] = 725;
+	recY[16] = 338;
+	dx[16] = 190;
+	dy[16] = 24;
 
 
 	iSetColor(255, 255, 255);
@@ -140,39 +160,68 @@ void collisionLvlOnePhaseTwo()
 	iFilledRectangle(recX[10], recY[10], dx[10], dy[10]);
 	iFilledRectangle(recX[11], recY[11], dx[11], dy[11]);
 	iFilledRectangle(recX[12], recY[12], dx[12], dy[12]);
+	iFilledRectangle(recX[13], recY[13], dx[13], dy[13]);
+	iFilledRectangle(recX[14], recY[14], dx[14], dy[14]);
+	iFilledRectangle(recX[15], recY[15], dx[15], dy[15]);
+	iFilledRectangle(recX[16], recY[16], dx[16], dy[16]);
+
 
 
 }
 
 void collisionLvlOnePhaseThree()
 {
-	boxNumber = 3;
+	boxNumber = 24;
 
 	recX = (int*)realloc(recX, boxNumber * sizeof(int));
 	recY = (int*)realloc(recY, boxNumber * sizeof(int));
 	dx = (int*)realloc(dx, boxNumber * sizeof(int));
 	dy = (int*)realloc(dy, boxNumber * sizeof(int));
 
-	recX[0] = 91;
-	recY[0] = 291;
-	dx[0] = 119;
-	dy[0] = 33;
+	recX[17] = 0;
+	recY[17] = 0;
+	dx[17] = 520;
+	dy[17] = 116;
 
-	recX[1] = 0;
-	recY[1] = 0;
-	dx[1] = 511;
-	dy[1] = 148;
+	recX[18] = 524;
+	recY[18] = 0;
+	dx[18] = 117;
+	dy[18] = 167;
 
-	recX[2] = 512;
-	recY[2] = 0;
-	dx[2] = 768;
-	dy[2] = 182;
+	recX[19] = 642;
+	recY[19] = 0;
+	dx[19] = 360;
+	dy[19] = 209;
+
+	recX[20] = 1007;
+	recY[20] = 0;
+	dx[20] = 273;
+	dy[20] = 170;
+
+	recX[21] = 688;
+	recY[21] = 336;
+	dx[21] = 142;
+	dy[21] = 24;
+
+	recX[22] = 1010;
+	recY[22] = 445;
+	dx[22] = 105;
+	dy[22] = 34;
+
+	recX[23] = 1169;
+	recY[23] = 564;
+	dx[23] = 111;
+	dy[23] = 34;
 
 
 	iSetColor(255, 255, 255);
-	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
-	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
-	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
+	iFilledRectangle(recX[17], recY[17], dx[17], dy[17]);
+	iFilledRectangle(recX[18], recY[18], dx[18], dy[18]);
+	iFilledRectangle(recX[19], recY[19], dx[19], dy[19]);
+	iFilledRectangle(recX[20], recY[20], dx[20], dy[20]);
+	iFilledRectangle(recX[21], recY[21], dx[21], dy[21]);
+	iFilledRectangle(recX[22], recY[22], dx[22], dy[22]);
+	iFilledRectangle(recX[23], recY[23], dx[23], dy[23]);
 
 
 }
