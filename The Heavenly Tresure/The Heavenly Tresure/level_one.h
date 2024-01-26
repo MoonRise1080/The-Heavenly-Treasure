@@ -83,44 +83,6 @@ void showLevelOne()
 		chaseCheck(&huntressOne);
 		chaseCheck(&huntressTwo);
 
-		/*if (abs(mainChar.pos_x - huntressOne.pos_x) <= enemyRangeMax && abs(mainChar.pos_x - huntressOne.pos_x) >= enemyRangeMin)
-		{
-			huntressOne.idle = false;
-			huntressOne.chase = true;
-			if (mainChar.pos_x - huntressOne.pos_x <= 0)
-			{
-				huntressOne.rdirection = false;
-			}
-			else
-			{
-				huntressOne.rdirection = true; 
-			}
-		}
-		else 
-		{
-			huntressOne.idle = true;
-			huntressOne.chase = false;
-		}*/
-
-		/*if (abs(mainChar.pos_x - huntressTwo.pos_x) <= enemyRangeMax && abs(mainChar.pos_x - huntressTwo.pos_x) >= 15)
-		{
-			huntressTwo.idle = false;
-			huntressTwo.chase = true;
-			if (mainChar.pos_x - huntressTwo.pos_x <= 0)
-			{
-				huntressTwo.rdirection = false;
-			}
-			else
-			{
-				huntressTwo.rdirection = true;
-			}
-		}
-		else
-		{
-			huntressTwo.idle = true;
-			huntressTwo.chase = false;
-		}*/
-
 		
 	}
 

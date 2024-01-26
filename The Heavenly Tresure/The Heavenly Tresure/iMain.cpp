@@ -120,9 +120,23 @@ void oneFiftyMilli()
 		{
 			huntressTwo.Chase();
 		}
-		
+
 	}
 		
+}
+void heroHurt()
+{
+	if (lvlOneStart == true)
+	{
+		if (huntressOne.attack == true)
+		{
+			huntressOne.enemyAttack();
+		}
+		if (huntressTwo.attack == true)
+		{
+			huntressTwo.enemyAttack();
+		}
+	}
 }
 
 
@@ -324,6 +338,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
+	iSetTimer(3000, heroHurt);
 	controlSound(true);
 	iStart();
 	return 0;

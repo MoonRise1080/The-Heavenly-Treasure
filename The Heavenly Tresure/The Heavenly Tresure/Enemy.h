@@ -2,6 +2,8 @@
 #define ENEMY_H_INCLUDED
 #define enemyRangeMax 200
 #define enemyRangeMin 50
+#define attackRangeMax 100
+#define attackRangeMin 0
 #include "Player.h"
 #include <cstdlib>
 
@@ -60,6 +62,18 @@ struct Enemy
 			pos_x -= 10;
 		}
 	}
+	void enemyAttack()
+	{
+		if (abs(mainChar.pos_x - pos_x) <= 50)
+		{
+				mainChar.hp++;
+				if (mainChar.hp > 4)
+				{
+					mainChar.hp = 4;
+				}
+				showHp();
+		}
+	}
 
 }huntressMother(53, 112);
 
@@ -85,9 +99,13 @@ void chaseCheck(Enemy *currentEnemy)
 		(*currentEnemy).idle = true;
 		(*currentEnemy).chase = false;
 	}
-	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) < enemyRangeMin && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= 0)
+	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) <= attackRangeMax && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= attackRangeMin)
 	{
 		(*currentEnemy).attack = true;
+	}
+	else
+	{
+		(*currentEnemy).attack = false;
 	}
 }
 
@@ -127,10 +145,10 @@ void showHuntressAnimations(Enemy animationEnemy)
 		}
 
 	}
-	if (animationEnemy.attack == true)
+	/*if (animationEnemy.attack == true)
 	{
 		
-	}
+	}*/
 }
 
 
