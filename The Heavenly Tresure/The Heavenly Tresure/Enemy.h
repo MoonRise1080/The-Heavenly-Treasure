@@ -17,6 +17,7 @@ struct Enemy
 	bool rdirection = true;
 	bool collision = false;
 	bool chase = true;
+	bool attack = true;
 	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8];
 
 	Enemy()
@@ -69,6 +70,7 @@ void chaseCheck(Enemy *currentEnemy)
 	{
 		(*currentEnemy).idle = false;
 		(*currentEnemy).chase = true;
+		(*currentEnemy).attack = false;
 		if (mainChar.pos_x - (*currentEnemy).pos_x <= 0)
 		{
 			(*currentEnemy).rdirection = false;
@@ -82,6 +84,10 @@ void chaseCheck(Enemy *currentEnemy)
 	{
 		(*currentEnemy).idle = true;
 		(*currentEnemy).chase = false;
+	}
+	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) < enemyRangeMin && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= 0)
+	{
+		(*currentEnemy).attack = true;
 	}
 }
 
@@ -120,6 +126,10 @@ void showHuntressAnimations(Enemy animationEnemy)
 			animationEnemy.idle = true;
 		}
 
+	}
+	if (animationEnemy.attack == true)
+	{
+		
 	}
 }
 
