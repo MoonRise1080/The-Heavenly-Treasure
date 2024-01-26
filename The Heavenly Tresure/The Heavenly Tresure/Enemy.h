@@ -1,8 +1,9 @@
 #ifndef ENEMY_H_INCLUDED
 #define ENEMY_H_INCLUDED
-
+#define enemyRangeMax 200
+#define enemyRangeMin 50
 #include "Player.h"
-
+#include <cstdlib>
 
 struct Enemy
 {
@@ -62,6 +63,28 @@ struct Enemy
 }huntressMother(53, 112);
 
 
+void chaseCheck(Enemy *currentEnemy)
+{
+	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) <= enemyRangeMax && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= enemyRangeMin)
+	{
+		(*currentEnemy).idle = false;
+		(*currentEnemy).chase = true;
+		if (mainChar.pos_x - (*currentEnemy).pos_x <= 0)
+		{
+			(*currentEnemy).rdirection = false;
+		}
+		else
+		{
+			(*currentEnemy).rdirection = true;
+		}
+	}
+	else
+	{
+		(*currentEnemy).idle = true;
+		(*currentEnemy).chase = false;
+	}
+}
+
 void showHuntressAnimations(Enemy animationEnemy)
 {
 	if (animationEnemy.idle)
@@ -81,20 +104,20 @@ void showHuntressAnimations(Enemy animationEnemy)
 	{
 		if (animationEnemy.rdirection)
 		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_run[mainChar.runIndex]);
+			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_run[huntressMother.runIndex]);
 		}
 
 		else
 		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invRun[mainChar.runIndex]);
+			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invRun[huntressMother.runIndex]);
 		}
 
-		huntressMother.moveCheck++;
+		animationEnemy.moveCheck++;
 
-		if (huntressMother.moveCheck > 200)
+		if (animationEnemy.moveCheck > 200)
 		{
-			huntressMother.moveCheck = 0;
-			huntressMother.idle = true;
+			animationEnemy.moveCheck = 0;
+			animationEnemy.idle = true;
 		}
 
 	}

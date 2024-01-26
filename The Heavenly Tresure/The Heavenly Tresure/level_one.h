@@ -35,24 +35,6 @@ void showLevelOne()
 		
 		showHuntressAnimations(huntressOne);
 		showHuntressAnimations(huntressTwo);
-
-		/*if (huntressOne.rdirection == true)
-		{
-			iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
-		}
-		else
-		{
-			iShowImage(huntressOne.pos_x, huntressOne.pos_y, huntressOne.dim_x, huntressOne.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
-		}
-
-		if (huntressTwo.rdirection == true)
-		{
-			iShowImage(huntressTwo.pos_x, huntressTwo.pos_y, huntressTwo.dim_x, huntressTwo.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
-		}
-		else
-		{
-			iShowImage(huntressTwo.pos_x, huntressTwo.pos_y, huntressTwo.dim_x, huntressTwo.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
-		}*/
 		
 		
 		showHp();
@@ -98,7 +80,10 @@ void showLevelOne()
 			huntressTwo.collision = false;
 		}
 		
-		if (abs(mainChar.pos_x - huntressOne.pos_x) <= 150 && abs(mainChar.pos_x - huntressOne.pos_x) >= 15)
+		chaseCheck(&huntressOne);
+		chaseCheck(&huntressTwo);
+
+		/*if (abs(mainChar.pos_x - huntressOne.pos_x) <= enemyRangeMax && abs(mainChar.pos_x - huntressOne.pos_x) >= enemyRangeMin)
 		{
 			huntressOne.idle = false;
 			huntressOne.chase = true;
@@ -115,9 +100,9 @@ void showLevelOne()
 		{
 			huntressOne.idle = true;
 			huntressOne.chase = false;
-		}
+		}*/
 
-		if (abs(mainChar.pos_x - huntressTwo.pos_x) <= 150 && abs(mainChar.pos_x - huntressTwo.pos_x) >= 15)
+		/*if (abs(mainChar.pos_x - huntressTwo.pos_x) <= enemyRangeMax && abs(mainChar.pos_x - huntressTwo.pos_x) >= 15)
 		{
 			huntressTwo.idle = false;
 			huntressTwo.chase = true;
@@ -134,7 +119,7 @@ void showLevelOne()
 		{
 			huntressTwo.idle = true;
 			huntressTwo.chase = false;
-		}
+		}*/
 
 		
 	}

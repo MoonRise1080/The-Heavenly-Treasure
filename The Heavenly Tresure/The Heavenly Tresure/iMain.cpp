@@ -19,7 +19,7 @@ void iDraw()
 {
 	iClear();
 
-	cout << huntressOne.pos_x - mainChar.pos_x << endl;
+	cout << huntressOne.idle << endl;
 
 	if (menu_option == 0)
 	{
@@ -83,7 +83,7 @@ void oneFiftyMilli()
 
 	if (lvlOneStart == true)
 	{
-		if (huntressMother.idle)
+		if (1)
 		{
 			huntressMother.idleIndex++;
 			if (huntressMother.idleIndex > 7)
@@ -92,7 +92,7 @@ void oneFiftyMilli()
 			}
 		}
 
-		if (!huntressMother.idle)
+		if (1)
 		{
 			huntressMother.runIndex++;
 			if (huntressMother.runIndex > 7)
