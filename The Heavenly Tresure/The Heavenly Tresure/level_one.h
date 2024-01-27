@@ -14,15 +14,15 @@
 #include <iostream>
 #include <cstdlib>
 
-bool isStart = false;
 int phase = 0;
+bool isStart = false;
 bool collisionPlayer = false;
 bool collisionMob = false;
 bool lvlOneStart = false;
 bool lvlOnePhaseOneRepo = false;
 
-Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false);
-Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false);
+Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false);
 
 void showLevelOne()
 {

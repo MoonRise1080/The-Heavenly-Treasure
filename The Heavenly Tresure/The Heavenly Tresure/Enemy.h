@@ -1,9 +1,7 @@
 #ifndef ENEMY_H_INCLUDED
 #define ENEMY_H_INCLUDED
-#define enemyRangeMax 200
+#define enemyRangeMax 250
 #define enemyRangeMin 50
-#define attackRangeMax 100
-#define attackRangeMin 0
 #include "Player.h"
 #include <cstdlib>
 
@@ -11,7 +9,7 @@ struct Enemy
 {
 	int pos_x, pos_y;
 	int dim_x, dim_y;
-	int idleIndex = 0, runIndex = 0;
+	int idleIndex = 0, runIndex = 0, attackIndex = 0;
 	int moveCheck = 0;
 	int padN = 50;
 	int padInv = 0;
@@ -20,7 +18,7 @@ struct Enemy
 	bool collision = false;
 	bool chase = true;
 	bool attack = true;
-	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8];
+	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8], img_attack[4], img_invAttack[5];
 
 	Enemy()
 	{
@@ -34,7 +32,7 @@ struct Enemy
 	}
 
 
-	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision, bool chase)
+	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision, bool chase, bool attack)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
@@ -44,6 +42,7 @@ struct Enemy
 		this->rdirection = rdirection;
 		this->collision = collision;
 		this->chase = chase;
+		this->attack = attack;
 	}
 
 	void applyGravityEnemy()
@@ -71,7 +70,6 @@ struct Enemy
 				{
 					mainChar.hp = 4;
 				}
-				showHp();
 		}
 	}
 
@@ -94,20 +92,21 @@ void chaseCheck(Enemy *currentEnemy)
 			(*currentEnemy).rdirection = true;
 		}
 	}
-	else
+	else if (abs(mainChar.pos_x - (*currentEnemy).pos_x) > enemyRangeMax)
 	{
 		(*currentEnemy).idle = true;
 		(*currentEnemy).chase = false;
-	}
-	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) <= attackRangeMax && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= attackRangeMin)
-	{
-		(*currentEnemy).attack = true;
-	}
-	else
-	{
 		(*currentEnemy).attack = false;
 	}
+	else if ((abs(mainChar.pos_x - (*currentEnemy).pos_x) < enemyRangeMin) && (abs(mainChar.pos_y - (*currentEnemy).pos_y) <= 50))
+	{
+		(*currentEnemy).attack = true;
+		(*currentEnemy).idle = false;
+		(*currentEnemy).chase = false;
+	}
+
 }
+
 
 void showHuntressAnimations(Enemy animationEnemy)
 {
@@ -124,7 +123,7 @@ void showHuntressAnimations(Enemy animationEnemy)
 		}
 	}
 
-	else
+	else if (animationEnemy.chase)
 	{
 		if (animationEnemy.rdirection)
 		{
@@ -145,10 +144,25 @@ void showHuntressAnimations(Enemy animationEnemy)
 		}
 
 	}
-	/*if (animationEnemy.attack == true)
+
+	else if (animationEnemy.attack)
 	{
-		
-	}*/
+		if (animationEnemy.rdirection)
+		{
+			animationEnemy.dim_x += 200;
+			animationEnemy.dim_y += 200;
+			animationEnemy.pos_x += 107;
+			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_attack[huntressMother.attackIndex]);
+		}
+
+		else
+		{
+			animationEnemy.dim_x += 200;
+			animationEnemy.dim_y += 200;
+			animationEnemy.pos_x -= 107;
+			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invAttack[huntressMother.attackIndex]);
+		}
+	}
 }
 
 

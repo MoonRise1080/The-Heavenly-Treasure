@@ -117,6 +117,7 @@ void loadImage()
 
 	/*------------------------------------------------- Enemy -----------------------------------------*/
 
+	/*------------------------------------ Huntress -------------------------------------*/
 	huntressMother.img_idle[0] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_0.png");
 	huntressMother.img_idle[1] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_1.png");
 	huntressMother.img_idle[2] = iLoadImage("Enemy\\Huntress\\Idle\\huntress_idle_2.png");
@@ -152,6 +153,19 @@ void loadImage()
 	huntressMother.img_invRun[5] = iLoadImage("Enemy\\Huntress\\Run Inv\\huntress_invRun_5.png");
 	huntressMother.img_invRun[6] = iLoadImage("Enemy\\Huntress\\Run Inv\\huntress_invRun_6.png");
 	huntressMother.img_invRun[7] = iLoadImage("Enemy\\Huntress\\Run Inv\\huntress_invRun_7.png");
+
+	huntressMother.img_attack[0] = iLoadImage("Enemy\\Huntress\\Attack\\huntress_attack_0.png");
+	huntressMother.img_attack[1] = iLoadImage("Enemy\\Huntress\\Attack\\huntress_attack_1.png");
+	huntressMother.img_attack[2] = iLoadImage("Enemy\\Huntress\\Attack\\huntress_attack_2.png");
+	huntressMother.img_attack[3] = iLoadImage("Enemy\\Huntress\\Attack\\huntress_attack_3.png");
+	huntressMother.img_attack[4] = iLoadImage("Enemy\\Huntress\\Attack\\huntress_attack_4.png");
+
+	huntressMother.img_invAttack[0] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_0.png");
+	huntressMother.img_invAttack[1] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_1.png");
+	huntressMother.img_invAttack[2] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_2.png");
+	huntressMother.img_invAttack[3] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_3.png");
+	huntressMother.img_invAttack[4] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_4.png");
+	
 
 }
 

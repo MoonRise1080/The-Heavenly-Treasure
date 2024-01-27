@@ -19,7 +19,6 @@ void iDraw()
 {
 	iClear();
 
-	cout << huntressOne.idle << endl;
 
 	if (menu_option == 0)
 	{
@@ -101,6 +100,15 @@ void oneFiftyMilli()
 			}
 		}
 
+		if (1)
+		{
+			huntressMother.attackIndex++;
+			if (huntressMother.attackIndex > 4)
+			{
+				huntressMother.attackIndex = 0;
+			}
+		}
+
 		if (huntressOne.collision == false)
 		{
 			huntressOne.applyGravityEnemy();
@@ -121,10 +129,11 @@ void oneFiftyMilli()
 			huntressTwo.Chase();
 		}
 
+
 	}
 		
 }
-void heroHurt()
+void threeThousandMilli()
 {
 	if (lvlOneStart == true)
 	{
@@ -338,7 +347,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
-	iSetTimer(3000, heroHurt);
+	iSetTimer(2000, threeThousandMilli);
 	controlSound(true);
 	iStart();
 	return 0;
