@@ -24,7 +24,7 @@ bool lvlOnePhaseOneRepo = false;
 
 Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false);
 Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false);
-gameObject heartOne(905, 185, 50, 50, 0, false);
+gameObject heartOne(905, 185, 64, 64, 0, false);
 void showLevelOne()
 {
 	

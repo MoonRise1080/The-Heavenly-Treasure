@@ -117,7 +117,7 @@ void loadImage()
 
 	/*--------------------------------- Game Objects Image ---------------------------------*/
 
-	object.img_object[0] = iLoadImage("GameObjects\\heart.png");
+	motherObject.img_object[0] = iLoadImage("GameObjects\\heart.png");
 
 
 	/*------------------------------------------------- Enemy -----------------------------------------*/
