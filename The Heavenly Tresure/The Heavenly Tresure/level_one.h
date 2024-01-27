@@ -24,7 +24,15 @@ bool lvlOnePhaseOneRepo = false;
 
 Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false);
 Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressThree(789, 374, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressFour(1117, 192, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressFive(696, 366, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, true, false, false, false, false);
+
 gameObject heartOne(905, 185, 64, 64, 0, false);
+gameObject heartTwo(532, 614, 64, 64, 0, false);
+gameObject heartThree(1214, 614, 64, 64, 0, false);
+
 void showLevelOne()
 {
 	
@@ -112,6 +120,10 @@ void showLevelOne()
 		
 		collisionLvlOnePhaseTwo();
 		iShowImage(lvlOnePhaseTwo.pos_x, lvlOnePhaseTwo.pos_y, lvlOnePhaseTwo.dim_x, lvlOnePhaseTwo.dim_y, lvlOnePhaseTwo.bgImage);
+
+		showHuntressAnimations(huntressThree);
+		showHuntressAnimations(huntressFour);
+
 		showHp();
 		if (mainChar.pos_x > 1280)
 		{
@@ -124,17 +136,73 @@ void showLevelOne()
 			mainChar.pos_x = 1280;
 		}
 
-		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[6], recY[6], dx[6], dy[6]) ||
+		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[6], recY[6], dx[6], dy[6]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[7], recY[7], dx[7], dy[7]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[8], recY[8], dx[8], dy[8]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[9], recY[9], dx[9], dy[9]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[10], recY[10], dx[10], dy[10]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[11], recY[11], dx[11], dy[11]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[12], recY[12], dx[12], dy[12])||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[13], recY[13], dx[13], dy[13])||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[14], recY[14], dx[14], dy[14])||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[15], recY[15], dx[15], dy[15])||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[16], recY[16], dx[16], dy[16]));
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[10], recY[10], dx[10], dy[10]));
+
+		/******************************************************************************************/
+		if (collisionEnemy(huntressThree, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[6], recY[6], dx[6], dy[6]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[7], recY[7], dx[7], dy[7]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[8], recY[8], dx[8], dy[8]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[9], recY[9], dx[9], dy[9]) ||
+			collisionEnemy(huntressThree, huntressMother, recX[10], recY[10], dx[10], dy[10]))
+		{
+			huntressThree.collision = true;
+		}
+		else
+		{
+			huntressThree.collision = false;
+		}
+
+		if (collisionEnemy(huntressFour, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[6], recY[6], dx[6], dy[6]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[7], recY[7], dx[7], dy[7]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[8], recY[8], dx[8], dy[8]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[9], recY[9], dx[9], dy[9]) ||
+			collisionEnemy(huntressFour, huntressMother, recX[10], recY[10], dx[10], dy[10]))
+		{
+			huntressFour.collision = true;
+		}
+		else
+		{
+			huntressFour.collision = false;
+		}
+
+		chaseCheck(&huntressThree);
+		chaseCheck(&huntressFour);
+
+
+		//pick up the HEART
+		showGameObject(heartTwo);
+		if ((heartTwo.isTaken == false) && (mainChar.pos_x == heartTwo.pos_x) && (mainChar.pos_y = heartTwo.pos_y))
+		{
+			heartTwo.isTaken = true;
+			mainChar.hp--;
+			if (mainChar.hp < 0)
+			{
+				mainChar.hp = 0;
+			}
+		}
+		/**************************************************************************************************************/
 	}
 
 	else if (phase == 2)
@@ -142,7 +210,8 @@ void showLevelOne()
 		collisionLvlOnePhaseThree();
 		iShowImage(lvlOnePhaseThree.pos_x, lvlOnePhaseThree.pos_y, lvlOnePhaseThree.dim_x, lvlOnePhaseThree.dim_y, lvlOnePhaseThree.bgImage);
 		
-		
+		showHuntressAnimations(huntressFive);
+		showHuntressAnimations(huntressSix);
 		
 		showHp();
 		if (mainChar.pos_x > 1280)
@@ -155,14 +224,62 @@ void showLevelOne()
 			phase--;
 			mainChar.pos_x = 1280;
 		}
-		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[17], recY[17], dx[17], dy[17]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[18], recY[18], dx[18], dy[18]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[19], recY[19], dx[19], dy[19]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[20], recY[20], dx[20], dy[20]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[21], recY[21], dx[21], dy[21]) ||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[22], recY[22], dx[22], dy[22])||
-			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[23], recY[23], dx[23], dy[23]));
+		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[6], recY[6], dx[6], dy[6]));
 
+
+		/*****************************************************************************************************************************/
+		if (collisionEnemy(huntressFive, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionEnemy(huntressFive, huntressMother, recX[6], recY[6], dx[6], dy[6]))
+		{
+			huntressFive.collision = true;
+		}
+		else
+		{
+			huntressFive.collision = false;
+		}
+
+		if (collisionEnemy(huntressSix, huntressMother, recX[0], recY[0], dx[0], dy[0]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[1], recY[1], dx[1], dy[1]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[2], recY[2], dx[2], dy[2]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[3], recY[3], dx[3], dy[3]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[4], recY[4], dx[4], dy[4]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[5], recY[5], dx[5], dy[5]) ||
+			collisionEnemy(huntressSix, huntressMother, recX[6], recY[6], dx[6], dy[6]))
+		{
+			huntressSix.collision = true;
+		}
+		else
+		{
+			huntressSix.collision = false;
+		}
+
+		chaseCheck(&huntressFive);
+		chaseCheck(&huntressSix);
+
+
+		//pick up the HEART
+		showGameObject(heartThree);
+		if ((heartThree.isTaken == false) && (mainChar.pos_x == heartThree.pos_x) && (mainChar.pos_y = heartThree.pos_y))
+		{
+			heartThree.isTaken = true;
+			mainChar.hp--;
+			if (mainChar.hp < 0)
+			{
+				mainChar.hp = 0;
+			}
+		}
+		/*****************************************************************************************************************************/
 	}
 
 	/*___________________________________________________ Animations _____________________________________________________________*/

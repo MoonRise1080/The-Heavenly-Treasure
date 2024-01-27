@@ -112,22 +112,58 @@ void oneFiftyMilli()
 
 		if (huntressOne.collision == false)
 		{
+			if (phase==0)
 			huntressOne.applyGravityEnemy();
 		}
-
 		if (huntressTwo.collision == false)
 		{
+			if (phase == 0)
 			huntressTwo.applyGravityEnemy();
+		}
+		if (huntressThree.collision == false)
+		{
+			if (phase == 1)
+			huntressThree.applyGravityEnemy();
+		}
+		if (huntressFour.collision == false)
+		{
+			if (phase == 1)
+			huntressFour.applyGravityEnemy();
+		}
+		if (huntressFive.collision == false)
+		{
+			if (phase == 2)
+			huntressFive.applyGravityEnemy();
+		}
+		if (huntressSix.collision == false)
+		{
+			if (phase == 2)
+			huntressSix.applyGravityEnemy();
 		}
 		
 		if (huntressOne.chase == true)
 		{
 			huntressOne.Chase();
 		}
-
 		if (huntressTwo.chase == true)
 		{
 			huntressTwo.Chase();
+		}
+		if (huntressThree.chase == true)
+		{
+			huntressThree.Chase();
+		}
+		if (huntressFour.chase == true)
+		{
+			huntressFour.Chase();
+		}
+		if (huntressFive.chase == true)
+		{
+			huntressFive.Chase();
+		}
+		if (huntressSix.chase == true)
+		{
+			huntressSix.Chase();
 		}
 
 	}
