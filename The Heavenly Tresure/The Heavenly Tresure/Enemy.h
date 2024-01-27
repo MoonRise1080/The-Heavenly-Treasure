@@ -151,7 +151,7 @@ void showHuntressAnimations(Enemy animationEnemy)
 		{
 			animationEnemy.dim_x += 200;
 			animationEnemy.dim_y += 200;
-			animationEnemy.pos_x += 107;
+			animationEnemy.pos_x -= 107;
 			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_attack[huntressMother.attackIndex]);
 		}
 

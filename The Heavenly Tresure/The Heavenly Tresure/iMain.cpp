@@ -8,6 +8,7 @@
 #include "level_one.h"
 #include "sound.h"
 #include "HUD.h"
+#include "Game_object.h"
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -128,7 +129,6 @@ void oneFiftyMilli()
 		{
 			huntressTwo.Chase();
 		}
-
 
 	}
 		

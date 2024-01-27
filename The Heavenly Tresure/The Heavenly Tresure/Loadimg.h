@@ -7,7 +7,7 @@
 #include "HUD.h"
 #include "level_one.h"
 #include "Enemy.h"
-
+#include "Game_object.h"
 void loadImage()
 {
 
@@ -113,6 +113,11 @@ void loadImage()
 	hpImgArr[2] = iLoadImage("Backgrounds\\HUD\\Health\\health_2.png");
 	hpImgArr[3] = iLoadImage("Backgrounds\\HUD\\Health\\health_3.png");
 	hpImgArr[4] = iLoadImage("Backgrounds\\HUD\\Health\\health_4.png");
+
+
+	/*--------------------------------- Game Objects Image ---------------------------------*/
+
+	object.img_object[0] = iLoadImage("GameObjects\\heart.png");
 
 
 	/*------------------------------------------------- Enemy -----------------------------------------*/

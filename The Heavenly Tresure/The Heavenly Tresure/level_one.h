@@ -11,6 +11,7 @@
 #include "menu.h"
 #include "HUD.h"
 #include "Enemy.h"
+#include "Game_object.h"
 #include <iostream>
 #include <cstdlib>
 
@@ -23,7 +24,7 @@ bool lvlOnePhaseOneRepo = false;
 
 Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false);
 Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false);
-
+gameObject heartOne(905, 185, 50, 50, 0, false);
 void showLevelOne()
 {
 	
@@ -35,9 +36,10 @@ void showLevelOne()
 		
 		showHuntressAnimations(huntressOne);
 		showHuntressAnimations(huntressTwo);
-		
-		
+
 		showHp();
+
+
 		if (mainChar.pos_x == 1280)
 		{
 			phase++;
@@ -82,6 +84,19 @@ void showLevelOne()
 		
 		chaseCheck(&huntressOne);
 		chaseCheck(&huntressTwo);
+
+
+		//pick up the HEART
+		showGameObject(heartOne);
+		if ((heartOne.isTaken==false)&&(mainChar.pos_x == heartOne.pos_x) && (mainChar.pos_y = heartOne.pos_y))
+		{
+			heartOne.isTaken = true;
+			mainChar.hp--;
+			if (mainChar.hp < 0)
+			{
+				mainChar.hp = 0;
+			}
+		}
 
 		
 	}
