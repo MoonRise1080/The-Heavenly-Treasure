@@ -18,6 +18,7 @@ struct Enemy
 	bool collision = false;
 	bool chase = true;
 	bool attack = true;
+	bool isDead = false;
 	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8], img_attack[4], img_invAttack[5];
 
 	Enemy()
@@ -32,7 +33,7 @@ struct Enemy
 	}
 
 
-	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision, bool chase, bool attack)
+	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision, bool chase, bool attack, bool isDead)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
@@ -43,6 +44,7 @@ struct Enemy
 		this->collision = collision;
 		this->chase = chase;
 		this->attack = attack;
+		this->isDead = isDead;
 	}
 
 	void applyGravityEnemy()
@@ -78,91 +80,97 @@ struct Enemy
 
 void chaseCheck(Enemy *currentEnemy)
 {
-	if (abs(mainChar.pos_x - (*currentEnemy).pos_x) <= enemyRangeMax && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= enemyRangeMin)
+	if (!(*currentEnemy).isDead)
 	{
-		(*currentEnemy).idle = false;
-		(*currentEnemy).chase = true;
-		(*currentEnemy).attack = false;
-		if (mainChar.pos_x - (*currentEnemy).pos_x <= 0)
+		if (abs(mainChar.pos_x - (*currentEnemy).pos_x) <= enemyRangeMax && abs(mainChar.pos_x - (*currentEnemy).pos_x) >= enemyRangeMin)
 		{
-			(*currentEnemy).rdirection = false;
+			(*currentEnemy).idle = false;
+			(*currentEnemy).chase = true;
+			(*currentEnemy).attack = false;
+			if (mainChar.pos_x - (*currentEnemy).pos_x <= 0)
+			{
+				(*currentEnemy).rdirection = false;
+			}
+			else
+			{
+				(*currentEnemy).rdirection = true;
+			}
 		}
-		else
+		else if (abs(mainChar.pos_x - (*currentEnemy).pos_x) > enemyRangeMax)
 		{
-			(*currentEnemy).rdirection = true;
+			(*currentEnemy).idle = true;
+			(*currentEnemy).chase = false;
+			(*currentEnemy).attack = false;
+		}
+		else if ((abs(mainChar.pos_x - (*currentEnemy).pos_x) < enemyRangeMin) && (abs(mainChar.pos_y - (*currentEnemy).pos_y) <= 50))
+		{
+			(*currentEnemy).attack = true;
+			(*currentEnemy).idle = false;
+			(*currentEnemy).chase = false;
 		}
 	}
-	else if (abs(mainChar.pos_x - (*currentEnemy).pos_x) > enemyRangeMax)
-	{
-		(*currentEnemy).idle = true;
-		(*currentEnemy).chase = false;
-		(*currentEnemy).attack = false;
-	}
-	else if ((abs(mainChar.pos_x - (*currentEnemy).pos_x) < enemyRangeMin) && (abs(mainChar.pos_y - (*currentEnemy).pos_y) <= 50))
-	{
-		(*currentEnemy).attack = true;
-		(*currentEnemy).idle = false;
-		(*currentEnemy).chase = false;
-	}
-
 }
 
 
 void showHuntressAnimations(Enemy animationEnemy)
 {
-	if (animationEnemy.idle)
+	if (!animationEnemy.isDead)
 	{
-		if (animationEnemy.rdirection)
+		if (animationEnemy.idle)
 		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
+			if (animationEnemy.rdirection)
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_idle[huntressMother.idleIndex]);
+			}
+
+			else
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
+			}
 		}
 
-		else
+		else if (animationEnemy.chase)
 		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invIdle[huntressMother.idleIndex]);
+			if (animationEnemy.rdirection)
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_run[huntressMother.runIndex]);
+			}
+
+			else
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invRun[huntressMother.runIndex]);
+			}
+
+			animationEnemy.moveCheck++;
+
+			if (animationEnemy.moveCheck > 200)
+			{
+				animationEnemy.moveCheck = 0;
+				animationEnemy.idle = true;
+			}
+
+		}
+
+		else if (animationEnemy.attack)
+		{
+			if (animationEnemy.rdirection)
+			{
+				animationEnemy.dim_x += 200;
+				animationEnemy.dim_y += 200;
+				animationEnemy.pos_x -= 107;
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_attack[huntressMother.attackIndex]);
+			}
+
+			else
+			{
+				animationEnemy.dim_x += 200;
+				animationEnemy.dim_y += 200;
+				animationEnemy.pos_x -= 107;
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invAttack[huntressMother.attackIndex]);
+			}
 		}
 	}
-
-	else if (animationEnemy.chase)
-	{
-		if (animationEnemy.rdirection)
-		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_run[huntressMother.runIndex]);
-		}
-
-		else
-		{
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invRun[huntressMother.runIndex]);
-		}
-
-		animationEnemy.moveCheck++;
-
-		if (animationEnemy.moveCheck > 200)
-		{
-			animationEnemy.moveCheck = 0;
-			animationEnemy.idle = true;
-		}
-
-	}
-
-	else if (animationEnemy.attack)
-	{
-		if (animationEnemy.rdirection)
-		{
-			animationEnemy.dim_x += 200;
-			animationEnemy.dim_y += 200;
-			animationEnemy.pos_x -= 107;
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_attack[huntressMother.attackIndex]);
-		}
-
-		else
-		{
-			animationEnemy.dim_x += 200;
-			animationEnemy.dim_y += 200;
-			animationEnemy.pos_x -= 107;
-			iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, huntressMother.img_invAttack[huntressMother.attackIndex]);
-		}
-	}
+	
 }
 
 

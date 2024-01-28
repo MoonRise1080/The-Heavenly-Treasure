@@ -8,14 +8,17 @@ struct Player
 	int dim_x, dim_y;
 	int idleIndex = 0;
 	int runIndex = 0;
+	int attIndex = 0;
 	int moveCheck = 0;
 	int padN = 51;
 	int padInv = 51;
 	int hp = 0;
 	bool idle = true;
 	bool rdirection = true;
-	
-	int img_idle[8], img_invIdle[8], img_run[10], img_invRun[10];
+	bool attack = false;
+	bool attRe = false;
+
+	int img_idle[8], img_invIdle[8], img_run[10], img_invRun[10], img_att[6], img_attInv[6];
 
 	
 
@@ -41,7 +44,9 @@ void applyGravity()
 
 void showPlayerAnimations()
 {
-	if (mainChar.idle)
+	int tempX;
+
+	if (mainChar.idle == true && mainChar.attack == false)
 	{
 		if (mainChar.rdirection)
 		{
@@ -55,7 +60,7 @@ void showPlayerAnimations()
 
 	}
 
-	else
+	else if (mainChar.idle == false && mainChar.attack == false)
 	{
 		if (mainChar.rdirection)
 		{
@@ -75,6 +80,39 @@ void showPlayerAnimations()
 			mainChar.idle = true;
 		}
 
+	}
+
+	if (mainChar.attack)
+	{
+		if (mainChar.attRe == false)
+		{
+			mainChar.dim_x += 75;
+			mainChar.dim_y += 25;
+			mainChar.attRe = true;
+		}
+		
+		if (mainChar.rdirection)
+		{
+			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_att[mainChar.attIndex]);
+		}
+
+		else
+		{
+			tempX = mainChar.pos_x - 100;
+			iShowImage(tempX, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_attInv[mainChar.attIndex]);
+		}
+
+		mainChar.moveCheck++;
+
+		if (mainChar.moveCheck > 200)
+		{
+			mainChar.moveCheck = 0;
+			mainChar.idle = true;
+			mainChar.attack = false;
+			mainChar.attRe = false;
+			mainChar.dim_x -= 75;
+			mainChar.dim_y -= 25;
+		}
 	}
 }
 

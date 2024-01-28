@@ -39,7 +39,7 @@ void iDraw()
 	{
 		showScore();
 	}
-	
+
 	if (menu_option == 4)
 	{
 		showSet();
@@ -49,7 +49,7 @@ void iDraw()
 	{
 		showStory();
 	}
-	
+
 }
 
 
@@ -110,37 +110,46 @@ void oneFiftyMilli()
 			}
 		}
 
+		if (1)
+		{
+			mainChar.attIndex++;
+			if (mainChar.attIndex > 5)
+			{
+				mainChar.attIndex = 0;
+			}
+		}
+
 		if (huntressOne.collision == false)
 		{
-			if (phase==0)
-			huntressOne.applyGravityEnemy();
+			if (phase == 0)
+				huntressOne.applyGravityEnemy();
 		}
 		if (huntressTwo.collision == false)
 		{
 			if (phase == 0)
-			huntressTwo.applyGravityEnemy();
+				huntressTwo.applyGravityEnemy();
 		}
 		if (huntressThree.collision == false)
 		{
 			if (phase == 1)
-			huntressThree.applyGravityEnemy();
+				huntressThree.applyGravityEnemy();
 		}
 		if (huntressFour.collision == false)
 		{
 			if (phase == 1)
-			huntressFour.applyGravityEnemy();
+				huntressFour.applyGravityEnemy();
 		}
 		if (huntressFive.collision == false)
 		{
 			if (phase == 2)
-			huntressFive.applyGravityEnemy();
+				huntressFive.applyGravityEnemy();
 		}
 		if (huntressSix.collision == false)
 		{
 			if (phase == 2)
-			huntressSix.applyGravityEnemy();
+				huntressSix.applyGravityEnemy();
 		}
-		
+
 		if (huntressOne.chase == true)
 		{
 			huntressOne.Chase();
@@ -167,7 +176,7 @@ void oneFiftyMilli()
 		}
 
 	}
-		
+
 }
 void threeThousandMilli()
 {
@@ -181,6 +190,22 @@ void threeThousandMilli()
 		{
 			huntressTwo.enemyAttack();
 		}
+		if (huntressThree.attack == true)
+		{
+			huntressThree.enemyAttack();
+		}
+		if (huntressFour.attack == true)
+		{
+			huntressFour.enemyAttack();
+		}
+		if (huntressFive.attack == true)
+		{
+			huntressFive.enemyAttack();
+		}
+		if (huntressSix.attack == true)
+		{
+			huntressSix.enemyAttack();
+		}
 	}
 }
 
@@ -192,7 +217,7 @@ void threeThousandMilli()
 
 void iMouseMove(int mx, int my)
 {
-	
+
 }
 
 //*******************************************************************ipassiveMouse***********************************************************************//
@@ -293,17 +318,17 @@ void iPassiveMouseMove(int mx, int my)
 
 void iMouse(int button, int state, int mx, int my)
 {
-	
+
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
 	{
 		//controlSound(false);
 		selectMenuOption(mx, my);
 	}
-	
-	
+
+
 	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
 	{
-		
+
 	}
 }
 
@@ -315,25 +340,26 @@ key- holds the ASCII value of the key pressed.
 
 void iKeyboard(unsigned char key)
 {
-	if (key == '\r')
+	if (key == 'a')
 	{
-		
+		mainChar.attack = true;
+		mainChar.idle = false;
 	}
-	
+
 	if (key == 'm')
 	{
-		music = false; 
+		music = false;
 		controlSound(false);
 	}
-	
+
 }
 
 
 void iSpecialKeyboard(unsigned char key)
 {
-	
+
 	if (key == GLUT_KEY_RIGHT)
-	{	
+	{
 		if (1)
 		{
 			mainChar.pos_x += 5;
@@ -349,7 +375,7 @@ void iSpecialKeyboard(unsigned char key)
 			mainChar.pos_x -= 5;
 			mainChar.idle = false;
 			mainChar.rdirection = false;
-		}	
+		}
 	}
 
 	if (key == GLUT_KEY_UP)
@@ -358,7 +384,7 @@ void iSpecialKeyboard(unsigned char key)
 		mainChar.idle = false;
 
 	}
-	
+
 	if (key == GLUT_KEY_DOWN)
 	{
 		mainChar.pos_y -= 200;
@@ -372,7 +398,7 @@ void iSpecialKeyboard(unsigned char key)
 		controlSound(false);
 		controlSound(true);
 	}
-	
+
 }
 
 
@@ -383,7 +409,7 @@ int main()
 	loadImage();
 
 	iSetTimer(150, oneFiftyMilli);
-	iSetTimer(2000, threeThousandMilli);
+	iSetTimer(1000, threeThousandMilli);
 	controlSound(true);
 	iStart();
 	return 0;

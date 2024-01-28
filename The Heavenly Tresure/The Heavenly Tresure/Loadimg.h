@@ -97,9 +97,21 @@ void loadImage()
 	mainChar.img_invRun[8] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_8.png");
 	mainChar.img_invRun[9] = iLoadImage("HeroKnight\\Run\\HeroKnight_invRun_9.png");
 
-	
+	/*------------------------------- Attack Image -----------------------------------*/
 
+	mainChar.img_att[0] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_0.png");
+	mainChar.img_att[1] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_1.png");
+	mainChar.img_att[2] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_2.png");
+	mainChar.img_att[3] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_3.png");
+	mainChar.img_att[4] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_4.png");
+	mainChar.img_att[5] = iLoadImage("HeroKnight\\Attack1\\Att\\Attack_5.png");
 
+	mainChar.img_attInv[0] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_0.png");
+	mainChar.img_attInv[1] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_1.png");
+	mainChar.img_attInv[2] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_2.png");
+	mainChar.img_attInv[3] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_3.png");
+	mainChar.img_attInv[4] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_4.png");
+	mainChar.img_attInv[5] = iLoadImage("HeroKnight\\Attack1\\Att Inv\\Attack_inv_5.png");
 
 	/*-------------------------------- Background ------------------------------*/
 

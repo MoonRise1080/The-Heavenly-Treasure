@@ -22,16 +22,16 @@ bool collisionMob = false;
 bool lvlOneStart = false;
 bool lvlOnePhaseOneRepo = false;
 
-Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false);
-Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false);
-Enemy huntressThree(789, 374, huntressHeight, huntressWidth, true, false, false, false, false);
-Enemy huntressFour(1117, 192, huntressHeight, huntressWidth, true, false, false, false, false);
-Enemy huntressFive(696, 366, huntressHeight, huntressWidth, true, false, false, false, false);
-Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, true, false, false, false, false);
+Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressThree(789, 374, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressFour(1117, 192, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressFive(696, 366, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, true, false, false, false, false, false);
 
-gameObject heartOne(905, 185, 64, 64, 0, false);
-gameObject heartTwo(532, 614, 64, 64, 0, false);
-gameObject heartThree(1214, 614, 64, 64, 0, false);
+gameObject heartOne(905, 185, 128, 128, 0, false);
+gameObject heartTwo(532, 200, 128, 128, 0, false);
+gameObject heartThree(1214, 614, 128, 128, 0, false);
 
 void showLevelOne()
 {
@@ -193,7 +193,7 @@ void showLevelOne()
 
 		//pick up the HEART
 		showGameObject(heartTwo);
-		if ((heartTwo.isTaken == false) && (mainChar.pos_x == heartTwo.pos_x) && (mainChar.pos_y = heartTwo.pos_y))
+		if ((heartTwo.isTaken == false) && abs(mainChar.pos_x - heartTwo.pos_x) <= 50 && abs(mainChar.pos_y - heartTwo.pos_y) <= 50)
 		{
 			heartTwo.isTaken = true;
 			mainChar.hp--;
