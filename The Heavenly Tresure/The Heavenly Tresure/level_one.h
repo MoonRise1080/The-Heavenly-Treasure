@@ -40,7 +40,7 @@ void showLevelOne()
 	{
 
 		collisionLvlOnePhaseOne();
-		//iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
 
 		showHuntressAnimations(huntressOne);
 		showHuntressAnimations(huntressTwo);
