@@ -20,6 +20,7 @@ void iDraw()
 {
 	iClear();
 
+	cout << colL << endl; 
 
 	if (menu_option == 0)
 	{

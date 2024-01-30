@@ -35,13 +35,13 @@ gameObject heartThree(1214, 614, 128, 128, 0, false);
 
 void showLevelOne()
 {
-	
+
 	if (phase == 0)
 	{
-		
+
 		collisionLvlOnePhaseOne();
-		iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
-		
+		//iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
+
 		showHuntressAnimations(huntressOne);
 		showHuntressAnimations(huntressTwo);
 
@@ -53,7 +53,6 @@ void showLevelOne()
 			phase++;
 			mainChar.pos_x = 0;
 		}
-
 
 		collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]) ||
 			collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[1], recY[1], dx[1], dy[1]) ||
@@ -89,14 +88,14 @@ void showLevelOne()
 		{
 			huntressTwo.collision = false;
 		}
-		
+
 		chaseCheck(&huntressOne);
 		chaseCheck(&huntressTwo);
 
 
 		//pick up the HEART
 		showGameObject(heartOne);
-		if ((heartOne.isTaken==false)&&(mainChar.pos_x == heartOne.pos_x) && (mainChar.pos_y = heartOne.pos_y))
+		if ((heartOne.isTaken == false) && abs(mainChar.pos_x - heartOne.pos_x) <= 50 && abs(mainChar.pos_y - heartOne.pos_y) <= 50)
 		{
 			heartOne.isTaken = true;
 			mainChar.hp--;
@@ -106,7 +105,7 @@ void showLevelOne()
 			}
 		}
 
-		
+
 	}
 
 	else if (phase == 1)
@@ -117,7 +116,7 @@ void showLevelOne()
 			mainChar.pos_y = 300;
 			lvlOnePhaseOneRepo = true;
 		}
-		
+
 		collisionLvlOnePhaseTwo();
 		iShowImage(lvlOnePhaseTwo.pos_x, lvlOnePhaseTwo.pos_y, lvlOnePhaseTwo.dim_x, lvlOnePhaseTwo.dim_y, lvlOnePhaseTwo.bgImage);
 
@@ -209,10 +208,10 @@ void showLevelOne()
 	{
 		collisionLvlOnePhaseThree();
 		iShowImage(lvlOnePhaseThree.pos_x, lvlOnePhaseThree.pos_y, lvlOnePhaseThree.dim_x, lvlOnePhaseThree.dim_y, lvlOnePhaseThree.bgImage);
-		
+
 		showHuntressAnimations(huntressFive);
 		showHuntressAnimations(huntressSix);
-		
+
 		showHp();
 		if (mainChar.pos_x > 1280)
 		{
@@ -288,7 +287,7 @@ void showLevelOne()
 
 	/*___________________________________________________ Animations End ________________________________________________________*/
 
-	
+
 }
 
 #endif
