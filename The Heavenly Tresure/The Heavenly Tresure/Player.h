@@ -13,6 +13,8 @@ struct Player
 	int padN = 51;
 	int padInv = 51;
 	int hp = 0;
+	int dead = 0;
+	bool isDead = false;
 	bool idle = true;
 	bool rdirection = true;
 	bool attack = false;
@@ -41,6 +43,22 @@ void applyGravity()
 	mainChar.pos_y -= 15;
 }
 
+void gameOver(int resX,int resY)
+{
+	if (mainChar.isDead == true)
+	{
+		if (mainChar.dead <= 3)
+		{
+			mainChar.pos_x = resX;
+			mainChar.pos_y = resY;
+			mainChar.isDead = false;
+		}
+		if (mainChar.dead==4)
+		{
+			//GAME IS OVER RETURN TO THE MENU PAGE;
+		}
+	}
+}
 
 void showPlayerAnimations()
 {

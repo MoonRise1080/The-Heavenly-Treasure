@@ -105,6 +105,11 @@ void showLevelOne()
 			}
 		}
 
+		//GAME OVER
+		if (mainChar.isDead == true)
+		{
+			gameOver(100, 324);
+		}
 
 	}
 
@@ -201,6 +206,11 @@ void showLevelOne()
 				mainChar.hp = 0;
 			}
 		}
+		//Game over
+		if (mainChar.isDead == true)
+		{
+			gameOver(40, 300);
+		}
 		/**************************************************************************************************************/
 	}
 
@@ -277,6 +287,12 @@ void showLevelOne()
 			{
 				mainChar.hp = 0;
 			}
+		}
+
+		//GAME OVER
+		if (mainChar.isDead == true)
+		{
+			gameOver(20, 140);
 		}
 		/*****************************************************************************************************************************/
 	}
