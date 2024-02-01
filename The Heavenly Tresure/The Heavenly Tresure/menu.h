@@ -13,6 +13,7 @@ int settings[7];
 int setIndex;
 int score[3];
 int scoreIndex;
+int gameover;
 
 void selectMenuOption(int menu_x, int menu_y)
 {
@@ -212,5 +213,6 @@ void showScore()
 		iShowImage(0, 0, screenWidth, screenHight, score[scoreIndex]);
 	}
 }
+
 
 #endif

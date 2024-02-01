@@ -32,7 +32,9 @@ struct Background
 Background lvlOnePhaseOne(oriX, oriY, screenWidth, screenHight);
 Background lvlOnePhaseTwo(oriX, oriY, screenWidth, screenHight);
 Background lvlOnePhaseThree(oriX, oriY, screenWidth, screenHight);
-
+Background lvlTwoPhaseOne(oriX, oriY, screenWidth, screenHight);
+Background lvlTwoPhaseTwo(oriX, oriY, screenWidth, screenHight);
+Background lvlTwoPhaseThree(oriX, oriY, screenWidth, screenHight);
 
 
 void collisionLvlOnePhaseOne()

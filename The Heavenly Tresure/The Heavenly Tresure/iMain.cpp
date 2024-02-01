@@ -9,6 +9,7 @@
 #include "sound.h"
 #include "HUD.h"
 #include "Game_object.h"
+#include "Gameover.h"
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -20,7 +21,7 @@ void iDraw()
 {
 	iClear();
 
-	cout << colL << endl; 
+	cout << colL << endl;
 
 	if (menu_option == 0)
 	{
@@ -55,7 +56,13 @@ void iDraw()
 
 
 void oneFiftyMilli()
-{
+{	
+	if (mainChar.dead == 4)
+	{
+		iShowImage(0, 0, 1920, 1080, gameover);
+		isStart = false;
+		lvlOneStart = false;
+	}
 	if (isStart)
 	{
 		if (mainChar.idle)

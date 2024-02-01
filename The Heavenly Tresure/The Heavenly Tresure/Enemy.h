@@ -4,6 +4,7 @@
 #define enemyRangeMin 50
 #include "Player.h"
 #include <cstdlib>
+#include "Gameover.h"
 
 struct Enemy
 {
@@ -67,13 +68,13 @@ struct Enemy
 	{
 		if (abs(mainChar.pos_x - pos_x) <= 50)
 		{
-				mainChar.hp++;
-				if (mainChar.hp == 4)
-				{
-					mainChar.isDead = true;
-					mainChar.dead++;
-					mainChar.hp = 0;
-				}
+			mainChar.hp++;
+			if (mainChar.hp == 4 && mainChar.dead <= 3)
+			{
+				mainChar.isDead = true;
+				mainChar.dead++;
+				mainChar.hp = 0;
+			}
 		}
 	}
 
@@ -172,7 +173,7 @@ void showHuntressAnimations(Enemy animationEnemy)
 			}
 		}
 	}
-	
+
 }
 
 

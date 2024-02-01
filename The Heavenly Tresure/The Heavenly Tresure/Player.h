@@ -22,7 +22,7 @@ struct Player
 
 	int img_idle[8], img_invIdle[8], img_run[10], img_invRun[10], img_att[6], img_attInv[6];
 
-	
+
 
 	Player(int pos_x, int pos_y, int dim_x, int dim_y, int hp, bool idle, bool rdirection)
 	{
@@ -43,7 +43,7 @@ void applyGravity()
 	mainChar.pos_y -= 15;
 }
 
-void gameOver(int resX,int resY)
+void gameOver(int resX, int resY)
 {
 	if (mainChar.isDead == true)
 	{
@@ -53,9 +53,9 @@ void gameOver(int resX,int resY)
 			mainChar.pos_y = resY;
 			mainChar.isDead = false;
 		}
-		if (mainChar.dead==4)
+		else
 		{
-			//GAME IS OVER RETURN TO THE MENU PAGE;
+			mainChar.dead = 0;
 		}
 	}
 }
@@ -108,7 +108,7 @@ void showPlayerAnimations()
 			mainChar.dim_y += 25;
 			mainChar.attRe = true;
 		}
-		
+
 		if (mainChar.rdirection)
 		{
 			iShowImage(mainChar.pos_x, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, mainChar.img_att[mainChar.attIndex]);
