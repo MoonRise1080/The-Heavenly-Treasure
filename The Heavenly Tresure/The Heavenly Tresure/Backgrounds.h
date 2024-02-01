@@ -228,7 +228,124 @@ void collisionLvlOnePhaseThree()
 
 }
 
+/**********************************LEVEL_TWO**************************************************************/
+
+
+void collisionLvlTwoPhaseOne()
+{
+	boxNumber = 4;
+
+	recX = (int*)realloc(recX, boxNumber * sizeof(int));
+	recY = (int*)realloc(recY, boxNumber * sizeof(int));
+	dx = (int*)realloc(dx, boxNumber * sizeof(int));
+	dy = (int*)realloc(dy, boxNumber * sizeof(int));
+
+	recX[0] = 0;
+	recY[0] = 0;
+	dx[0] = 1280;
+	dy[0] = 127;
+
+	recX[1] = 70;
+	recY[1] = 411;
+	dx[1] = 196;
+	dy[1] = 26;
+
+	recX[2] = 543;
+	recY[2] = 283;
+	dx[2] = 198;
+	dy[2] = 28;
+
+	recX[3] = 1032;
+	recY[3] = 419;
+	dx[3] = 199;
+	dy[3] = 25;
 
 
 
+	iSetColor(255, 255, 255);
+	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
+	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
+	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
+	iFilledRectangle(recX[3], recY[3], dx[3], dy[3]);
+	
+
+
+}//complete
+
+void collisionLvlTwoPhaseTwo()
+{
+	boxNumber = 3;
+
+	recX = (int*)realloc(recX, boxNumber * sizeof(int));
+	recY = (int*)realloc(recY, boxNumber * sizeof(int));
+	dx = (int*)realloc(dx, boxNumber * sizeof(int));
+	dy = (int*)realloc(dy, boxNumber * sizeof(int));
+
+	recX[0] = 0;
+	recY[0] = 0;
+	dx[0] = 1280;
+	dy[0] = 129;
+
+	recX[1] = 201;
+	recY[1] = 482;
+	dx[1] = 199;
+	dy[1] = 24;
+
+	recX[2] = 874;
+	recY[2] = 484;
+	dx[2] = 195;
+	dy[2] = 23;
+
+
+
+	iSetColor(255, 255, 255);
+	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
+	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
+	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
+	
+
+
+}//complete
+
+void collisionLvlTwoPhaseThree()
+{
+	boxNumber = 4;
+
+	recX = (int*)realloc(recX, boxNumber * sizeof(int));
+	recY = (int*)realloc(recY, boxNumber * sizeof(int));
+	dx = (int*)realloc(dx, boxNumber * sizeof(int));
+	dy = (int*)realloc(dy, boxNumber * sizeof(int));
+
+	recX[0] = 0;
+	recY[0] = 0;
+	dx[0] = 1280;
+	dy[0] = 129;
+
+	recX[1] = 370;
+	recY[1] = 313;
+	dx[1] = 193;
+	dy[1] = 31;
+
+	recX[2] = 676;
+	recY[2] = 414;
+	dx[2] = 203;
+	dy[2] = 29;
+
+	recX[3] = 1082;
+	recY[3] = 461;
+	dx[3] = 198;
+	dy[3] = 30;
+
+	
+
+
+	iSetColor(255, 255, 255);
+	iFilledRectangle(recX[0], recY[0], dx[0], dy[0]);
+	iFilledRectangle(recX[1], recY[1], dx[1], dy[1]);
+	iFilledRectangle(recX[2], recY[2], dx[2], dy[2]);
+	iFilledRectangle(recX[3], recY[3], dx[3], dy[3]);
+	
+
+
+}//complete
 #endif

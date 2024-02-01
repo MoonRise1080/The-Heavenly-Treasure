@@ -6,6 +6,7 @@
 #include "menu.h"
 #include "HUD.h"
 #include "level_one.h"
+#include "level_two.h"
 #include "Enemy.h"
 #include "Game_object.h"
 void loadImage()
@@ -118,6 +119,9 @@ void loadImage()
 	lvlOnePhaseOne.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_1.png");
 	lvlOnePhaseTwo.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_2.png");
 	lvlOnePhaseThree.bgImage = iLoadImage("Backgrounds\\level_1\\forest_1_3.png");
+	lvlTwoPhaseOne.bgImage = iLoadImage("Backgrounds\\level_2\\forest_2_1.png");
+	lvlTwoPhaseTwo.bgImage = iLoadImage("Backgrounds\\level_2\\forest_2_2.png");
+	lvlTwoPhaseThree.bgImage = iLoadImage("Backgrounds\\level_2\\forest_2_3.png");
 
 	/*--------------------------- Hp Image --------------------------*/
 	hpImgArr[0] = iLoadImage("Backgrounds\\HUD\\Health\\health_0.png");
