@@ -66,19 +66,24 @@ struct Enemy
 			pos_x -= 10;
 		}
 	}
+
 	void enemyAttack()
 	{
-		if (abs(mainChar.pos_x - pos_x) <= 50)
+		if (isDead == false)
 		{
-			mainChar.hp++;
-			if (mainChar.hp == 4 && mainChar.dead <= 3)
+			if (abs(mainChar.pos_x - pos_x) <= 50)
 			{
-				mainChar.isDead = true;
-				mainChar.dead++;
-				mainChar.hp = 0;
+				mainChar.hp++;
+				if (mainChar.hp == 4 && mainChar.dead <= 3)
+				{
+					mainChar.isDead = true;
+					mainChar.dead++;
+					mainChar.hp = 0;
+				}
 			}
-		}
+		}		
 	}
+
 
 }huntressMother(53, 112);
 
@@ -112,6 +117,21 @@ void chaseCheck(Enemy *currentEnemy)
 			(*currentEnemy).attack = true;
 			(*currentEnemy).idle = false;
 			(*currentEnemy).chase = false;
+		}
+	}
+}
+
+void heroAttack(Enemy *insEnemy)
+{
+	if ((abs(mainChar.pos_x - (*insEnemy).pos_x <= 50)) && mainChar.attack == true && mainChar.atkDec == true && (*insEnemy).isDead == false)
+	{
+		mainChar.atkDec = false;
+		(*insEnemy).hp--;
+		if ((*insEnemy).hp <= 0)
+		{
+			(*insEnemy).isDead = true;
+			mainChar.score += 50;
+			(*insEnemy).hp = 0;
 		}
 	}
 }
@@ -177,6 +197,7 @@ void showHuntressAnimations(Enemy animationEnemy)
 	}
 
 }
+
 
 
 #endif

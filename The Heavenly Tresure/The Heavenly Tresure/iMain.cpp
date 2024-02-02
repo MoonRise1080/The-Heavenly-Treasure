@@ -10,6 +10,7 @@
 #include "HUD.h"
 #include "Game_object.h"
 #include "Gameover.h"
+#include <cstdlib>
 using namespace std;
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Idraw Here::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
@@ -21,7 +22,7 @@ void iDraw()
 {
 	iClear();
 
-	cout << colL << endl;
+	cout << abs(huntressOne.pos_x - mainChar.pos_x) << endl;
 
 	if (menu_option == 0)
 	{

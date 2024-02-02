@@ -1,8 +1,6 @@
 #ifndef PLAYER_H_INCLUDED
 #define PLAYER_H_INCLUDED
 
-#include "Enemy.h"
-
 struct Player
 {
 	int pos_x, pos_y;
@@ -21,6 +19,7 @@ struct Player
 	bool rdirection = true;
 	bool attack = false;
 	bool attRe = false;
+	bool atkDec = true;
 
 	int img_idle[8], img_invIdle[8], img_run[10], img_invRun[10], img_att[6], img_attInv[6];
 
@@ -58,18 +57,6 @@ void gameOver(int resX, int resY)
 	}
 }
 
-void heroAttack(Enemy *currentEnemy)
-{
-	if (abs(mainChar.pos_x - (*currentEnemy).pos_x <= 50))
-	{
-		currentEnemy.hp--;
-		if ((*currentEnemy).hp == 0 )
-		{
-			(*currentEnemy).isDead = true;
-			mainChar.score+=50;
-		}
-	}
-}
 
 void showPlayerAnimations()
 {
@@ -141,6 +128,7 @@ void showPlayerAnimations()
 			mainChar.attRe = false;
 			mainChar.dim_x -= 75;
 			mainChar.dim_y -= 25;
+			mainChar.atkDec = true;
 		}
 	}
 }

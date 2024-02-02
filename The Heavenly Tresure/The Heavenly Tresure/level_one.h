@@ -33,6 +33,8 @@ gameObject heartOne(905, 185, 128, 128, 0, false);
 gameObject heartTwo(532, 200, 128, 128, 0, false);
 gameObject heartThree(1214, 1214, 128, 128, 0, false);
 
+
+
 void showLevelOne()
 {
 	if (mainChar.dead == 4)
@@ -221,6 +223,7 @@ void showLevelOne()
 			//hero attack
 			heroAttack(&huntressOne);
 			heroAttack(&huntressTwo);
+			
 
 			//pick up the HEART
 			showGameObject(heartOne);
