@@ -30,9 +30,9 @@ bool lvlTwoPhaseOneRepo = false;
 Enemy huntressSeven(161, 465, huntressHeight, huntressWidth, true, false, false, false, false, false);
 Enemy huntressEight(608, 327, huntressHeight, huntressWidth, true, false, false, false, false, false);
 Enemy huntressNine(1120, 476, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTen(200, 800, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressEleven(600, 900, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwelve(1000, 1000, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressTen(200, 1170, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressEleven(600, 1200, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressTwelve(1000, 1250, huntressHeight, huntressWidth, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_1**********************************************/
 
