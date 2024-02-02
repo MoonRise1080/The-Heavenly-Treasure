@@ -27,36 +27,36 @@ void selectMenuOption(int menu_x, int menu_y)
 			menu_option = 1; //For new game.
 			controlSound(true);
 		}
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 399 && menu_y <= 450)
+		else if (menu_x >= 520 && menu_x <= 750 && menu_y >= 399 && menu_y <= 450)
 		{
 			menu_option = 2; //For continue.
 		}
 
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 325 && menu_y <= 375)
+		else if (menu_x >= 520 && menu_x <= 750 && menu_y >= 325 && menu_y <= 375)
 		{
 			musicOption = 2;
 			menu_option = 3; //For score.
 			controlSound(true);
 		}
 
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 250 && menu_y <= 305)
+		else if (menu_x >= 520 && menu_x <= 750 && menu_y >= 250 && menu_y <= 305)
 		{
 			menu_option = 4; //For setting.
 		}
 
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 175 && menu_y <= 230)
+		else if (menu_x >= 520 && menu_x <= 750 && menu_y >= 175 && menu_y <= 230)
 		{
 			menu_option = 5; //For control.
 		}
 
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 100 && menu_y <= 150)
+		else if (menu_x >= 552 && menu_x <= 750 && menu_y >= 100 && menu_y <= 150)
 		{
 			musicOption = 3;
 			menu_option = 6; //For story.
 			controlSound(true);
 		}
 
-		if (menu_x >= 520 && menu_x <= 750 && menu_y >= 25 && menu_y <= 75)
+		else if (menu_x >= 520 && menu_x <= 750 && menu_y >= 25 && menu_y <= 75)
 		{
 			exit(0);
 		}
@@ -96,7 +96,7 @@ void selectMenuOption(int menu_x, int menu_y)
 	
 	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
 	{
-		menu_option = 0;
+		menu_option = 0; // game over
 	}
 }
 
@@ -154,7 +154,7 @@ void showStory()
 	{
 		iShowImage(0, 0, screenWidth, screenHight, story[storyIndex]);
 	}
-	else
+	else if (menu_option == 6 && storyIndex == 1)
 	{
 		iShowImage(0, 0, screenWidth, screenHight, story[storyIndex]);
 	}

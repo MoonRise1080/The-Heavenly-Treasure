@@ -154,9 +154,6 @@ void showLevelOne()
 		heartThree.dim_y = 128;
 		heartThree.index = 0;
 		heartThree.isTaken = false;
-
-
-
 	}
 
 	if (lvlOneStart == true)
@@ -220,9 +217,9 @@ void showLevelOne()
 			chaseCheck(&huntressOne);
 			chaseCheck(&huntressTwo);
 
-			//hero attack
+			/*hero attack
 			heroAttack(&huntressOne);
-			heroAttack(&huntressTwo);
+			heroAttack(&huntressTwo);*/
 			
 
 			//pick up the HEART

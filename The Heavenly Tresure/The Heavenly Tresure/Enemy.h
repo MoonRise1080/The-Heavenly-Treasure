@@ -117,6 +117,18 @@ void chaseCheck(Enemy *currentEnemy)
 			(*currentEnemy).attack = true;
 			(*currentEnemy).idle = false;
 			(*currentEnemy).chase = false;
+				
+			if ((abs(mainChar.pos_x - (*currentEnemy).pos_x <= 50)) && mainChar.attack == true && mainChar.atkDec == true && (*currentEnemy).isDead == false)
+			{
+				mainChar.atkDec = false;
+				(*currentEnemy).hp--;
+				if ((*currentEnemy).hp <= 0)
+				{
+					(*currentEnemy).isDead = true;
+					mainChar.score += 50;
+					(*currentEnemy).hp = 0;
+				}
+			}
 		}
 	}
 }

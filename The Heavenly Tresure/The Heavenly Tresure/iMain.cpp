@@ -21,8 +21,7 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-
-	cout << abs(huntressOne.pos_x - mainChar.pos_x) << endl;
+	cout << menu_option << endl;
 
 	if (menu_option == 0)
 	{
@@ -530,6 +529,7 @@ void iMouseMove(int mx, int my)
 void iPassiveMouseMove(int mx, int my)
 {
 	/*-------------------------- Highlight menu -------------------------*/
+	
 	if (menu_option >= 0 && menu_option <= 6)
 	{
 		if (mx >= 520 && mx <= 750 && my >= 475 && my <= 525)
@@ -622,7 +622,7 @@ void iPassiveMouseMove(int mx, int my)
 	
 	if (mx >= 459 && mx <= 840 && my >= 100 && my <= 190)
 	{
-		gameOverIndex = 1;
+		gameOverIndex = 1; // game over
 	}
 	else
 	{
@@ -632,7 +632,7 @@ void iPassiveMouseMove(int mx, int my)
 
 void iMouse(int button, int state, int mx, int my)
 {
-
+	cout << mx << " " << my << endl;
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
 	{
 		//controlSound(false);
