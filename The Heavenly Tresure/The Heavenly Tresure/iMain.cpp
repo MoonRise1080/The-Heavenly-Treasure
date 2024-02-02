@@ -100,7 +100,7 @@ void oneFiftyMilli()
 		}
 	}
 
-	if (lvlOneStart == true)
+	if (lvlOneStart == true || lvlTwoStart == true)
 	{
 		if (1)
 		{
@@ -137,6 +137,7 @@ void oneFiftyMilli()
 				mainChar.attIndex = 0;
 			}
 		}
+		/*******************************level_one*********************************************************/
 
 		if (huntressOne.collision == false)
 		{
@@ -168,7 +169,10 @@ void oneFiftyMilli()
 			if (phase == 2)
 				huntressSix.applyGravityEnemy();
 		}
+		/*******************************level_one*********************************************************/
 
+
+		/*******************************level_one_chase*********************************************************/
 		if (huntressOne.chase == true)
 		{
 			huntressOne.Chase();
@@ -193,14 +197,216 @@ void oneFiftyMilli()
 		{
 			huntressSix.Chase();
 		}
+		/*******************************level_one_chase*********************************************************/
+
+
+		/*******************************level_two*********************************************************/
+
+		if (huntressSeven.collision == false)
+		{
+			if (phase == 3)
+				huntressSeven.applyGravityEnemy();
+		}
+		if (huntressEight.collision == false)
+		{
+			if (phase == 3)
+				huntressEight.applyGravityEnemy();
+		}
+		if (huntressNine.collision == false)
+		{
+			if (phase == 3)
+				huntressNine.applyGravityEnemy();
+		}
+		if (huntressTen.collision == false)
+		{
+			if (phase == 3)
+				huntressTen.applyGravityEnemy();
+		}
+		if (huntressEleven.collision == false)
+		{
+			if (phase == 3)
+				huntressEleven.applyGravityEnemy();
+		}
+		if (huntressTwelve.collision == false)
+		{
+			if (phase == 3)
+				huntressTwelve.applyGravityEnemy();
+		}
+		
+		//phase one ends
+
+		if (huntressThirteen.collision == false)
+		{
+			if (phase == 4)
+				huntressThirteen.applyGravityEnemy();
+		}
+		if (huntressFourteen.collision == false)
+		{
+			if (phase == 4)
+				huntressFourteen.applyGravityEnemy();
+		}
+		
+		if (huntressFifteen.collision == false)
+		{
+			if (phase == 4)
+				huntressFifteen.applyGravityEnemy();
+		}
+		if (huntressSixteen.collision == false)
+		{
+			if (phase == 4)
+				huntressSixteen.applyGravityEnemy();
+		}
+
+		if (huntressSeventeen.collision == false)
+		{
+			if (phase == 4)
+				huntressSeventeen.applyGravityEnemy();
+		}
+		if (huntressEighteen.collision == false)
+		{
+			if (phase == 4)
+				huntressEighteen.applyGravityEnemy();
+		}
+		if (huntressNineteen.collision == false)
+		{
+			if (phase == 4)
+				huntressNineteen.applyGravityEnemy();
+		}
+		//phase two ends 
+
+		if (huntressTwenty.collision == false)
+		{
+			if (phase == 5)
+				huntressTwenty.applyGravityEnemy();
+		}
+		if (huntressTwentyone.collision == false)
+		{
+			if (phase == 5)
+				huntressTwentyone.applyGravityEnemy();
+		}
+		if (huntressTwentytwo.collision == false)
+		{
+			if (phase == 5)
+				huntressTwentytwo.applyGravityEnemy();
+		}
+		if (huntressTwenty.collision == false)
+		{
+			if (phase == 5)
+				huntressTwenty.applyGravityEnemy();
+		}
+		if (huntressTwentythree.collision == false)
+		{
+			if (phase == 5)
+				huntressTwentythree.applyGravityEnemy();
+		}
+		if (huntressTwentyfour.collision == false)
+		{
+			if (phase == 5)
+				huntressTwentyfour.applyGravityEnemy();
+		}
+		if (huntressTwentyfive.collision == false)
+		{
+			if (phase == 5)
+				huntressTwentyfive.applyGravityEnemy();
+		}
+		//phase three ends 
+
+		/*******************************level_two*********************************************************/
+
+
+		/*******************************level_two*********************************************************/
+		if (huntressSeven.chase == true)
+		{
+			huntressSeven.Chase();
+		}
+		if (huntressEight.chase == true)
+		{
+			huntressEight.Chase();
+		}
+		if (huntressNine.chase == true)
+		{
+			huntressNine.Chase();
+		}
+		if (huntressTen.chase == true)
+		{
+			huntressTen.Chase();
+		}
+		if (huntressEleven.chase == true)
+		{
+			huntressEleven.Chase();
+		}
+		if (huntressTwelve.chase == true)
+		{
+			huntressTwelve.Chase();
+		}
+		//phase one ends
+
+		if (huntressThirteen.chase == true)
+		{
+			huntressThirteen.Chase();
+		}
+		if (huntressFourteen.chase == true)
+		{
+			huntressFourteen.Chase();
+		}
+		if (huntressFifteen.chase == true)
+		{
+			huntressFifteen.Chase();
+		}
+		if (huntressSixteen.chase == true)
+		{
+			huntressSixteen.Chase();
+		}
+		if (huntressSeventeen.chase == true)
+		{
+			huntressSeventeen.Chase();
+		}
+		if (huntressEighteen.chase == true)
+		{
+			huntressEighteen.Chase();
+		}
+		if (huntressNineteen.chase == true)
+		{
+			huntressNineteen.Chase();
+		}
+
+		//phase Two ends
+
+		if (huntressTwenty.chase == true)
+		{
+			huntressTwenty.Chase();
+		}
+		if (huntressTwentyone.chase == true)
+		{
+			huntressTwentyone.Chase();
+		}
+		if (huntressTwentytwo.chase == true)
+		{
+			huntressTwentytwo.Chase();
+		}
+		if (huntressTwentythree.chase == true)
+		{
+			huntressTwentythree.Chase();
+		}
+		if (huntressTwentyfour.chase == true)
+		{
+			huntressTwentyfour.Chase();
+		}
+		if (huntressTwentyfive.chase == true)
+		{
+			huntressTwentyfive.Chase();
+		}
+		//phase Three ends
+		/*******************************level_two*********************************************************/
 
 	}
 
 }
 void threeThousandMilli()
 {
-	if (lvlOneStart == true)
+	if (lvlOneStart == true || lvlTwoStart == true)
 	{
+		/***********************************************Level_one*****************************************************************************/
 		if (huntressOne.attack == true)
 		{
 			huntressOne.enemyAttack();
@@ -225,6 +431,89 @@ void threeThousandMilli()
 		{
 			huntressSix.enemyAttack();
 		}
+		/***********************************************Level_one*****************************************************************************/
+
+		/***********************************************Level_Two*****************************************************************************/
+		if (huntressSeven.attack == true)
+		{
+			huntressSeven.enemyAttack();
+		}
+		if (huntressEight.attack == true)
+		{
+			huntressEight.enemyAttack();
+		}
+		if (huntressNine.attack == true)
+		{
+			huntressNine.enemyAttack();
+		}
+		if (huntressTen.attack == true)
+		{
+			huntressTen.enemyAttack();
+		}
+		if (huntressEleven.attack == true)
+		{
+			huntressEleven.enemyAttack();
+		}
+		if (huntressTwelve.attack == true)
+		{
+			huntressTwelve.enemyAttack();
+		}
+		//phase one ends
+		if (huntressThirteen.attack == true)
+		{
+			huntressThirteen.enemyAttack();
+		}
+		if (huntressFourteen.attack == true)
+		{
+			huntressFourteen.enemyAttack();
+		}
+		if (huntressFifteen.attack == true)
+		{
+			huntressFifteen.enemyAttack();
+		}
+		if (huntressSixteen.attack == true)
+		{
+			huntressSixteen.enemyAttack();
+		}
+		if (huntressSeventeen.attack == true)
+		{
+			huntressSeventeen.enemyAttack();
+		}
+		if (huntressEighteen.attack == true)
+		{
+			huntressEighteen.enemyAttack();
+		}
+		if (huntressNineteen.attack == true)
+		{
+			huntressNineteen.enemyAttack();
+		}
+		//phase two ends
+		if (huntressTwenty.attack == true)
+		{
+			huntressTwenty.enemyAttack();
+		}
+		if (huntressTwentyone.attack == true)
+		{
+			huntressTwentyone.enemyAttack();
+		}
+		if (huntressTwentytwo.attack == true)
+		{
+			huntressTwentytwo.enemyAttack();
+		}
+		if (huntressTwentythree.attack == true)
+		{
+			huntressTwentythree.enemyAttack();
+		}
+		if (huntressTwentyfour.attack == true)
+		{
+			huntressTwentyfour.enemyAttack();
+		}
+		if (huntressTwentyfive.attack == true)
+		{
+			huntressTwentyfive.enemyAttack();
+		}
+		//phase three ends
+		/***********************************************Level_Two*****************************************************************************/
 	}
 }
 
