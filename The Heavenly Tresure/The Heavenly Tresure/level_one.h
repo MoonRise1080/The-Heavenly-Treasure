@@ -22,12 +22,12 @@ bool collisionMob = false;
 bool lvlOneStart = false;
 bool lvlOnePhaseOneRepo = false;
 
-Enemy huntressOne(990, 575, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressThree(789, 374, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressFour(1117, 192, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressFive(696, 366, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressOne(990, 575, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressThree(789, 374, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressFour(1117, 192, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressFive(696, 366, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 
 gameObject heartOne(905, 185, 128, 128, 0, false);
 gameObject heartTwo(532, 200, 128, 128, 0, false);
@@ -35,6 +35,54 @@ gameObject heartThree(1214, 614, 128, 128, 0, false);
 
 void showLevelOne()
 {
+	if (mainChar.dead == 4)
+	{
+		if (gameOverIndex == 1)
+		{
+			iShowImage(0, 0, 1280, 720, gameOverMenu[1]);
+		}
+		else
+		{
+			iShowImage(0, 0, 1280, 720, gameOverMenu[0]);
+		}
+
+		isStart = false;
+		lvlOneStart = false;
+		gameOverCommand = true;
+
+		mainChar.pos_x = 100;
+		mainChar.pos_y = 324;
+		mainChar.dim_x = 138;
+		mainChar.dim_y = 120;
+		mainChar.hp = 0;
+		mainChar.idle = true;
+		mainChar.rdirection = true;
+
+		huntressOne.pos_x = 990;
+		huntressOne.pos_y = 575;
+		huntressOne.dim_x = huntressHeight;
+		huntressOne.dim_y = huntressWidth;
+		huntressOne.hp = 2;
+		huntressOne.idle = true;
+		huntressOne.rdirection = false;
+		huntressOne.collision = false;
+		huntressOne.chase = false;
+		huntressOne.attack = false;
+		huntressOne.isDead = false;
+
+		huntressTwo.pos_x = 688;
+		huntressTwo.pos_y = 504;
+		huntressTwo.dim_x = huntressHeight;
+		huntressTwo.dim_y = huntressWidth;
+		huntressTwo.hp = 2;
+		huntressTwo.idle = true;
+		huntressTwo.rdirection = false;
+		huntressTwo.collision = false;
+		huntressTwo.chase = false;
+		huntressTwo.attack = false;
+		huntressTwo.isDead = false;
+	}
+
 	if (lvlOneStart == true)
 	{
 

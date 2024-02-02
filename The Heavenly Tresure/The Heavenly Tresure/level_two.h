@@ -27,37 +27,37 @@ bool lvlTwoPhaseOneRepo = false;
 
 /*******************************Leve2_phase_1**********************************************/
 
-Enemy huntressSeven(161, 465, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressEight(608, 327, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressNine(1120, 476, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTen(200, 1170, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressEleven(600, 1200, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwelve(1000, 1250, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressSeven(161, 465, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressEight(608, 327, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressNine(1120, 476, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTen(200, 1170, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressEleven(600, 1200, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwelve(1000, 1250, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_1**********************************************/
 
 
 /*******************************Leve2_phase_2**********************************************/
 
-Enemy huntressThirteen(298, 534, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressFourteen(976, 540, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressFifteen(789, 1200, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressSixteen(789, 1000, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressSeventeen(1117,1500, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressEighteen(696, 900, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressNineteen(300, 900, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressThirteen(298, 534, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressFourteen(976, 540, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressFifteen(789, 1200, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressSixteen(789, 1000, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressSeventeen(1117,1500, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressEighteen(696, 900, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressNineteen(300, 900, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_2**********************************************/
 
 
 /*******************************Leve2_phase_3**********************************************/
 
-Enemy huntressTwenty(331, 372, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwentyone(636, 470, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwentytwo(1059, 525, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwentythree(300, 800, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwentyfour(696, 1000, huntressHeight, huntressWidth, true, false, false, false, false, false);
-Enemy huntressTwentyfive(1022, 1200, huntressHeight, huntressWidth, true, false, false, false, false, false);
+Enemy huntressTwenty(331, 372, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentyone(636, 470, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentytwo(1059, 525, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentythree(300, 800, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentyfour(696, 1000, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentyfive(1022, 1200, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_3**********************************************/
 
@@ -65,6 +65,23 @@ Enemy huntressTwentyfive(1022, 1200, huntressHeight, huntressWidth, true, false,
 
 void showLevelTwo()
 {
+	if (mainChar.dead == 4)
+	{
+		if (gameOverIndex == 1)
+		{
+			iShowImage(0, 0, 1280, 720, gameOverMenu[1]);
+		}
+		else
+		{
+			iShowImage(0, 0, 1280, 720, gameOverMenu[0]);
+		}
+
+		isStart = false;
+		lvlOneStart = false;
+		lvlTwoStart = false;
+		gameOverCommand = true;
+	}
+
 	if (lvlTwoStart == true)
 	{
 		if (phase == 3)

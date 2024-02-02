@@ -14,6 +14,7 @@ struct Enemy
 	int moveCheck = 0;
 	int padN = 50;
 	int padInv = 0;
+	int hp;
 	bool idle = true;
 	bool rdirection = true;
 	bool collision = false;
@@ -34,12 +35,13 @@ struct Enemy
 	}
 
 
-	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, bool idle, bool rdirection, bool collision, bool chase, bool attack, bool isDead)
+	Enemy(int pos_x, int pos_y, int dim_x, int dim_y, int hp, bool idle, bool rdirection, bool collision, bool chase, bool attack, bool isDead)
 	{
 		this->pos_x = pos_x;
 		this->pos_y = pos_y;
 		this->dim_x = dim_x;
 		this->dim_y = dim_y;
+		this->hp = hp;
 		this->idle = idle;
 		this->rdirection = rdirection;
 		this->collision = collision;

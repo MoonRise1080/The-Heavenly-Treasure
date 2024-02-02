@@ -22,7 +22,10 @@ void loadImage()
 	menu_image[5] = iLoadImage("Menu\\menu_5.png");
 	menu_image[6] = iLoadImage("Menu\\menu_6.png");
 	menu_image[7] = iLoadImage("Menu\\menu_7.png");
-	gameover = iLoadImage("Menu\\game_over.png");
+
+	/*--------------------------- Game Over -------------------------*/
+	gameOverMenu[0] = iLoadImage("Menu\\Game Over\\game_over_0.png");
+	gameOverMenu[1] = iLoadImage("Menu\\Game Over\\game_over_1.png");
 
 	/*--------------------------------- Story --------------------------------------*/
 	story[0] = iLoadImage("Menu\\Story\\story_0.png");

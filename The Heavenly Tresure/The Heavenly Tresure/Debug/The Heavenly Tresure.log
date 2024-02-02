@@ -1,4 +1,4 @@
-﻿Build started 2/2/2024 9:21:30 PM.
+﻿Build started 2/3/2024 12:13:22 AM.
      1>Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          E:\VS 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp

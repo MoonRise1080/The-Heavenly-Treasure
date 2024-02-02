@@ -26,6 +26,7 @@ void iDraw()
 	if (menu_option == 0)
 	{
 		isStart = false;
+		mainChar.dead = 0;
 		showMenu();
 	}
 
@@ -68,12 +69,7 @@ void iDraw()
 
 void oneFiftyMilli()
 {	
-	if (mainChar.dead == 4)
-	{
-		iShowImage(0, 0, 1920, 1080, gameover);
-		isStart = false;
-		lvlOneStart = false;
-	}
+	
 	if (isStart)
 	{
 		if (mainChar.idle)
@@ -621,6 +617,15 @@ void iPassiveMouseMove(int mx, int my)
 		{
 			storyIndex = 0;
 		}
+	}
+	
+	if (mx >= 459 && mx <= 840 && my >= 100 && my <= 190)
+	{
+		gameOverIndex = 1;
+	}
+	else
+	{
+		gameOverIndex = 0;
 	}
 }
 

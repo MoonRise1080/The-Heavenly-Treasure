@@ -53,10 +53,6 @@ void gameOver(int resX, int resY)
 			mainChar.pos_y = resY;
 			mainChar.isDead = false;
 		}
-		else
-		{
-			mainChar.dead = 0;
-		}
 	}
 }
 

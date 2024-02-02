@@ -13,7 +13,9 @@ int settings[7];
 int setIndex;
 int score[3];
 int scoreIndex;
-int gameover;
+int gameOverMenu[2];
+int gameOverIndex;
+bool gameOverCommand = false;
 
 void selectMenuOption(int menu_x, int menu_y)
 {
@@ -91,8 +93,11 @@ void selectMenuOption(int menu_x, int menu_y)
 		menu_option = 0; //Story back
 		controlSound(true);
 	}
-
 	
+	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
+	{
+		menu_option = 0;
+	}
 }
 
 /*________________________________________________________Showing menu pages.__________________________________________________________*/
@@ -213,6 +218,7 @@ void showScore()
 		iShowImage(0, 0, screenWidth, screenHight, score[scoreIndex]);
 	}
 }
+
 
 
 #endif
