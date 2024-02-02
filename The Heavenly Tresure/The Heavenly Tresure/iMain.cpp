@@ -33,8 +33,19 @@ void iDraw()
 	if (menu_option == 1)
 	{
 		isStart = true;
-		lvlOneStart = true;
-		showLevelOne();
+		
+		if (phase >= 0 && phase <= 2)
+		{
+			lvlOneStart = true;
+			showLevelOne();
+		}
+		else if (phase >= 3)
+		{
+			lvlOneStart = false;
+			lvlTwoStart = true;
+			showLevelTwo();
+		}
+				
 	}
 
 	if (menu_option == 3)

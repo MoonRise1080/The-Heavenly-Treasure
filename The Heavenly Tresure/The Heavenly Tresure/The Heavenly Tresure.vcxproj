@@ -78,6 +78,7 @@
     <ClInclude Include="HUD.h" />
     <ClInclude Include="iGraphics.h" />
     <ClInclude Include="level_one.h" />
+    <ClInclude Include="level_two.h" />
     <ClInclude Include="Loadimg.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Player.h" />
