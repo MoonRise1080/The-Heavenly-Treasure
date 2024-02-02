@@ -1,6 +1,7 @@
 #ifndef PLAYER_H_INCLUDED
 #define PLAYER_H_INCLUDED
 
+#include "Enemy.h"
 
 struct Player
 {
@@ -14,6 +15,7 @@ struct Player
 	int padInv = 51;
 	int hp = 0;
 	int dead = 0;
+	int score = 0;
 	bool isDead = false;
 	bool idle = true;
 	bool rdirection = true;
@@ -52,6 +54,19 @@ void gameOver(int resX, int resY)
 			mainChar.pos_x = resX;
 			mainChar.pos_y = resY;
 			mainChar.isDead = false;
+		}
+	}
+}
+
+void heroAttack(Enemy *currentEnemy)
+{
+	if (abs(mainChar.pos_x - (*currentEnemy).pos_x <= 50))
+	{
+		currentEnemy.hp--;
+		if ((*currentEnemy).hp == 0 )
+		{
+			(*currentEnemy).isDead = true;
+			mainChar.score+=50;
 		}
 	}
 }

@@ -213,9 +213,14 @@ void showLevelOne()
 				huntressTwo.collision = false;
 			}
 
+
+			//enemy chase and attack
 			chaseCheck(&huntressOne);
 			chaseCheck(&huntressTwo);
 
+			//hero attack
+			heroAttack(&huntressOne);
+			heroAttack(&huntressTwo);
 
 			//pick up the HEART
 			showGameObject(heartOne);

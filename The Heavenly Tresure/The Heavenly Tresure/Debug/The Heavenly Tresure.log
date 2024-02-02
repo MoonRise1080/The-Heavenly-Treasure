@@ -1,13 +1,191 @@
-﻿Build started 2/3/2024 12:13:22 AM.
-     1>Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
+﻿Build started 03/02/2024 01:34:48.
+     1>Project "E:\joy bangla\The-Heavenly-Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\VS 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt iMain.cpp
          iMain.cpp
-       Link:
-         E:\VS 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.lib" /MACHINE:X86 Debug\iMain.obj
-         The Heavenly Tresure.vcxproj -> E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\Debug\The Heavenly Tresure.exe
-     1>Done Building Project "E:\Premiere Pro Projects\CSE 1200 Game Development Project\The Heavenly Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)).
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\collision.h(44): error C2065: 'Enemy' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\collision.h(44): error C2146: syntax error : missing ')' before identifier 'tempEnemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\collision.h(44): error C2059: syntax error : ')'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\collision.h(45): error C2143: syntax error : missing ';' before '{'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\collision.h(45): error C2447: '{' : missing function header (old-style formal list?)
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\hud.h(12): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\hud.h(12): error C2228: left of '.hp' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\hud.h(12): error C2660: 'iShowImage' : function does not take 4 arguments
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25): error C2146: syntax error : missing ';' before identifier 'huntressOne'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(26): error C2146: syntax error : missing ';' before identifier 'huntressTwo'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(26): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(26): error C2086: 'int Enemy' : redefinition
+                 e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25) : see declaration of 'Enemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(26): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(27): error C2146: syntax error : missing ';' before identifier 'huntressThree'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(27): error C2086: 'int Enemy' : redefinition
+                 e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25) : see declaration of 'Enemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(27): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(28): error C2146: syntax error : missing ';' before identifier 'huntressFour'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(28): error C2086: 'int Enemy' : redefinition
+                 e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25) : see declaration of 'Enemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(28): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(29): error C2146: syntax error : missing ';' before identifier 'huntressFive'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(29): error C2086: 'int Enemy' : redefinition
+                 e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25) : see declaration of 'Enemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(29): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(30): error C2146: syntax error : missing ';' before identifier 'huntressSix'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(30): error C2086: 'int Enemy' : redefinition
+                 e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(25) : see declaration of 'Enemy'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(30): error C2078: too many initializers
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(38): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(38): error C2228: left of '.dead' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(53): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(53): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(54): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(54): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(55): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(55): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(56): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(56): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(57): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(57): error C2228: left of '.hp' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(58): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(58): error C2228: left of '.idle' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(59): error C2065: 'mainChar' : undeclared identifier
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(59): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'unknown-type'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(61): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(62): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(63): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(64): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(65): error C2228: left of '.hp' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(66): error C2228: left of '.idle' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(67): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(68): error C2228: left of '.collision' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(69): error C2228: left of '.chase' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(70): error C2228: left of '.attack' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(71): error C2228: left of '.isDead' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(73): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(74): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(75): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(76): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(77): error C2228: left of '.hp' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(78): error C2228: left of '.idle' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(79): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(80): error C2228: left of '.collision' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(81): error C2228: left of '.chase' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(82): error C2228: left of '.attack' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(83): error C2228: left of '.isDead' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(85): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(86): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(87): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(88): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(89): error C2228: left of '.hp' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(90): error C2228: left of '.idle' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(91): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(92): error C2228: left of '.collision' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(93): error C2228: left of '.chase' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(94): error C2228: left of '.attack' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(95): error C2228: left of '.isDead' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(97): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(98): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(99): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(100): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(101): error C2228: left of '.hp' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(102): error C2228: left of '.idle' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(103): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(104): error C2228: left of '.collision' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(105): error C2228: left of '.chase' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(106): error C2228: left of '.attack' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(107): error C2228: left of '.isDead' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(109): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(110): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(111): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(112): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(113): error C2228: left of '.hp' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(114): error C2228: left of '.idle' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(115): error C2228: left of '.rdirection' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(116): error C2228: left of '.collision' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(117): error C2228: left of '.chase' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(118): error C2228: left of '.attack' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(119): error C2228: left of '.isDead' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(121): error C2228: left of '.pos_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(122): error C2228: left of '.pos_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(123): error C2228: left of '.dim_x' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(124): error C2228: left of '.dim_y' must have class/struct/union
+                 type is 'int'
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(125): error C2228: left of '.hp' must have class/struct/union
+     1>e:\joy bangla\the-heavenly-treasure\the heavenly tresure\the heavenly tresure\level_one.h(125): fatal error C1003: error count exceeds 100; stopping compilation
+     1>Done Building Project "E:\joy bangla\The-Heavenly-Treasure\The Heavenly Tresure\The Heavenly Tresure\The Heavenly Tresure.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.05
+Time Elapsed 00:00:00.86
