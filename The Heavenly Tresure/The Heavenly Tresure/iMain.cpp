@@ -21,7 +21,7 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-	cout << menu_option << endl;
+	cout << huntressSeven.rdirection << endl;
 
 	if (menu_option == 0)
 	{
@@ -34,7 +34,7 @@ void iDraw()
 	if (menu_option == 1)
 	{
 		isStart = true;
-		
+
 		if (phase >= 0 && phase <= 2)
 		{
 			lvlOneStart = true;
@@ -46,7 +46,7 @@ void iDraw()
 			lvlTwoStart = true;
 			showLevelTwo();
 		}
-				
+
 	}
 
 	if (menu_option == 3)
@@ -68,8 +68,8 @@ void iDraw()
 
 
 void oneFiftyMilli()
-{	
-	
+{
+
 	if (isStart)
 	{
 		if (mainChar.idle)
@@ -96,34 +96,44 @@ void oneFiftyMilli()
 		}
 	}
 
-	if (lvlOneStart == true || lvlTwoStart == true)
+	if (lvlOneStart == true || lvlTwoStart == true && isStart == true)
 	{
-		if (1)
+		huntressMother.idleIndex++;
+		if (huntressMother.idleIndex > 7)
 		{
-			huntressMother.idleIndex++;
-			if (huntressMother.idleIndex > 7)
-			{
-				huntressMother.idleIndex = 0;
-			}
+			huntressMother.idleIndex = 0;
+		}
+		
+		huntressMother.runIndex++;
+		if (huntressMother.runIndex > 7)
+		{
+			huntressMother.runIndex = 0;
 		}
 
-		if (1)
+		huntressMother.attackIndex++;
+		if (huntressMother.attackIndex > 4)
 		{
-			huntressMother.runIndex++;
-			if (huntressMother.runIndex > 7)
-			{
-				huntressMother.runIndex = 0;
-			}
+			huntressMother.attackIndex = 0;
 		}
 
-		if (1)
+		bringerMother.idleIndex++;
+		if (bringerMother.idleIndex > 7)
 		{
-			huntressMother.attackIndex++;
-			if (huntressMother.attackIndex > 4)
-			{
-				huntressMother.attackIndex = 0;
-			}
+			bringerMother.idleIndex = 0;
 		}
+
+		bringerMother.runIndex++;
+		if (bringerMother.runIndex > 7)
+		{
+			bringerMother.runIndex = 0;
+		}
+
+		bringerMother.attackIndex++;
+		if (bringerMother.attackIndex > 9)
+		{
+			bringerMother.attackIndex = 0;
+		}
+
 
 		if (1)
 		{
@@ -228,7 +238,7 @@ void oneFiftyMilli()
 			if (phase == 3)
 				huntressTwelve.applyGravityEnemy();
 		}
-		
+
 		//phase one ends
 
 		if (huntressThirteen.collision == false)
@@ -241,7 +251,7 @@ void oneFiftyMilli()
 			if (phase == 4)
 				huntressFourteen.applyGravityEnemy();
 		}
-		
+
 		if (huntressFifteen.collision == false)
 		{
 			if (phase == 4)
@@ -529,7 +539,7 @@ void iMouseMove(int mx, int my)
 void iPassiveMouseMove(int mx, int my)
 {
 	/*-------------------------- Highlight menu -------------------------*/
-	
+
 	if (menu_option >= 0 && menu_option <= 6)
 	{
 		if (mx >= 520 && mx <= 750 && my >= 475 && my <= 525)
@@ -619,8 +629,8 @@ void iPassiveMouseMove(int mx, int my)
 			storyIndex = 0;
 		}
 	}
-	
-	if (mx >= 459 && mx <= 840 && my >= 100 && my <= 190)
+
+	if (menu_option == 1 && mx >= 459 && mx <= 840 && my >= 100 && my <= 190)
 	{
 		gameOverIndex = 1; // game over
 	}
@@ -676,7 +686,7 @@ void iSpecialKeyboard(unsigned char key)
 	{
 		if (1)
 		{
-			mainChar.pos_x += 5;
+			mainChar.pos_x += 15;
 			mainChar.idle = false;
 			mainChar.rdirection = true;
 		}

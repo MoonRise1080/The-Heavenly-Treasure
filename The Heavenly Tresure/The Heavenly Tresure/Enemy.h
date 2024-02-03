@@ -21,7 +21,7 @@ struct Enemy
 	bool chase = true;
 	bool attack = true;
 	bool isDead = false;
-	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8], img_attack[4], img_invAttack[5];
+	int img_idle[8], img_invIdle[8], img_run[8], img_invRun[8], img_attack[10], img_invAttack[10];
 
 	Enemy()
 	{
@@ -81,11 +81,11 @@ struct Enemy
 					mainChar.hp = 0;
 				}
 			}
-		}		
+		}
 	}
 
 
-}huntressMother(53, 112);
+}huntressMother(53, 112), bringerMother(210, 210);
 
 
 void chaseCheck(Enemy *currentEnemy)
@@ -117,7 +117,7 @@ void chaseCheck(Enemy *currentEnemy)
 			(*currentEnemy).attack = true;
 			(*currentEnemy).idle = false;
 			(*currentEnemy).chase = false;
-				
+
 			if ((abs(mainChar.pos_x - (*currentEnemy).pos_x <= 50)) && mainChar.attack == true && mainChar.atkDec == true && (*currentEnemy).isDead == false)
 			{
 				mainChar.atkDec = false;
@@ -129,21 +129,6 @@ void chaseCheck(Enemy *currentEnemy)
 					(*currentEnemy).hp = 0;
 				}
 			}
-		}
-	}
-}
-
-void heroAttack(Enemy *insEnemy)
-{
-	if ((abs(mainChar.pos_x - (*insEnemy).pos_x <= 50)) && mainChar.attack == true && mainChar.atkDec == true && (*insEnemy).isDead == false)
-	{
-		mainChar.atkDec = false;
-		(*insEnemy).hp--;
-		if ((*insEnemy).hp <= 0)
-		{
-			(*insEnemy).isDead = true;
-			mainChar.score += 50;
-			(*insEnemy).hp = 0;
 		}
 	}
 }
@@ -210,6 +195,61 @@ void showHuntressAnimations(Enemy animationEnemy)
 
 }
 
+
+void showBringerAnimations(Enemy animationEnemy)
+{
+	if (!animationEnemy.isDead)
+	{
+		if (animationEnemy.idle)
+		{
+			if (animationEnemy.rdirection)
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_idle[bringerMother.idleIndex]);
+			}
+
+			else
+			{
+				iShowImage(animationEnemy.pos_x - 177, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_invIdle[bringerMother.idleIndex]);
+			}
+		}
+
+		else if (animationEnemy.chase)
+		{
+			if (animationEnemy.rdirection)
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_run[bringerMother.runIndex]);
+			}
+
+			else
+			{
+				iShowImage(animationEnemy.pos_x - 172, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_invRun[bringerMother.runIndex]);
+			}
+
+			animationEnemy.moveCheck++;
+
+			if (animationEnemy.moveCheck > 200)
+			{
+				animationEnemy.moveCheck = 0;
+				animationEnemy.idle = true;
+			}
+
+		}
+
+		else if (animationEnemy.attack)
+		{
+			if (animationEnemy.rdirection)
+			{
+				iShowImage(animationEnemy.pos_x, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_attack[bringerMother.attackIndex]);
+			}
+
+			else
+			{
+				iShowImage(animationEnemy.pos_x - 156, animationEnemy.pos_y, animationEnemy.dim_x, animationEnemy.dim_y, bringerMother.img_invAttack[bringerMother.attackIndex]);
+			}
+		}
+	}
+
+}
 
 
 #endif

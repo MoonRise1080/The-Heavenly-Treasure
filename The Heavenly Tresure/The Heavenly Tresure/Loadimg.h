@@ -189,7 +189,69 @@ void loadImage()
 	huntressMother.img_invAttack[2] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_2.png");
 	huntressMother.img_invAttack[3] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_3.png");
 	huntressMother.img_invAttack[4] = iLoadImage("Enemy\\Huntress\\Attack Inv\\huntress_invAttack_4.png");
-	
+
+
+	/*---------------------------------------- Bringer of Death -----------------------------------------*/
+
+	bringerMother.img_idle[0] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_0.png");
+	bringerMother.img_idle[1] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_1.png");
+	bringerMother.img_idle[2] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_2.png");
+	bringerMother.img_idle[3] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_3.png");
+	bringerMother.img_idle[4] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_4.png");
+	bringerMother.img_idle[5] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_5.png");
+	bringerMother.img_idle[6] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_6.png");
+	bringerMother.img_idle[7] = iLoadImage("Enemy\\Bringer of Death\\Idle\\bringerIdle_7.png");
+
+	bringerMother.img_invIdle[0] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_0.png");
+	bringerMother.img_invIdle[1] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_1.png");
+	bringerMother.img_invIdle[2] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_2.png");
+	bringerMother.img_invIdle[3] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_3.png");
+	bringerMother.img_invIdle[4] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_4.png");
+	bringerMother.img_invIdle[5] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_5.png");
+	bringerMother.img_invIdle[6] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_6.png");
+	bringerMother.img_invIdle[7] = iLoadImage("Enemy\\Bringer of Death\\Idle Inv\\bringerInvIdle_7.png");
+
+	bringerMother.img_run[0] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_0.png");
+	bringerMother.img_run[1] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_1.png");
+	bringerMother.img_run[2] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_2.png");
+	bringerMother.img_run[3] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_3.png");
+	bringerMother.img_run[4] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_4.png");
+	bringerMother.img_run[5] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_5.png");
+	bringerMother.img_run[6] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_6.png");
+	bringerMother.img_run[7] = iLoadImage("Enemy\\Bringer of Death\\Run\\bringerRun_7.png");
+
+	bringerMother.img_invRun[0] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_0.png");
+	bringerMother.img_invRun[1] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_1.png");
+	bringerMother.img_invRun[2] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_2.png");
+	bringerMother.img_invRun[3] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_3.png");
+	bringerMother.img_invRun[4] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_4.png");
+	bringerMother.img_invRun[5] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_5.png");
+	bringerMother.img_invRun[6] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_6.png");
+	bringerMother.img_invRun[7] = iLoadImage("Enemy\\Bringer of Death\\Run Inv\\bringerInvRun_7.png");
+
+	bringerMother.img_attack[0] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_0.png");
+	bringerMother.img_attack[1] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_1.png");
+	bringerMother.img_attack[2] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_2.png");
+	bringerMother.img_attack[3] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_3.png");
+	bringerMother.img_attack[4] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_4.png");
+	bringerMother.img_attack[5] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_5.png");
+	bringerMother.img_attack[6] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_6.png");
+	bringerMother.img_attack[7] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_7.png");
+	bringerMother.img_attack[8] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_8.png");
+	bringerMother.img_attack[9] = iLoadImage("Enemy\\Bringer of Death\\Atk\\bringerAtt_9.png");
+
+	bringerMother.img_invAttack[0] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_0.png");
+	bringerMother.img_invAttack[1] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_1.png");
+	bringerMother.img_invAttack[2] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_2.png");
+	bringerMother.img_invAttack[3] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_3.png");
+	bringerMother.img_invAttack[4] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_4.png");
+	bringerMother.img_invAttack[5] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_5.png");
+	bringerMother.img_invAttack[6] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_6.png");
+	bringerMother.img_invAttack[7] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_7.png");
+	bringerMother.img_invAttack[8] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_8.png");
+	bringerMother.img_invAttack[9] = iLoadImage("Enemy\\Bringer of Death\\Atk Inv\\bringerInvAtt_9.png");
+
+			
 
 }
 

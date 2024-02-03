@@ -31,13 +31,13 @@ Enemy huntressSix(1022, 494, huntressHeight, huntressWidth, 2, true, false, fals
 
 gameObject heartOne(905, 185, 128, 128, 0, false);
 gameObject heartTwo(532, 200, 128, 128, 0, false);
-gameObject heartThree(1214, 1214, 128, 128, 0, false);
+gameObject heartThree(216, 134, 128, 128, 0, false);
 
 
 
 void showLevelOne()
 {
-	if (mainChar.dead == 4)
+	if (mainChar.dead == 4 && menu_option == 1)
 	{
 		if (gameOverIndex == 1)
 		{
@@ -171,7 +171,7 @@ void showLevelOne()
 			showHp();
 
 
-			if (mainChar.pos_x == 1280)
+			if (mainChar.pos_x + mainChar.dim_x > 1300)
 			{
 				phase++;
 				mainChar.pos_x = 0;
@@ -258,7 +258,7 @@ void showLevelOne()
 			showHuntressAnimations(huntressFour);
 
 			showHp();
-			if (mainChar.pos_x > 1280)
+			if (mainChar.pos_x + mainChar.dim_x > 1300)
 			{
 				phase++;
 				mainChar.pos_x = 0;
@@ -352,7 +352,7 @@ void showLevelOne()
 			showHuntressAnimations(huntressSix);
 
 			showHp();
-			if (mainChar.pos_x > 1280)
+			if (mainChar.pos_x + mainChar.dim_x > 1300)
 			{
 				phase++;
 				mainChar.pos_x = 0;
@@ -408,7 +408,7 @@ void showLevelOne()
 
 			//pick up the HEART
 			showGameObject(heartThree);
-			if ((heartThree.isTaken == false) && (mainChar.pos_x == heartThree.pos_x) && (mainChar.pos_y = heartThree.pos_y))
+			if ((heartThree.isTaken == false) && abs(mainChar.pos_x - heartThree.pos_x) <= 50 && abs(mainChar.pos_y - heartThree.pos_y) <= 50)
 			{
 				heartThree.isTaken = true;
 				mainChar.hp--;
@@ -435,7 +435,12 @@ void showLevelOne()
 
 		/*___________________________________________________ Animations _____________________________________________________________*/
 
-		showPlayerAnimations();
+		if (mainChar.dead < 4 && menu_option == 1)
+		{
+			showPlayerAnimations();
+		}
+
+		
 
 		/*___________________________________________________ Animations End ________________________________________________________*/
 
