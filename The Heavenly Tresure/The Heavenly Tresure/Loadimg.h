@@ -42,11 +42,14 @@ void loadImage()
 	settings[5] = iLoadImage("Menu\\Settings\\set_5.png");
 	settings[6] = iLoadImage("Menu\\Settings\\set_6.png");
 
+	/*------------------------------------ Controls ---------------------------------------*/
+	control[0] = iLoadImage("Menu\\Controls\\control_0.png");
+	control[1] = iLoadImage("Menu\\Controls\\control_1.png");
 
 	/*----------------------------------- Score -----------------------------------------*/
 	score[0] = iLoadImage("Menu\\Score\\score_0.png");
-	score[1] = iLoadImage("Menu\\Score\\score_1.png");
-	score[2] = iLoadImage("Menu\\Score\\score_2.png");
+	score[1] = iLoadImage("Menu\\Score\\score_2.png");
+	score[2] = iLoadImage("Menu\\Score\\score_1.png");
 
 
 	/*--------------------------------- Idle Image -------------------------------------*/

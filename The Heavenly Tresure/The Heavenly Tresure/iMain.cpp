@@ -50,6 +50,7 @@ void iDraw()
 
 	}
 
+
 	if (menu_option == 3)
 	{
 		showScore();
@@ -58,6 +59,11 @@ void iDraw()
 	if (menu_option == 4)
 	{
 		showSet();
+	}
+
+	if (menu_option == 5)
+	{
+		showControls();
 	}
 
 	if (menu_option == 6)
@@ -620,6 +626,14 @@ void iPassiveMouseMove(int mx, int my)
 			scoreIndex = 0;
 		}
 
+		if (menu_option == 5 && mx >= 530 && mx <= 755 && my >= 32 && my <= 85)
+		{
+			controlIndex = 1;
+		}
+		else
+		{
+			controlIndex = 0;
+		}
 
 		if (menu_option == 6 && (mx >= 528 && mx <= 750 && my >= 67 && my <= 118))
 		{
@@ -643,7 +657,6 @@ void iPassiveMouseMove(int mx, int my)
 
 void iMouse(int button, int state, int mx, int my)
 {
-	cout << mx << " " << my << endl;
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP)
 	{
 		//controlSound(false);
@@ -675,6 +688,16 @@ void iKeyboard(unsigned char key)
 	{
 		music = false;
 		controlSound(false);
+	}
+
+	if (key == 'p')
+	{
+		if (phase >= 0 && phase <= 2)
+		{
+			lvlOneStart = false;
+			menu_option = 7;
+			showPauseMenu();
+		}
 	}
 
 }

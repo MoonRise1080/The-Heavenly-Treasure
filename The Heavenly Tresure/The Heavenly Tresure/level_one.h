@@ -22,6 +22,7 @@ bool collisionMob = false;
 bool lvlOneStart = false;
 bool lvlOnePhaseOneRepo = false;
 
+
 Enemy huntressOne(990, 575, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 Enemy huntressTwo(688, 504, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
 Enemy huntressThree(789, 374, huntressHeight, huntressWidth, 2, true, false, false, false, false, false);
@@ -37,15 +38,20 @@ gameObject heartThree(216, 134, 128, 128, 0, false);
 
 void showLevelOne()
 {
+	char score[20];
 	if (mainChar.dead == 4 && menu_option == 1)
 	{
 		if (gameOverIndex == 1)
 		{
 			iShowImage(0, 0, 1280, 720, gameOverMenu[1]);
+			sprintf_s(score, "%d", mainChar.score);
+			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 		else
 		{
 			iShowImage(0, 0, 1280, 720, gameOverMenu[0]);
+			sprintf_s(score, "%d", mainChar.score);
+			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 
 		isStart = false;

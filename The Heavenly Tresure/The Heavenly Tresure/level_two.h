@@ -48,23 +48,23 @@ gameObject heartSix(640, 105, 128, 128, 0, false);
 
 Enemy huntressThirteen(298, 534, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressFourteen(976, 540, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressFifteen(789, 1200, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressSixteen(789, 1000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressFifteen(789, 3000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressSixteen(789, 2500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 //Enemy huntressSeventeen(1117, 1500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressEighteen(696, 900, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressNineteen(300, 900, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressEighteen(696, 3500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressNineteen(300, 2000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_2**********************************************/
 
 
 /*******************************Leve2_phase_3**********************************************/
 
-Enemy huntressTwenty(331, 372, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressTwentyone(636, 470, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressTwentytwo(1059, 525, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressTwentythree(300, 800, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressTwentyfour(696, 1000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressTwentyfive(1022, 1200, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwenty(331, 372, bringerHeight, bringerWidth, 1, true, false, false, false, false, false);
+Enemy huntressTwentyone(636, 470, bringerHeight, bringerWidth, 1, true, false, false, false, false, false);
+Enemy huntressTwentytwo(1059, 525, bringerHeight, bringerWidth, 1, true, false, false, false, false, false);
+Enemy huntressTwentythree(300, 2000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentyfour(696, 2500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+Enemy huntressTwentyfive(1022, 3000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 
 /*******************************Leve2_phase_3**********************************************/
 
@@ -72,15 +72,20 @@ Enemy huntressTwentyfive(1022, 1200, bringerHeight, bringerWidth, 2, true, false
 
 void showLevelTwo()
 {
+	char score[20];
 	if (mainChar.dead == 4)
 	{
 		if (gameOverIndex == 1)
 		{
 			iShowImage(0, 0, 1280, 720, gameOverMenu[1]);
+			sprintf_s(score, "%d", mainChar.score);
+			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 		else
 		{
 			iShowImage(0, 0, 1280, 720, gameOverMenu[0]);
+			sprintf_s(score, "%d", mainChar.score);
+			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 
 		isStart = false;
@@ -418,7 +423,9 @@ void showLevelTwo()
 			{
 				huntressNine.collision = false;
 			}*/
+
 			//out of the screen enemy starts
+
 			if (collisionEnemy(huntressTen, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
 				collisionEnemy(huntressTen, bringerMother, recX[1], recY[1], dx[1], dy[1], bringerMother.padN) ||
 				collisionEnemy(huntressTen, bringerMother, recX[2], recY[2], dx[2], dy[2], bringerMother.padN) ||

@@ -12,6 +12,10 @@ int storyIndex = 0;
 int settings[7];
 int setIndex;
 int score[3];
+int control[2];
+int controlIndex = 0;
+int pause[3];
+int pauseIndex = 0;
 int scoreIndex;
 int gameOverMenu[2];
 int gameOverIndex;
@@ -97,6 +101,11 @@ void selectMenuOption(int menu_x, int menu_y)
 	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
 	{
 		menu_option = 0; // game over
+	}
+
+	if (menu_option == 5 && menu_x >= 530 && menu_x <= 755 && menu_y >= 32 && menu_y <= 85)
+	{
+		menu_option = 0;
 	}
 }
 
@@ -217,6 +226,25 @@ void showScore()
 	{
 		iShowImage(0, 0, screenWidth, screenHight, score[scoreIndex]);
 	}
+}
+
+void showControls()
+{
+	if (menu_option == 5 && controlIndex == 0)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, control[controlIndex]);
+	}
+
+	else if (menu_option == 5 && controlIndex == 1)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, control[controlIndex]);
+	}
+
+}
+
+void showPauseMenu()
+{
+	if ()
 }
 
 
