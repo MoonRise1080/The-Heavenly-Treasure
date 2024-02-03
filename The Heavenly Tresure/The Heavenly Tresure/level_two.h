@@ -358,6 +358,7 @@ void showLevelTwo()
 	{
 		if (phase == 3)
 		{
+			mainChar.phase = phase;
 			collisionLvlTwoPhaseOne();
 						
 			iShowImage(lvlTwoPhaseOne.pos_x, lvlTwoPhaseOne.pos_y, lvlTwoPhaseOne.dim_x, lvlTwoPhaseOne.dim_y, lvlTwoPhaseOne.bgImage);
@@ -615,6 +616,7 @@ void showLevelTwo()
 
 		if (phase == 5)
 		{
+			mainChar.phase = phase;
 			collisionLvlTwoPhaseThree();
 			
 
@@ -745,6 +747,7 @@ void showLevelTwo()
 
 	if (mainChar.dead < 4 && menu_option == 1)
 	{
+		showPoint();
 		showPlayerAnimations();
 	}
 }

@@ -14,6 +14,7 @@ struct Player
 	int hp = 0;
 	int dead = 0;
 	int score = 0;
+	int phase = 0;
 	bool isDead = false;
 	bool idle = true;
 	bool rdirection = true;
