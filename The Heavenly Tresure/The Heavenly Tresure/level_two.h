@@ -36,9 +36,9 @@ Enemy huntressTen(200, 2000, bringerHeight, bringerWidth, 2, true, false, false,
 Enemy huntressEleven(600, 2500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressTwelve(1000, 3000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 
-gameObject heartOne(640, 105, 128, 128, 0, false);
-gameObject heartTwo(640, 105, 128, 128, 0, false);
-gameObject heartThree(640, 105, 128, 128, 0, false);
+gameObject heartFour(640, 105, 128, 128, 0, false);
+gameObject heartFive(640, 105, 128, 128, 0, false);
+gameObject heartSix(640, 105, 128, 128, 0, false);
 
 
 /*******************************Leve2_phase_1**********************************************/
@@ -196,6 +196,17 @@ void showLevelTwo()
 			chaseCheck(&huntressEleven);
 			chaseCheck(&huntressTwelve);
 
+			showGameObject(heartFour);
+			if ((heartFour.isTaken == false) && abs(mainChar.pos_x - heartFour.pos_x) <= 50 && abs(mainChar.pos_y - heartFour.pos_y) <= 50)
+			{
+				heartFour.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+
 			if (mainChar.isDead == true)
 			{
 				gameOver(8, 128);
@@ -319,6 +330,17 @@ void showLevelTwo()
 			chaseCheck(&huntressEighteen);
 			chaseCheck(&huntressNineteen);
 
+			showGameObject(heartFive);
+			if ((heartFive.isTaken == false) && abs(mainChar.pos_x - heartFive.pos_x) <= 50 && abs(mainChar.pos_y - heartFive.pos_y) <= 50)
+			{
+				heartFive.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+
 			if (mainChar.isDead == true)
 			{
 				gameOver(8, 128);
@@ -435,6 +457,17 @@ void showLevelTwo()
 			chaseCheck(&huntressTwentythree);
 			chaseCheck(&huntressTwentyfour);
 			chaseCheck(&huntressTwentyfive);
+
+			showGameObject(heartSix);
+			if ((heartSix.isTaken == false) && abs(mainChar.pos_x - heartSix.pos_x) <= 50 && abs(mainChar.pos_y - heartSix.pos_y) <= 50)
+			{
+				heartSix.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
 
 			if (mainChar.isDead == true)
 			{
