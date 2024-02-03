@@ -161,6 +161,7 @@ void showLevelOne()
 
 		if (phase == 0)
 		{
+			mainChar.phase = phase;
 
 			collisionLvlOnePhaseOne();
 			iShowImage(lvlOnePhaseOne.pos_x, lvlOnePhaseOne.pos_y, lvlOnePhaseOne.dim_x, lvlOnePhaseOne.dim_y, lvlOnePhaseOne.bgImage);
@@ -244,6 +245,7 @@ void showLevelOne()
 
 		else if (phase == 1)
 		{
+			mainChar.phase = phase;
 			if (lvlOnePhaseOneRepo == false)
 			{
 				mainChar.pos_x = 40;
@@ -345,6 +347,7 @@ void showLevelOne()
 
 		else if (phase == 2)
 		{
+			mainChar.phase = phase;
 			collisionLvlOnePhaseThree();
 			iShowImage(lvlOnePhaseThree.pos_x, lvlOnePhaseThree.pos_y, lvlOnePhaseThree.dim_x, lvlOnePhaseThree.dim_y, lvlOnePhaseThree.bgImage);
 
@@ -437,6 +440,7 @@ void showLevelOne()
 
 		if (mainChar.dead < 4 && menu_option == 1)
 		{
+			showPoint();
 			showPlayerAnimations();
 		}
 
