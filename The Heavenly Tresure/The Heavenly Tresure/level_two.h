@@ -483,7 +483,7 @@ void showLevelTwo()
 		{
 			collisionLvlTwoPhaseTwo();
 			
-
+			mainChar.phase = phase;
 			iShowImage(lvlTwoPhaseTwo.pos_x, lvlTwoPhaseTwo.pos_y, lvlTwoPhaseTwo.dim_x, lvlTwoPhaseTwo.dim_y, lvlTwoPhaseTwo.bgImage);
 
 			showHp();
