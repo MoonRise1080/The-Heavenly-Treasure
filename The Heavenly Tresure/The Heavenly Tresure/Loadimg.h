@@ -9,6 +9,7 @@
 #include "level_two.h"
 #include "Enemy.h"
 #include "Game_object.h"
+
 void loadImage()
 {
 
@@ -56,6 +57,9 @@ void loadImage()
 	pause[1] = iLoadImage("Menu\\Pause\\pause_1.png");
 	pause[2] = iLoadImage("Menu\\Pause\\pause_2.png");
 
+	/*------------------------------------ You Win ---------------------------------------*/
+	youWin[0] = iLoadImage("Menu\\Win\\win_0.png");
+	youWin[1] = iLoadImage("Menu\\Win\\win_1.png");
 
 	/*--------------------------------- Idle Image -------------------------------------*/
 	mainChar.img_idle[0] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_0.png");
@@ -133,6 +137,7 @@ void loadImage()
 	lvlTwoPhaseOne.bgImage = iLoadImage("Backgrounds\\level_2\\level_2_1.png");
 	lvlTwoPhaseTwo.bgImage = iLoadImage("Backgrounds\\level_2\\level_2_2.png");
 	lvlTwoPhaseThree.bgImage = iLoadImage("Backgrounds\\level_2\\level_2_3.png");
+	lvlTwoPhaseFour.bgImage = iLoadImage("Backgrounds\\level_2\\level_2_4.png");
 
 	/*--------------------------- Hp Image --------------------------*/
 	hpImgArr[0] = iLoadImage("Backgrounds\\HUD\\Health\\health_0.png");

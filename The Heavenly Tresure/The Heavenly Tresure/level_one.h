@@ -35,6 +35,108 @@ gameObject heartTwo(532, 200, 128, 128, 0, false);
 gameObject heartThree(216, 134, 128, 128, 0, false);
 
 
+void lvlOneReset()
+{
+	isStart = false;
+	lvlOneStart = false;
+	gameOverCommand = true;
+	
+	huntressOne.pos_x = 990;
+	huntressOne.pos_y = 575;
+	huntressOne.dim_x = huntressHeight;
+	huntressOne.dim_y = huntressWidth;
+	huntressOne.hp = 2;
+	huntressOne.idle = true;
+	huntressOne.rdirection = false;
+	huntressOne.collision = false;
+	huntressOne.chase = false;
+	huntressOne.attack = false;
+	huntressOne.isDead = false;
+
+	huntressTwo.pos_x = 688;
+	huntressTwo.pos_y = 504;
+	huntressTwo.dim_x = huntressHeight;
+	huntressTwo.dim_y = huntressWidth;
+	huntressTwo.hp = 2;
+	huntressTwo.idle = true;
+	huntressTwo.rdirection = false;
+	huntressTwo.collision = false;
+	huntressTwo.chase = false;
+	huntressTwo.attack = false;
+	huntressTwo.isDead = false;
+
+	huntressThree.pos_x = 789;
+	huntressThree.pos_y = 374;
+	huntressThree.dim_x = huntressHeight;
+	huntressThree.dim_y = huntressWidth;
+	huntressThree.hp = 2;
+	huntressThree.idle = true;
+	huntressThree.rdirection = false;
+	huntressThree.collision = false;
+	huntressThree.chase = false;
+	huntressThree.attack = false;
+	huntressThree.isDead = false;
+
+	huntressFour.pos_x = 1117;
+	huntressFour.pos_y = 192;
+	huntressFour.dim_x = huntressHeight;
+	huntressFour.dim_y = huntressWidth;
+	huntressFour.hp = 2;
+	huntressFour.idle = true;
+	huntressFour.rdirection = false;
+	huntressFour.collision = false;
+	huntressFour.chase = false;
+	huntressFour.attack = false;
+	huntressFour.isDead = false;
+
+	huntressFive.pos_x = 696;
+	huntressFive.pos_y = 366;
+	huntressFive.dim_x = huntressHeight;
+	huntressFive.dim_y = huntressWidth;
+	huntressFive.hp = 2;
+	huntressFive.idle = true;
+	huntressFive.rdirection = false;
+	huntressFive.collision = false;
+	huntressFive.chase = false;
+	huntressFive.attack = false;
+	huntressFive.isDead = false;
+
+	huntressSix.pos_x = 1022;
+	huntressSix.pos_y = 494;
+	huntressSix.dim_x = huntressHeight;
+	huntressSix.dim_y = huntressWidth;
+	huntressSix.hp = 2;
+	huntressSix.idle = true;
+	huntressSix.rdirection = false;
+	huntressSix.collision = false;
+	huntressSix.chase = false;
+	huntressSix.attack = false;
+	huntressSix.isDead = false;
+
+	/******************************************Game_object***************************************************************/
+
+	heartOne.pos_x = 905;
+	heartOne.pos_y = 185;
+	heartOne.dim_x = 128;
+	heartOne.dim_y = 128;
+	heartOne.index = 0;
+	heartOne.isTaken = false;
+
+	heartTwo.pos_x = 532;
+	heartTwo.pos_y = 200;
+	heartTwo.dim_x = 128;
+	heartTwo.dim_y = 128;
+	heartTwo.index = 0;
+	heartTwo.isTaken = false;
+
+	heartThree.pos_x = 1214;
+	heartThree.pos_y = 1214;
+	heartThree.dim_x = 128;
+	heartThree.dim_y = 128;
+	heartThree.index = 0;
+	heartThree.isTaken = false;
+}
+
 
 void showLevelOne()
 {
@@ -54,113 +156,7 @@ void showLevelOne()
 			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 
-		isStart = false;
-		lvlOneStart = false;
-		gameOverCommand = true;
-
-		mainChar.pos_x = 100;
-		mainChar.pos_y = 324;
-		mainChar.dim_x = 138;
-		mainChar.dim_y = 120;
-		mainChar.hp = 0;
-		mainChar.idle = true;
-		mainChar.rdirection = true;
-
-		huntressOne.pos_x = 990;
-		huntressOne.pos_y = 575;
-		huntressOne.dim_x = huntressHeight;
-		huntressOne.dim_y = huntressWidth;
-		huntressOne.hp = 2;
-		huntressOne.idle = true;
-		huntressOne.rdirection = false;
-		huntressOne.collision = false;
-		huntressOne.chase = false;
-		huntressOne.attack = false;
-		huntressOne.isDead = false;
-
-		huntressTwo.pos_x = 688;
-		huntressTwo.pos_y = 504;
-		huntressTwo.dim_x = huntressHeight;
-		huntressTwo.dim_y = huntressWidth;
-		huntressTwo.hp = 2;
-		huntressTwo.idle = true;
-		huntressTwo.rdirection = false;
-		huntressTwo.collision = false;
-		huntressTwo.chase = false;
-		huntressTwo.attack = false;
-		huntressTwo.isDead = false;
-
-		huntressThree.pos_x = 789;
-		huntressThree.pos_y = 374;
-		huntressThree.dim_x = huntressHeight;
-		huntressThree.dim_y = huntressWidth;
-		huntressThree.hp = 2;
-		huntressThree.idle = true;
-		huntressThree.rdirection = false;
-		huntressThree.collision = false;
-		huntressThree.chase = false;
-		huntressThree.attack = false;
-		huntressThree.isDead = false;
-
-		huntressFour.pos_x = 1117;
-		huntressFour.pos_y = 192;
-		huntressFour.dim_x = huntressHeight;
-		huntressFour.dim_y = huntressWidth;
-		huntressFour.hp = 2;
-		huntressFour.idle = true;
-		huntressFour.rdirection = false;
-		huntressFour.collision = false;
-		huntressFour.chase = false;
-		huntressFour.attack = false;
-		huntressFour.isDead = false;
-
-		huntressFive.pos_x = 696;
-		huntressFive.pos_y = 366;
-		huntressFive.dim_x = huntressHeight;
-		huntressFive.dim_y = huntressWidth;
-		huntressFive.hp = 2;
-		huntressFive.idle = true;
-		huntressFive.rdirection = false;
-		huntressFive.collision = false;
-		huntressFive.chase = false;
-		huntressFive.attack = false;
-		huntressFive.isDead = false;
-
-		huntressSix.pos_x = 1022;
-		huntressSix.pos_y = 494;
-		huntressSix.dim_x = huntressHeight;
-		huntressSix.dim_y = huntressWidth;
-		huntressSix.hp = 2;
-		huntressSix.idle = true;
-		huntressSix.rdirection = false;
-		huntressSix.collision = false;
-		huntressSix.chase = false;
-		huntressSix.attack = false;
-		huntressSix.isDead = false;
-
-		/******************************************Game_object***************************************************************/
-
-		heartOne.pos_x = 905;
-		heartOne.pos_y = 185;
-		heartOne.dim_x = 128;
-		heartOne.dim_y = 128;
-		heartOne.index = 0;
-		heartOne.isTaken =false ;
-
-		heartTwo.pos_x = 532;
-		heartTwo.pos_y = 200;
-		heartTwo.dim_x = 128;
-		heartTwo.dim_y = 128;
-		heartTwo.index = 0;
-		heartTwo.isTaken = false;
-
-		heartThree.pos_x = 1214;
-		heartThree.pos_y = 1214;
-		heartThree.dim_x = 128;
-		heartThree.dim_y = 128;
-		heartThree.index = 0;
-		heartThree.isTaken = false;
-	}
+}
 
 	if (lvlOneStart == true)
 	{

@@ -21,12 +21,22 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-	cout << huntressSeven.rdirection << endl;
+	
 
 	if (menu_option == 0)
 	{
 		isStart = false;
+		lvlOneStart = false;
+		lvlTwoStart = false;
 		mainChar.dead = 0;
+		phase = 0;
+		mainChar.pos_x = 100;
+		mainChar.pos_y = 324;
+		mainChar.dim_x = 138;
+		mainChar.dim_y = 120;
+		mainChar.hp = 0;
+		mainChar.idle = true;
+		mainChar.rdirection = true;
 		showMenu();
 	}
 
@@ -74,6 +84,14 @@ void iDraw()
 	if (menu_option == 7)
 	{
 		showPauseMenu();
+	}
+
+	if (menu_option == 8)
+	{
+		showWin();
+		char score[20];
+		sprintf_s(score, "%d", mainChar.score);
+		iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 	}
 
 }
@@ -329,6 +347,12 @@ void oneFiftyMilli()
 		}
 		//phase three ends 
 
+		if (bringerBoss.collision == false)
+		{
+			if (phase == 6)
+				bringerBoss.applyGravityEnemy();
+		}
+
 		/*******************************level_two*********************************************************/
 
 
@@ -417,6 +441,24 @@ void oneFiftyMilli()
 		//phase Three ends
 		/*******************************level_two*********************************************************/
 
+		if (bringerBoss.chase == true)
+		{
+			bringerBoss.Chase();
+		}
+
+		if (phase == 6)
+		{
+			h1.applyGravity();
+			h2.applyGravity();
+			h3.applyGravity();
+			h4.applyGravity();
+			h5.applyGravity();
+			h6.applyGravity();
+			h7.applyGravity();
+			h8.applyGravity();
+			h9.applyGravity();
+			h10.applyGravity();
+		}
 	}
 
 }
@@ -531,6 +573,11 @@ void threeThousandMilli()
 			huntressTwentyfive.enemyAttack();
 		}
 		//phase three ends
+
+		if (bringerBoss.attack == true)
+		{
+			bringerBoss.enemyAttack();
+		}
 		/***********************************************Level_Two*****************************************************************************/
 	}
 }
@@ -672,6 +719,15 @@ void iPassiveMouseMove(int mx, int my)
 		pauseIndex = 0;
 	}
 
+	if (menu_option == 8 && mx >= 460 && mx <= 840 && my >= 145 && my <= 190)
+	{
+		youWinIndex = 1;
+	}
+	else
+	{
+		youWinIndex = 0;
+	}
+
 }
 
 void iMouse(int button, int state, int mx, int my)
@@ -733,9 +789,15 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_RIGHT)
 	{
-		if (1)
+		if (phase >= 0 && phase <= 5)
 		{
-			mainChar.pos_x += 15;
+			mainChar.pos_x += 5;
+			mainChar.idle = false;
+			mainChar.rdirection = true;
+		}
+		if (phase == 6 && mainChar.pos_x + mainChar.dim_x <= 1280)
+		{
+			mainChar.pos_x += 5;
 			mainChar.idle = false;
 			mainChar.rdirection = true;
 		}
@@ -743,7 +805,14 @@ void iSpecialKeyboard(unsigned char key)
 
 	if (key == GLUT_KEY_LEFT)
 	{
-		if (1)
+		if (phase >= 0 && phase <= 5)
+		{
+			mainChar.pos_x -= 5;
+			mainChar.idle = false;
+			mainChar.rdirection = false;
+		}
+
+		if (phase == 6 && mainChar.pos_x >= 0)
 		{
 			mainChar.pos_x -= 5;
 			mainChar.idle = false;

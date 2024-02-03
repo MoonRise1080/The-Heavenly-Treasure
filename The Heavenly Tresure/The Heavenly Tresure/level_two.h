@@ -68,12 +68,25 @@ Enemy huntressTwentyfive(1022, 3000, bringerHeight, bringerWidth, 2, true, false
 
 /*******************************Leve2_phase_3**********************************************/
 
+Enemy bringerBoss(1280, 130, (bringerHeight * 3), (bringerWidth * 3), 10, true, false, false, false, false, false);
+
+gameObject h1(180, 1500, 128, 128, 0, false, true);
+gameObject h2(360, 2000, 128, 128, 0, false, true);
+gameObject h3(540, 2500, 128, 128, 0, false, true);
+gameObject h4(720, 3000, 128, 128, 0, false, true);
+gameObject h5(180, 3500, 128, 128, 0, false, true);
+gameObject h6(360, 4000, 128, 128, 0, false, true);
+gameObject h7(540, 4500, 128, 128, 0, false, true);
+gameObject h8(720, 5000, 128, 128, 0, false, true);
+gameObject h9(180, 5500, 128, 128, 0, false, true);
+gameObject h10(360, 6000, 128, 128, 0, false, true);
+
 
 
 void showLevelTwo()
 {
 	char score[20];
-	if (mainChar.dead == 4)
+	if (mainChar.dead == 4 && menu_option == 1)
 	{
 		if (gameOverIndex == 1)
 		{
@@ -88,18 +101,12 @@ void showLevelTwo()
 			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 
+
 		isStart = false;
 		lvlOneStart = false;
 		lvlTwoStart = false;
 		gameOverCommand = true;
-
-		mainChar.pos_x = 100;
-		mainChar.pos_y = 324;
-		mainChar.dim_x = 138;
-		mainChar.dim_y = 120;
-		mainChar.hp = 0;
-		mainChar.idle = true;
-		mainChar.rdirection = true;
+		
 
 		/*******************************Enemy_reposition*****************************************/
 		huntressSeven.pos_x = 161;
@@ -125,18 +132,6 @@ void showLevelTwo()
 		huntressEight.chase = false;
 		huntressEight.attack = false;
 		huntressEight.isDead = false;
-
-		/*huntressNine.pos_x = 1120;
-		huntressNine.pos_y = 476;
-		huntressNine.dim_x = huntressHeight;
-		huntressNine.dim_y = huntressWidth;
-		huntressNine.hp = 2;
-		huntressNine.idle = true;
-		huntressNine.rdirection = false;
-		huntressNine.collision = false;
-		huntressNine.chase = false;
-		huntressNine.attack = false;
-		huntressNine.isDead = false;*/
 
 		huntressTen.pos_x = 200;
 		huntressTen.pos_y = 2000;
@@ -221,18 +216,6 @@ void showLevelTwo()
 		huntressSixteen.chase = false;
 		huntressSixteen.attack = false;
 		huntressSixteen.isDead = false;
-
-		/*huntressSeventeen.pos_x = 1117;
-		huntressSeventeen.pos_y = 1500;
-		huntressSeventeen.dim_x = huntressHeight;
-		huntressSeventeen.dim_y = huntressWidth;
-		huntressSeventeen.hp = 2;
-		huntressSeventeen.idle = true;
-		huntressSeventeen.rdirection = false;
-		huntressSeventeen.collision = false;
-		huntressSeventeen.chase = false;
-		huntressSeventeen.attack = false;
-		huntressSeventeen.isDead = false;*/
 
 		huntressEighteen.pos_x = 696;
 		huntressEighteen.pos_y = 900;
@@ -329,6 +312,18 @@ void showLevelTwo()
 		huntressTwentyfive.chase = false;
 		huntressTwentyfive.attack = false;
 		huntressTwentyfive.isDead = false;//phase 3 ends
+
+		bringerBoss.pos_x = 1280;
+		bringerBoss.pos_y = 130;
+		bringerBoss.dim_x = (bringerHeight * 3);
+		bringerBoss.dim_y = (bringerWidth * 3);
+		bringerBoss.hp = 1;
+		bringerBoss.idle = true;
+		bringerBoss.rdirection = false;
+		bringerBoss.collision = false;
+		bringerBoss.chase = false;
+		bringerBoss.attack = false;
+		bringerBoss.isDead = false;
 
 		/*******************************Enemy_reposition*****************************************/
 
@@ -748,15 +743,407 @@ void showLevelTwo()
 				gameOver(8, 128);
 			}
 		}
+
+		if (phase == 6)
+		{
+			mainChar.phase = phase;
+			collisionLvlTwoPhaseFour();
+			mainChar.dead = 0;
+
+			iShowImage(lvlTwoPhaseFour.pos_x, lvlTwoPhaseFour.pos_y, lvlTwoPhaseFour.dim_x, lvlTwoPhaseFour.dim_y, lvlTwoPhaseFour.bgImage);
+			showHp();
+
+			showBringerAnimations(bringerBoss, 3);
+
+			collisionPlayer = (collisionDetection(mainChar.pos_x + mainChar.padN, mainChar.pos_y, mainChar.dim_x, mainChar.dim_y, recX[0], recY[0], dx[0], dy[0]));
+
+			if (collisionEnemy(bringerBoss, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN))
+			{
+				bringerBoss.collision = true;
+			}
+			else
+			{
+				bringerBoss.collision = false;
+			}
+
+			chaseCheck(&bringerBoss);
+
+			if (mainChar.isDead == true)
+			{
+				gameOver(8, 128);
+			}
+
+			showGameObject(h1);
+			if ((h1.isTaken == false) && abs(mainChar.pos_x - h1.pos_x) <= 50 && abs(mainChar.pos_y - h1.pos_y) <= 50)
+			{
+				h1.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h2);
+			if ((h2.isTaken == false) && abs(mainChar.pos_x - h2.pos_x) <= 50 && abs(mainChar.pos_y - h2.pos_y) <= 50)
+			{
+				h2.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h3);
+			if ((h3.isTaken == false) && abs(mainChar.pos_x - h3.pos_x) <= 50 && abs(mainChar.pos_y - h3.pos_y) <= 50)
+			{
+				h3.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h4);
+			if ((h4.isTaken == false) && abs(mainChar.pos_x - h4.pos_x) <= 50 && abs(mainChar.pos_y - h4.pos_y) <= 50)
+			{
+				h4.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h5);
+			if ((h5.isTaken == false) && abs(mainChar.pos_x - h5.pos_x) <= 50 && abs(mainChar.pos_y - h5.pos_y) <= 50)
+			{
+				h5.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h6);
+			if ((h6.isTaken == false) && abs(mainChar.pos_x - h6.pos_x) <= 50 && abs(mainChar.pos_y - h6.pos_y) <= 50)
+			{
+				h6.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h7);
+			if ((h7.isTaken == false) && abs(mainChar.pos_x - h7.pos_x) <= 50 && abs(mainChar.pos_y - h7.pos_y) <= 50)
+			{
+				h7.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h8);
+			if ((h8.isTaken == false) && abs(mainChar.pos_x - h8.pos_x) <= 50 && abs(mainChar.pos_y - h8.pos_y) <= 50)
+			{
+				h8.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h9);
+			if ((h9.isTaken == false) && abs(mainChar.pos_x - h9.pos_x) <= 50 && abs(mainChar.pos_y - h9.pos_y) <= 50)
+			{
+				h9.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+			showGameObject(h10);
+			if ((h10.isTaken == false) && abs(mainChar.pos_x - h10.pos_x) <= 50 && abs(mainChar.pos_y - h10.pos_y) <= 50)
+			{
+				h10.isTaken = true;
+				mainChar.hp--;
+				if (mainChar.hp < 0)
+				{
+					mainChar.hp = 0;
+				}
+			}
+
+		}
 				
 	}
 
+
+	if (bringerBoss.isDead == true)
+	{
+		phase = 0;
+		menu_option = 8;
+		mainChar.dead = 0;
+
+		lvlOneReset();
+
+		/*******************************Enemy_reposition*****************************************/
+		huntressSeven.pos_x = 161;
+		huntressSeven.pos_y = 465;
+		huntressSeven.dim_x = bringerHeight;
+		huntressSeven.dim_y = bringerWidth;
+		huntressSeven.hp = 2;
+		huntressSeven.idle = true;
+		huntressSeven.rdirection = false;
+		huntressSeven.collision = false;
+		huntressSeven.chase = false;
+		huntressSeven.attack = false;
+		huntressSeven.isDead = false;
+
+		huntressEight.pos_x = 608;
+		huntressEight.pos_y = 327;
+		huntressEight.dim_x = bringerHeight;
+		huntressEight.dim_y = bringerWidth;
+		huntressEight.hp = 2;
+		huntressEight.idle = true;
+		huntressEight.rdirection = false;
+		huntressEight.collision = false;
+		huntressEight.chase = false;
+		huntressEight.attack = false;
+		huntressEight.isDead = false;
+
+		huntressTen.pos_x = 200;
+		huntressTen.pos_y = 2000;
+		huntressTen.dim_x = bringerHeight;
+		huntressTen.dim_y = bringerWidth;
+		huntressTen.hp = 2;
+		huntressTen.idle = true;
+		huntressTen.rdirection = false;
+		huntressTen.collision = false;
+		huntressTen.chase = false;
+		huntressTen.attack = false;
+		huntressTen.isDead = false;
+
+		huntressEleven.pos_x = 600;
+		huntressEleven.pos_y = 2500;
+		huntressEleven.dim_x = bringerHeight;
+		huntressEleven.dim_y = bringerWidth;
+		huntressEleven.hp = 2;
+		huntressEleven.idle = true;
+		huntressEleven.rdirection = false;
+		huntressEleven.collision = false;
+		huntressEleven.chase = false;
+		huntressEleven.attack = false;
+		huntressEleven.isDead = false;
+
+		huntressTwelve.pos_x = 1000;
+		huntressTwelve.pos_y = 3000;
+		huntressTwelve.dim_x = bringerHeight;
+		huntressTwelve.dim_y = bringerWidth;
+		huntressTwelve.hp = 2;
+		huntressTwelve.idle = true;
+		huntressTwelve.rdirection = false;
+		huntressTwelve.collision = false;
+		huntressTwelve.chase = false;
+		huntressTwelve.attack = false;
+		huntressTwelve.isDead = false;// phase 1 ends
+
+		huntressThirteen.pos_x = 298;
+		huntressThirteen.pos_y = 534;
+		huntressThirteen.dim_x = bringerHeight;
+		huntressThirteen.dim_y = bringerWidth;
+		huntressThirteen.hp = 2;
+		huntressThirteen.idle = true;
+		huntressThirteen.rdirection = false;
+		huntressThirteen.collision = false;
+		huntressThirteen.chase = false;
+		huntressThirteen.attack = false;
+		huntressThirteen.isDead = false;
+
+		huntressFourteen.pos_x = 976;
+		huntressFourteen.pos_y = 540;
+		huntressFourteen.dim_x = bringerHeight;
+		huntressFourteen.dim_y = bringerWidth;
+		huntressFourteen.hp = 2;
+		huntressFourteen.idle = true;
+		huntressFourteen.rdirection = false;
+		huntressFourteen.collision = false;
+		huntressFourteen.chase = false;
+		huntressFourteen.attack = false;
+		huntressFourteen.isDead = false;
+
+		huntressFifteen.pos_x = 789;
+		huntressFifteen.pos_y = 1200;
+		huntressFifteen.dim_x = bringerHeight;
+		huntressFifteen.dim_y = bringerWidth;
+		huntressFifteen.hp = 2;
+		huntressFifteen.idle = true;
+		huntressFifteen.rdirection = false;
+		huntressFifteen.collision = false;
+		huntressFifteen.chase = false;
+		huntressFifteen.attack = false;
+		huntressFifteen.isDead = false;
+
+		huntressSixteen.pos_x = 789;
+		huntressSixteen.pos_y = 1500;
+		huntressSixteen.dim_x = bringerHeight;
+		huntressSixteen.dim_y = bringerWidth;
+		huntressSixteen.hp = 2;
+		huntressSixteen.idle = true;
+		huntressSixteen.rdirection = false;
+		huntressSixteen.collision = false;
+		huntressSixteen.chase = false;
+		huntressSixteen.attack = false;
+		huntressSixteen.isDead = false;
+
+		huntressEighteen.pos_x = 696;
+		huntressEighteen.pos_y = 900;
+		huntressEighteen.dim_x = bringerHeight;
+		huntressEighteen.dim_y = bringerWidth;
+		huntressEighteen.hp = 2;
+		huntressEighteen.idle = true;
+		huntressEighteen.rdirection = false;
+		huntressEighteen.collision = false;
+		huntressEighteen.chase = false;
+		huntressEighteen.attack = false;
+		huntressEighteen.isDead = false;
+
+		huntressNineteen.pos_x = 300;
+		huntressNineteen.pos_y = 900;
+		huntressNineteen.dim_x = bringerHeight;
+		huntressNineteen.dim_y = bringerWidth;
+		huntressNineteen.hp = 2;
+		huntressNineteen.idle = true;
+		huntressNineteen.rdirection = false;
+		huntressNineteen.collision = false;
+		huntressNineteen.chase = false;
+		huntressNineteen.attack = false;
+		huntressNineteen.isDead = false;//phase 2 ends
+
+		huntressTwenty.pos_x = 331;
+		huntressTwenty.pos_y = 372;
+		huntressTwenty.dim_x = bringerHeight;
+		huntressTwenty.dim_y = bringerWidth;
+		huntressTwenty.hp = 2;
+		huntressTwenty.idle = true;
+		huntressTwenty.rdirection = false;
+		huntressTwenty.collision = false;
+		huntressTwenty.chase = false;
+		huntressTwenty.attack = false;
+		huntressTwenty.isDead = false;
+
+		huntressTwentyone.pos_x = 636;
+		huntressTwentyone.pos_y = 470;
+		huntressTwentyone.dim_x = bringerHeight;
+		huntressTwentyone.dim_y = bringerWidth;
+		huntressTwentyone.hp = 2;
+		huntressTwentyone.idle = true;
+		huntressTwentyone.rdirection = false;
+		huntressTwentyone.collision = false;
+		huntressTwentyone.chase = false;
+		huntressTwentyone.attack = false;
+		huntressTwentyone.isDead = false;
+
+		huntressTwentytwo.pos_x = 1059;
+		huntressTwentytwo.pos_y = 525;
+		huntressTwentytwo.dim_x = bringerHeight;
+		huntressTwentytwo.dim_y = bringerWidth;
+		huntressTwentytwo.hp = 2;
+		huntressTwentytwo.idle = true;
+		huntressTwentytwo.rdirection = false;
+		huntressTwentytwo.collision = false;
+		huntressTwentytwo.chase = false;
+		huntressTwentytwo.attack = false;
+		huntressTwentytwo.isDead = false;
+
+		huntressTwentythree.pos_x = 300;
+		huntressTwentythree.pos_y = 800;
+		huntressTwentythree.dim_x = bringerHeight;
+		huntressTwentythree.dim_y = bringerWidth;
+		huntressTwentythree.hp = 2;
+		huntressTwentythree.idle = true;
+		huntressTwentythree.rdirection = false;
+		huntressTwentythree.collision = false;
+		huntressTwentythree.chase = false;
+		huntressTwentythree.attack = false;
+		huntressTwentythree.isDead = false;
+
+		huntressTwentyfour.pos_x = 696;
+		huntressTwentyfour.pos_y = 1000;
+		huntressTwentyfour.dim_x = bringerHeight;
+		huntressTwentyfour.dim_y = bringerWidth;
+		huntressTwentyfour.hp = 2;
+		huntressTwentyfour.idle = true;
+		huntressTwentyfour.rdirection = false;
+		huntressTwentyfour.collision = false;
+		huntressTwentyfour.chase = false;
+		huntressTwentyfour.attack = false;
+		huntressTwentyfour.isDead = false;
+
+		huntressTwentyfive.pos_x = 1022;
+		huntressTwentyfive.pos_y = 1200;
+		huntressTwentyfive.dim_x = bringerHeight;
+		huntressTwentyfive.dim_y = bringerWidth;
+		huntressTwentyfive.hp = 2;
+		huntressTwentyfive.idle = true;
+		huntressTwentyfive.rdirection = false;
+		huntressTwentyfive.collision = false;
+		huntressTwentyfive.chase = false;
+		huntressTwentyfive.attack = false;
+		huntressTwentyfive.isDead = false;//phase 3 ends
+
+		bringerBoss.pos_x = 1280;
+		bringerBoss.pos_y = 130;
+		bringerBoss.dim_x = (bringerHeight * 3);
+		bringerBoss.dim_y = (bringerWidth * 3);
+		bringerBoss.hp = 1;
+		bringerBoss.idle = true;
+		bringerBoss.rdirection = false;
+		bringerBoss.collision = false;
+		bringerBoss.chase = false;
+		bringerBoss.attack = false;
+		bringerBoss.isDead = false;
+
+		/*******************************Enemy_reposition*****************************************/
+
+		/**************************************Heart_reposition*********************************************/
+		heartFour.pos_x = 640;
+		heartFour.pos_y = 105;
+		heartFour.dim_x = 128;
+		heartFour.dim_y = 128;
+		heartFour.index = 0;
+		heartFour.isTaken = false;
+
+		heartFive.pos_x = 640;
+		heartFive.pos_y = 105;
+		heartFive.dim_x = 128;
+		heartFive.dim_y = 128;
+		heartFive.index = 0;
+		heartFive.isTaken = false;
+
+		heartSix.pos_x = 640;
+		heartSix.pos_y = 105;
+		heartSix.dim_x = 128;
+		heartSix.dim_y = 128;
+		heartSix.index = 0;
+		heartSix.isTaken = false;
+
+		isStart = false;
+		lvlOneStart = false;
+		lvlTwoStart = false;
+
+		/**************************************Heart_reposition*********************************************/
+	}
+	
 
 	if (mainChar.dead < 4 && menu_option == 1)
 	{
 		showPoint();
 		showPlayerAnimations();
+		
 	}
+		
+	
 }
 
 

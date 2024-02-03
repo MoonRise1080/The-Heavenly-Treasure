@@ -17,6 +17,8 @@ int controlIndex = 0;
 int pause[3];
 int pauseIndex = 0;
 int scoreIndex;
+int youWin[2];
+int youWinIndex = 0;
 int gameOverMenu[2];
 int gameOverIndex;
 bool gameOverCommand = false;
@@ -100,11 +102,11 @@ void selectMenuOption(int menu_x, int menu_y)
 
 	if (menu_option == 7 && (menu_x >= 460 && menu_x <= 830 && menu_y >= 130 && menu_y <= 220))
 	{
-		menu_option = 0;
+		menu_option = 0; // back to main menu
 	}
 	else if (menu_option == 7 && (menu_x >= 460 && menu_x <= 830 && menu_y >= 310 && menu_y <= 400))
 	{
-		menu_option = 1;
+		menu_option = 1; // resume
 	}
 	
 	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
@@ -114,7 +116,12 @@ void selectMenuOption(int menu_x, int menu_y)
 
 	if (menu_option == 5 && menu_x >= 530 && menu_x <= 755 && menu_y >= 32 && menu_y <= 85)
 	{
-		menu_option = 0;
+		menu_option = 0; //controls back
+	}
+
+	if (menu_option == 8 && menu_x >= 460 && menu_x <= 840 && menu_y >= 145 && menu_y <= 190)
+	{
+		menu_option = 0; //you win back
 	}
 }
 
@@ -264,6 +271,18 @@ void showPauseMenu()
 	else if (menu_option == 7 && pauseIndex == 2)
 	{
 		iShowImage(0, 0, screenWidth, screenHight, pause[pauseIndex]);
+	}
+}
+
+void showWin()
+{
+	if (menu_option == 8 && youWinIndex == 0)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, youWin[youWinIndex]);
+	}
+	else if (menu_option == 8 && youWinIndex == 1)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, youWin[youWinIndex]);
 	}
 }
 
