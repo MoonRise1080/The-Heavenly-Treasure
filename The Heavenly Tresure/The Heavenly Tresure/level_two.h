@@ -31,7 +31,7 @@ bool lvlTwoPhaseOneRepo = false;
 
 Enemy huntressSeven(161, 465, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressEight(608, 327, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressNine(1120, 476, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);//bug
+//Enemy huntressNine(1120, 476, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);//bug
 Enemy huntressTen(200, 2000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressEleven(600, 2500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressTwelve(1000, 3000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
@@ -50,7 +50,7 @@ Enemy huntressThirteen(298, 534, bringerHeight, bringerWidth, 2, true, false, fa
 Enemy huntressFourteen(976, 540, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressFifteen(789, 1200, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressSixteen(789, 1000, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
-Enemy huntressSeventeen(1117, 1500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
+//Enemy huntressSeventeen(1117, 1500, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressEighteen(696, 900, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 Enemy huntressNineteen(300, 900, bringerHeight, bringerWidth, 2, true, false, false, false, false, false);
 
@@ -99,8 +99,8 @@ void showLevelTwo()
 		/*******************************Enemy_reposition*****************************************/
 		huntressSeven.pos_x = 161;
 		huntressSeven.pos_y = 465;
-		huntressSeven.dim_x = huntressHeight;
-		huntressSeven.dim_y = huntressWidth;
+		huntressSeven.dim_x = bringerHeight;
+		huntressSeven.dim_y = bringerWidth;
 		huntressSeven.hp = 2;
 		huntressSeven.idle = true;
 		huntressSeven.rdirection = false;
@@ -111,8 +111,8 @@ void showLevelTwo()
 
 		huntressEight.pos_x = 608;
 		huntressEight.pos_y = 327;
-		huntressEight.dim_x = huntressHeight;
-		huntressEight.dim_y = huntressWidth;
+		huntressEight.dim_x = bringerHeight;
+		huntressEight.dim_y = bringerWidth;
 		huntressEight.hp = 2;
 		huntressEight.idle = true;
 		huntressEight.rdirection = false;
@@ -121,7 +121,7 @@ void showLevelTwo()
 		huntressEight.attack = false;
 		huntressEight.isDead = false;
 
-		huntressNine.pos_x = 1120;
+		/*huntressNine.pos_x = 1120;
 		huntressNine.pos_y = 476;
 		huntressNine.dim_x = huntressHeight;
 		huntressNine.dim_y = huntressWidth;
@@ -131,12 +131,12 @@ void showLevelTwo()
 		huntressNine.collision = false;
 		huntressNine.chase = false;
 		huntressNine.attack = false;
-		huntressNine.isDead = false;
+		huntressNine.isDead = false;*/
 
 		huntressTen.pos_x = 200;
 		huntressTen.pos_y = 2000;
-		huntressTen.dim_x = huntressHeight;
-		huntressTen.dim_y = huntressWidth;
+		huntressTen.dim_x = bringerHeight;
+		huntressTen.dim_y = bringerWidth;
 		huntressTen.hp = 2;
 		huntressTen.idle = true;
 		huntressTen.rdirection = false;
@@ -147,8 +147,8 @@ void showLevelTwo()
 
 		huntressEleven.pos_x = 600;
 		huntressEleven.pos_y = 2500;
-		huntressEleven.dim_x = huntressHeight;
-		huntressEleven.dim_y = huntressWidth;
+		huntressEleven.dim_x = bringerHeight;
+		huntressEleven.dim_y = bringerWidth;
 		huntressEleven.hp = 2;
 		huntressEleven.idle = true;
 		huntressEleven.rdirection = false;
@@ -159,8 +159,8 @@ void showLevelTwo()
 
 		huntressTwelve.pos_x = 1000;
 		huntressTwelve.pos_y = 3000;
-		huntressTwelve.dim_x = huntressHeight;
-		huntressTwelve.dim_y = huntressWidth;
+		huntressTwelve.dim_x = bringerHeight;
+		huntressTwelve.dim_y = bringerWidth;
 		huntressTwelve.hp = 2;
 		huntressTwelve.idle = true;
 		huntressTwelve.rdirection = false;
@@ -171,8 +171,8 @@ void showLevelTwo()
 
 		huntressThirteen.pos_x = 298;
 		huntressThirteen.pos_y = 534;
-		huntressThirteen.dim_x = huntressHeight;
-		huntressThirteen.dim_y = huntressWidth;
+		huntressThirteen.dim_x = bringerHeight;
+		huntressThirteen.dim_y = bringerWidth;
 		huntressThirteen.hp = 2;
 		huntressThirteen.idle = true;
 		huntressThirteen.rdirection = false;
@@ -183,8 +183,8 @@ void showLevelTwo()
 
 		huntressFourteen.pos_x = 976;
 		huntressFourteen.pos_y = 540;
-		huntressFourteen.dim_x = huntressHeight;
-		huntressFourteen.dim_y = huntressWidth;
+		huntressFourteen.dim_x = bringerHeight;
+		huntressFourteen.dim_y = bringerWidth;
 		huntressFourteen.hp = 2;
 		huntressFourteen.idle = true;
 		huntressFourteen.rdirection = false;
@@ -195,8 +195,8 @@ void showLevelTwo()
 
 		huntressFifteen.pos_x = 789;
 		huntressFifteen.pos_y = 1200;
-		huntressFifteen.dim_x = huntressHeight;
-		huntressFifteen.dim_y = huntressWidth;
+		huntressFifteen.dim_x = bringerHeight;
+		huntressFifteen.dim_y = bringerWidth;
 		huntressFifteen.hp = 2;
 		huntressFifteen.idle = true;
 		huntressFifteen.rdirection = false;
@@ -207,8 +207,8 @@ void showLevelTwo()
 
 		huntressSixteen.pos_x = 789;
 		huntressSixteen.pos_y = 1500;
-		huntressSixteen.dim_x = huntressHeight;
-		huntressSixteen.dim_y = huntressWidth;
+		huntressSixteen.dim_x = bringerHeight;
+		huntressSixteen.dim_y = bringerWidth;
 		huntressSixteen.hp = 2;
 		huntressSixteen.idle = true;
 		huntressSixteen.rdirection = false;
@@ -217,7 +217,7 @@ void showLevelTwo()
 		huntressSixteen.attack = false;
 		huntressSixteen.isDead = false;
 
-		huntressSeventeen.pos_x = 1117;
+		/*huntressSeventeen.pos_x = 1117;
 		huntressSeventeen.pos_y = 1500;
 		huntressSeventeen.dim_x = huntressHeight;
 		huntressSeventeen.dim_y = huntressWidth;
@@ -227,12 +227,12 @@ void showLevelTwo()
 		huntressSeventeen.collision = false;
 		huntressSeventeen.chase = false;
 		huntressSeventeen.attack = false;
-		huntressSeventeen.isDead = false;
+		huntressSeventeen.isDead = false;*/
 
 		huntressEighteen.pos_x = 696;
 		huntressEighteen.pos_y = 900;
-		huntressEighteen.dim_x = huntressHeight;
-		huntressEighteen.dim_y = huntressWidth;
+		huntressEighteen.dim_x = bringerHeight;
+		huntressEighteen.dim_y = bringerWidth;
 		huntressEighteen.hp = 2;
 		huntressEighteen.idle = true;
 		huntressEighteen.rdirection = false;
@@ -243,8 +243,8 @@ void showLevelTwo()
 
 		huntressNineteen.pos_x = 300;
 		huntressNineteen.pos_y = 900;
-		huntressNineteen.dim_x = huntressHeight;
-		huntressNineteen.dim_y = huntressWidth;
+		huntressNineteen.dim_x = bringerHeight;
+		huntressNineteen.dim_y = bringerWidth;
 		huntressNineteen.hp = 2;
 		huntressNineteen.idle = true;
 		huntressNineteen.rdirection = false;
@@ -255,8 +255,8 @@ void showLevelTwo()
 
 		huntressTwenty.pos_x = 331;
 		huntressTwenty.pos_y = 372;
-		huntressTwenty.dim_x = huntressHeight;
-		huntressTwenty.dim_y = huntressWidth;
+		huntressTwenty.dim_x = bringerHeight;
+		huntressTwenty.dim_y = bringerWidth;
 		huntressTwenty.hp = 2;
 		huntressTwenty.idle = true;
 		huntressTwenty.rdirection = false;
@@ -267,8 +267,8 @@ void showLevelTwo()
 
 		huntressTwentyone.pos_x = 636;
 		huntressTwentyone.pos_y = 470;
-		huntressTwentyone.dim_x = huntressHeight;
-		huntressTwentyone.dim_y = huntressWidth;
+		huntressTwentyone.dim_x = bringerHeight;
+		huntressTwentyone.dim_y = bringerWidth;
 		huntressTwentyone.hp = 2;
 		huntressTwentyone.idle = true;
 		huntressTwentyone.rdirection = false;
@@ -279,8 +279,8 @@ void showLevelTwo()
 
 		huntressTwentytwo.pos_x = 1059;
 		huntressTwentytwo.pos_y = 525;
-		huntressTwentytwo.dim_x = huntressHeight;
-		huntressTwentytwo.dim_y = huntressWidth;
+		huntressTwentytwo.dim_x = bringerHeight;
+		huntressTwentytwo.dim_y = bringerWidth;
 		huntressTwentytwo.hp = 2;
 		huntressTwentytwo.idle = true;
 		huntressTwentytwo.rdirection = false;
@@ -291,8 +291,8 @@ void showLevelTwo()
 
 		huntressTwentythree.pos_x = 300;
 		huntressTwentythree.pos_y = 800;
-		huntressTwentythree.dim_x = huntressHeight;
-		huntressTwentythree.dim_y = huntressWidth;
+		huntressTwentythree.dim_x = bringerHeight;
+		huntressTwentythree.dim_y = bringerWidth;
 		huntressTwentythree.hp = 2;
 		huntressTwentythree.idle = true;
 		huntressTwentythree.rdirection = false;
@@ -303,8 +303,8 @@ void showLevelTwo()
 
 		huntressTwentyfour.pos_x = 696;
 		huntressTwentyfour.pos_y = 1000;
-		huntressTwentyfour.dim_x = huntressHeight;
-		huntressTwentyfour.dim_y = huntressWidth;
+		huntressTwentyfour.dim_x = bringerHeight;
+		huntressTwentyfour.dim_y = bringerWidth;
 		huntressTwentyfour.hp = 2;
 		huntressTwentyfour.idle = true;
 		huntressTwentyfour.rdirection = false;
@@ -315,8 +315,8 @@ void showLevelTwo()
 		
 		huntressTwentyfive.pos_x = 1022;
 		huntressTwentyfive.pos_y = 1200;
-		huntressTwentyfive.dim_x = huntressHeight;
-		huntressTwentyfive.dim_y = huntressWidth;
+		huntressTwentyfive.dim_x = bringerHeight;
+		huntressTwentyfive.dim_y = bringerWidth;
 		huntressTwentyfive.hp = 2;
 		huntressTwentyfive.idle = true;
 		huntressTwentyfive.rdirection = false;
@@ -366,7 +366,7 @@ void showLevelTwo()
 			showHp();
 			showBringerAnimations(huntressSeven);
 			showBringerAnimations(huntressEight);
-			showBringerAnimations(huntressNine);
+			//showBringerAnimations(huntressNine);
 			showBringerAnimations(huntressTen);
 			showBringerAnimations(huntressEleven);
 			showBringerAnimations(huntressTwelve);
@@ -407,7 +407,7 @@ void showLevelTwo()
 				huntressEight.collision = false;
 			}
 
-			if (collisionEnemy(huntressNine, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
+			/*if (collisionEnemy(huntressNine, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
 				collisionEnemy(huntressNine, bringerMother, recX[1], recY[1], dx[1], dy[1], bringerMother.padN) ||
 				collisionEnemy(huntressNine, bringerMother, recX[2], recY[2], dx[2], dy[2], bringerMother.padN) ||
 				collisionEnemy(huntressNine, bringerMother, recX[3], recY[3], dx[3], dy[3], bringerMother.padN))
@@ -417,7 +417,7 @@ void showLevelTwo()
 			else
 			{
 				huntressNine.collision = false;
-			}
+			}*/
 			//out of the screen enemy starts
 			if (collisionEnemy(huntressTen, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
 				collisionEnemy(huntressTen, bringerMother, recX[1], recY[1], dx[1], dy[1], bringerMother.padN) ||
@@ -457,7 +457,7 @@ void showLevelTwo()
 
 			chaseCheck(&huntressSeven);
 			chaseCheck(&huntressEight);
-			chaseCheck(&huntressNine);
+			//chaseCheck(&huntressNine);
 			chaseCheck(&huntressTen);
 			chaseCheck(&huntressEleven);
 			chaseCheck(&huntressTwelve);
@@ -492,7 +492,7 @@ void showLevelTwo()
 			showBringerAnimations(huntressFourteen);
 			showBringerAnimations(huntressFifteen);
 			showBringerAnimations(huntressSixteen);
-			showBringerAnimations(huntressSeventeen);
+			//showBringerAnimations(huntressSeventeen);
 			showBringerAnimations(huntressEighteen);
 			showBringerAnimations(huntressNineteen);
 			
@@ -553,7 +553,7 @@ void showLevelTwo()
 				huntressSixteen.collision = false;
 			}
 
-			if (collisionEnemy(huntressSeventeen, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
+			/*if (collisionEnemy(huntressSeventeen, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
 				collisionEnemy(huntressSeventeen, bringerMother, recX[1], recY[1], dx[1], dy[1], bringerMother.padN) ||
 				collisionEnemy(huntressSeventeen, bringerMother, recX[2], recY[2], dx[2], dy[2], bringerMother.padN))
 			{
@@ -562,7 +562,7 @@ void showLevelTwo()
 			else
 			{
 				huntressSeventeen.collision = false;
-			}
+			}*/
 			if (collisionEnemy(huntressEighteen, bringerMother, recX[0], recY[0], dx[0], dy[0], bringerMother.padN) ||
 				collisionEnemy(huntressEighteen, bringerMother, recX[1], recY[1], dx[1], dy[1], bringerMother.padN) ||
 				collisionEnemy(huntressEighteen, bringerMother, recX[2], recY[2], dx[2], dy[2], bringerMother.padN))
@@ -592,7 +592,7 @@ void showLevelTwo()
 			chaseCheck(&huntressFourteen);
 			chaseCheck(&huntressFifteen);
 			chaseCheck(&huntressSixteen);
-			chaseCheck(&huntressSeventeen);
+			//chaseCheck(&huntressSeventeen);
 			chaseCheck(&huntressEighteen);
 			chaseCheck(&huntressNineteen);
 
