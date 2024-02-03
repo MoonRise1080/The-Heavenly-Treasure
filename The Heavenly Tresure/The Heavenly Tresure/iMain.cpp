@@ -71,6 +71,11 @@ void iDraw()
 		showStory();
 	}
 
+	if (menu_option == 7)
+	{
+		showPauseMenu();
+	}
+
 }
 
 
@@ -653,6 +658,20 @@ void iPassiveMouseMove(int mx, int my)
 	{
 		gameOverIndex = 0;
 	}
+
+	if (menu_option == 7 && mx >= 460 && mx <= 830 && my >= 130 && my <= 220)
+	{
+		pauseIndex = 1;
+	}
+	else if (menu_option == 7 && mx >= 460 && mx <= 830 && my >= 310 && my <= 400)
+	{
+		pauseIndex = 2;
+	}
+	else
+	{
+		pauseIndex = 0;
+	}
+
 }
 
 void iMouse(int button, int state, int mx, int my)
@@ -692,11 +711,17 @@ void iKeyboard(unsigned char key)
 
 	if (key == 'p')
 	{
-		if (phase >= 0 && phase <= 2)
+		if (phase >= 0 && phase <= 2 && menu_option == 1)
 		{
+			isStart = false;
 			lvlOneStart = false;
 			menu_option = 7;
-			showPauseMenu();
+		}
+		else if (phase >= 3 && phase <= 6 && menu_option == 1)
+		{
+			isStart = false;
+			lvlTwoStart = false;
+			menu_option = 7;
 		}
 	}
 

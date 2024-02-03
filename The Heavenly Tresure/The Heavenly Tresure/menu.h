@@ -97,6 +97,15 @@ void selectMenuOption(int menu_x, int menu_y)
 		menu_option = 0; //Story back
 		controlSound(true);
 	}
+
+	if (menu_option == 7 && (menu_x >= 460 && menu_x <= 830 && menu_y >= 130 && menu_y <= 220))
+	{
+		menu_option = 0;
+	}
+	else if (menu_option == 7 && (menu_x >= 460 && menu_x <= 830 && menu_y >= 310 && menu_y <= 400))
+	{
+		menu_option = 1;
+	}
 	
 	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
 	{
@@ -244,7 +253,18 @@ void showControls()
 
 void showPauseMenu()
 {
-	if ()
+	if (menu_option == 7 && pauseIndex == 0)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, pause[pauseIndex]);
+	}
+	else if (menu_option == 7 && pauseIndex == 1)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, pause[pauseIndex]);
+	}
+	else if (menu_option == 7 && pauseIndex == 2)
+	{
+		iShowImage(0, 0, screenWidth, screenHight, pause[pauseIndex]);
+	}
 }
 
 

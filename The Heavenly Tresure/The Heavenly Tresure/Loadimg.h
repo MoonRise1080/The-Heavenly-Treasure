@@ -51,6 +51,11 @@ void loadImage()
 	score[1] = iLoadImage("Menu\\Score\\score_2.png");
 	score[2] = iLoadImage("Menu\\Score\\score_1.png");
 
+	/*------------------------------------ Pause ---------------------------------------*/
+	pause[0] = iLoadImage("Menu\\Pause\\pause_0.png");
+	pause[1] = iLoadImage("Menu\\Pause\\pause_1.png");
+	pause[2] = iLoadImage("Menu\\Pause\\pause_2.png");
+
 
 	/*--------------------------------- Idle Image -------------------------------------*/
 	mainChar.img_idle[0] = iLoadImage("HeroKnight\\Idle\\Norm\\HeroKnight_Idle_0.png");
