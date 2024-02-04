@@ -804,7 +804,7 @@ void iSpecialKeyboard(unsigned char key)
 	{
 		if (phase >= 0 && phase <= 5)
 		{
-			mainChar.pos_x += 50;
+			mainChar.pos_x += 5;
 			mainChar.idle = false;
 			mainChar.rdirection = true;
 		}
