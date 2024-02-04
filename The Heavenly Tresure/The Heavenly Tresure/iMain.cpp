@@ -10,6 +10,7 @@
 #include "HUD.h"
 #include "Game_object.h"
 #include "Gameover.h"
+#include "ScoreReadWrite.h"
 #include <cstdlib>
 using namespace std;
 
@@ -30,6 +31,8 @@ void iDraw()
 		lvlTwoStart = false;
 		mainChar.dead = 0;
 		phase = 0;
+
+		mainChar.score = 0;
 		mainChar.pos_x = 100;
 		mainChar.pos_y = 324;
 		mainChar.dim_x = 138;
@@ -64,6 +67,16 @@ void iDraw()
 	if (menu_option == 3)
 	{
 		showScore();
+		/*char score[20];
+		sprintf_s(score, "Player 1: %d", mainChar.score);
+		iText(530, 485, score, GLUT_BITMAP_TIMES_ROMAN_24);
+		
+		sprintf_s(score, "Player 2: %d", mainChar.score);
+		iText(530, 405, score, GLUT_BITMAP_TIMES_ROMAN_24);
+		
+		sprintf_s(score, "Player 3: %d", mainChar.score);
+		iText(530, 320, score, GLUT_BITMAP_TIMES_ROMAN_24);*/
+		showScoreFromFile();
 	}
 
 	if (menu_option == 4)
@@ -791,7 +804,7 @@ void iSpecialKeyboard(unsigned char key)
 	{
 		if (phase >= 0 && phase <= 5)
 		{
-			mainChar.pos_x += 5;
+			mainChar.pos_x += 50;
 			mainChar.idle = false;
 			mainChar.rdirection = true;
 		}

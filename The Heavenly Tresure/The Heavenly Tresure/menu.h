@@ -3,6 +3,7 @@
 #define screenWidth 1280
 #define screenHight 720
 #include "sound.h"
+#include "ScoreReadWrite.h"
 
 int menu_option = 0;
 int menu_image[8];
@@ -111,7 +112,8 @@ void selectMenuOption(int menu_x, int menu_y)
 	
 	if (gameOverIndex == 1 && menu_x >= 459 && menu_x <= 840 && menu_y >= 100 && menu_y <= 190)
 	{
-		menu_option = 0; // game over
+		menu_option = 0; // game over back
+		writeScore();
 	}
 
 	if (menu_option == 5 && menu_x >= 530 && menu_x <= 755 && menu_y >= 32 && menu_y <= 85)
@@ -122,6 +124,8 @@ void selectMenuOption(int menu_x, int menu_y)
 	if (menu_option == 8 && menu_x >= 460 && menu_x <= 840 && menu_y >= 145 && menu_y <= 190)
 	{
 		menu_option = 0; //you win back
+		writeScore();
+		
 	}
 }
 

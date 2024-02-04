@@ -106,7 +106,6 @@ void showLevelTwo()
 		lvlOneStart = false;
 		lvlTwoStart = false;
 		gameOverCommand = true;
-		
 
 		/*******************************Enemy_reposition*****************************************/
 		huntressSeven.pos_x = 161;
@@ -612,6 +611,7 @@ void showLevelTwo()
 			if (mainChar.isDead == true)
 			{
 				gameOver(8, 128);
+				
 			}
 
 		}

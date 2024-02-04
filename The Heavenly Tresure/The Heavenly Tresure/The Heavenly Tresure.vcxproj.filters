@@ -68,5 +68,11 @@
     <ClInclude Include="Gameover.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="level_two.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreReadWrite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

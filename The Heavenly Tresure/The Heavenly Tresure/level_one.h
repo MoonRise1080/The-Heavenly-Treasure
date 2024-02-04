@@ -14,6 +14,7 @@
 #include "Game_object.h"
 #include <iostream>
 #include <cstdlib>
+#include "ScoreReadWrite.h"
 
 int phase = 0;
 bool isStart = false;
@@ -40,7 +41,7 @@ void lvlOneReset()
 	isStart = false;
 	lvlOneStart = false;
 	gameOverCommand = true;
-	
+
 	huntressOne.pos_x = 990;
 	huntressOne.pos_y = 575;
 	huntressOne.dim_x = huntressHeight;
@@ -156,7 +157,9 @@ void showLevelOne()
 			iText(650, 275, score, GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 
-}
+		lvlOneReset();
+
+	}
 
 	if (lvlOneStart == true)
 	{
@@ -223,7 +226,7 @@ void showLevelOne()
 			/*hero attack
 			heroAttack(&huntressOne);
 			heroAttack(&huntressTwo);*/
-			
+
 
 			//pick up the HEART
 			showGameObject(heartOne);
@@ -446,7 +449,7 @@ void showLevelOne()
 			showPlayerAnimations();
 		}
 
-		
+
 
 		/*___________________________________________________ Animations End ________________________________________________________*/
 

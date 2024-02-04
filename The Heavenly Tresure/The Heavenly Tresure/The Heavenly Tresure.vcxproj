@@ -82,6 +82,7 @@
     <ClInclude Include="Loadimg.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="ScoreReadWrite.h" />
     <ClInclude Include="sound.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
