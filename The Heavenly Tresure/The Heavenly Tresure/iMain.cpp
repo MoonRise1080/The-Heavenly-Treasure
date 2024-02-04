@@ -9,7 +9,6 @@
 #include "sound.h"
 #include "HUD.h"
 #include "Game_object.h"
-#include "Gameover.h"
 #include "ScoreReadWrite.h"
 #include <cstdlib>
 using namespace std;
@@ -22,7 +21,6 @@ using namespace std;
 void iDraw()
 {
 	iClear();
-	
 
 	if (menu_option == 0)
 	{

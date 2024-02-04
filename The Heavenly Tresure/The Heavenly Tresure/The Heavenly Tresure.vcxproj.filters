@@ -65,9 +65,6 @@
     <ClInclude Include="Game_object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gameover.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="level_two.h">
       <Filter>Header Files</Filter>
     </ClInclude>

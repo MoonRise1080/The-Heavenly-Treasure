@@ -8,7 +8,6 @@
 using namespace std;
 
 
-
 void writeScore()
 {
 	FILE *ptr;
@@ -28,9 +27,10 @@ void writeScore()
 void showScoreFromFile()
 {
 	FILE *ptr;
-	int scores[100];
-
+	
 	fopen_s(&ptr, "HighScore.txt", "r");
+
+	int scores[100];
 
 	int i = 0;
 	while (fscanf_s(ptr, "%d", &scores[i]) != EOF)
@@ -38,11 +38,12 @@ void showScoreFromFile()
 		i++;
 	}
 
-	for (int j = 0; j < i; j++)
+	int size = i, j;
+	for (i = 0; i < size; i++)
 	{
-		for (int k = j + 1; k < i; k++)
+		for (j = i + 1; j < size; j++)
 		{
-			if (scores[j] >= scores[k])
+			if (scores[j] >= scores[i])
 			{
 				int scoreTemp = scores[j];
 				scores[j] = scores[i];
@@ -53,13 +54,13 @@ void showScoreFromFile()
 
 	char score[30];
 
-	sprintf_s(score, "Player 1: %d", scores[2]);
+	sprintf_s(score, "Player 1: %d", scores[0]);
 	iText(530, 485, score, GLUT_BITMAP_TIMES_ROMAN_24);
 
 	sprintf_s(score, "Player 2: %d", scores[1]);
 	iText(530, 405, score, GLUT_BITMAP_TIMES_ROMAN_24);
 
-	sprintf_s(score, "Player 3: %d", scores[0]);
+	sprintf_s(score, "Player 3: %d", scores[2]);
 	iText(530, 320, score, GLUT_BITMAP_TIMES_ROMAN_24);
 
 	fclose(ptr);

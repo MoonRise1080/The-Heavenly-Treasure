@@ -71,7 +71,6 @@
     <ClInclude Include="Collision.h" />
     <ClInclude Include="Backgrounds.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Gameover.h" />
     <ClInclude Include="Game_object.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />

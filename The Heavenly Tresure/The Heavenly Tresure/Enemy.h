@@ -4,7 +4,6 @@
 #define enemyRangeMin 50
 #include "Player.h"
 #include <cstdlib>
-#include "Gameover.h"
 
 struct Enemy
 {
